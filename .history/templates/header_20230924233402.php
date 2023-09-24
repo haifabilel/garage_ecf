@@ -32,9 +32,8 @@ require_once 'head.php';
         <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <button  type="button" class="btn " data-bs-toggle="modal" data-bs-target="#buttonModal" >Contact  <i class="fa-solid fa-message"></i></button>
-      </div>
-    </div>
-   </div>  
+        </div>
+        
+
+
   </section>
- <?php require_once 'contact.php'?>
-  

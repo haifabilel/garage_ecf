@@ -31,10 +31,19 @@ require_once 'head.php';
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
         <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button  type="button" class="btn " data-bs-toggle="modal" data-bs-target="#buttonModal" >Contact  <i class="fa-solid fa-message"></i></button>
+        <a href="./espace_admin/contact.php"  class="btn modal-trigger" id="btn-login" >Contact  <i class="fa-solid fa-message"></i></a>
+        </div>
       </div>
     </div>
-   </div>  
+  </div>
+  <!-- fenetre modal -->
+  <div class="modal-container">
+    <div class="overlay modal-trigger">
+        <div class="modal">
+           </close-modal>
+        </div>
+  </div>
+    
+
+  </div>
   </section>
- <?php require_once 'contact.php'?>
-  

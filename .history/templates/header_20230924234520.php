@@ -36,5 +36,5 @@ require_once 'head.php';
     </div>
    </div>  
   </section>
- <?php require_once 'contact.php'?>
+ <
   
