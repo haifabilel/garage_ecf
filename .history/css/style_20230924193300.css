@@ -126,10 +126,5 @@ h2{
 /* Crousel starts */
 .carousel{
     display:flex;
-    gap: 20px;
-}
-.card-group{
-    display: flex;
-    gap: 20px; 
-     
+    gap:
 }

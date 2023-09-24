@@ -128,8 +128,6 @@ h2{
     display:flex;
     gap: 20px;
 }
-.card-group{
-    display: flex;
-    gap: 20px; 
-     
+.card{
+    gap: 20px;   
 }

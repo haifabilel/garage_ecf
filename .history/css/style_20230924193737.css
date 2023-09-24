@@ -130,6 +130,6 @@ h2{
 }
 .card-group{
     display: flex;
-    gap: 20px; 
-     
+    row
+    gap: 20px;   
 }

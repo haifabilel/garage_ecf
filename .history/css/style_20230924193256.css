@@ -125,11 +125,5 @@ h2{
 /* registre_page ends */
 /* Crousel starts */
 .carousel{
-    display:flex;
-    gap: 20px;
-}
-.card-group{
-    display: flex;
-    gap: 20px; 
-     
+    display:flex
 }
