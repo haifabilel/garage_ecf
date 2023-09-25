@@ -81,19 +81,6 @@ h2{
 .container-services{
     width:100wh;
 }
-.row{
-   padding: 20px;
-}
-.card{
-    margin-left: 20px;
-    box-shadow: 5px 5px 10px -1px #808080;
-    width: 95%;
-}
-.card:hover{
-    background-color: var(--bg-box);
-    transform:scale(1.1);
-    transition: 0.2s;
-}
 
 /* section services ends */
 /* registre_page starts */
@@ -148,10 +135,9 @@ h2{
 footer{
     background-color:rgba(128, 128, 128, 0.055);
     height: 300px;
-    width: 100wh;
 }
 iframe{
-    width:500px;
+    width:40%;
     height: 300px;
     position: absolute;
     z-index: 1;

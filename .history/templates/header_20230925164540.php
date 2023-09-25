@@ -24,14 +24,14 @@ require_once 'head.php';
   <section class="home" >
   <div class="container col-xxl-8 px-2 py-6">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
+      <div class="col-10 col-sm-8 col-lg-4">
         <img src="./assets/images/cover-blue.jpg" class="d-block mx-lg-auto img-fluid" alt="cover" width="700" height="500" loading="lazy">
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
         <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class= "btn" data-bs-toggle="modal" data-bs-target="#buttonModal" >Contact  <i class="fa-solid fa-message"></i></button>
+        <button  type="button" class= "btn" data-bs-toggle="modal" data-bs-target="#buttonModal" >Contact  <i class="fa-solid fa-message"></i></button>
       </div>
     </div>
    </div>  

@@ -82,17 +82,7 @@ h2{
     width:100wh;
 }
 .row{
-   padding: 20px;
-}
-.card{
-    margin-left: 20px;
-    box-shadow: 5px 5px 10px -1px #808080;
-    width: 95%;
-}
-.card:hover{
-    background-color: var(--bg-box);
-    transform:scale(1.1);
-    transition: 0.2s;
+    margin: 20px;
 }
 
 /* section services ends */
