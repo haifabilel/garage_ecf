@@ -28,6 +28,15 @@ if(!empty($_POST)){
       
     }
     //stocker les informations admin
+$_SESSION["admin"] = [
+    'id'=> $user["id"],
+     'name' => $user["name"],
+     'email' => $user["email"],
+     'password' => $user["password"],
+     'user_type' => $user["user_type"]
+ ];
+ var_dump($_SESSION);
+ 
 };
 
 
@@ -76,3 +85,13 @@ if(!empty($_POST)){
         <p>Don't have an account? <a href="registre.php">registre now</a></p>
     </form>
 </div>
+
+
+// $req = $conn->prepare('SELECT * FROM admin WHERE email = :email OR password = :password');
+    // $req->bindValue(":email", $_POST['email'], PDO::PARAM_STR);
+    // $req->execute();
+    // $user =$req->fetch();
+
+    // if(!$user){
+    //     die('ok');
+    // }

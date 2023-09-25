@@ -54,7 +54,7 @@ header{
     color:var(--bg-color);
     border-radius: 5rem;
     font-size: 1.3rem;
-   text-decoration: none;
+   
 }
 .button:hover{
     transform:scale(1.1);
@@ -78,9 +78,6 @@ h2{
  }
 /* home ends */
 /* section services starts */
-h1{
-    color: var(--main-color);
-}
 .container-services{
     width:100wh;
 }
@@ -94,7 +91,8 @@ h1{
 }
 .card:hover{
     background-color: var(--bg-box);
-
+    transform:scale(1.1);
+    transition: 0.2s;
 }
 
 /* section services ends */

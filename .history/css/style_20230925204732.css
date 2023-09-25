@@ -78,9 +78,7 @@ h2{
  }
 /* home ends */
 /* section services starts */
-h1{
-    color: var(--main-color);
-}
+h1
 .container-services{
     width:100wh;
 }

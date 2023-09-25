@@ -27,10 +27,29 @@ if(!empty($_POST)){
            };
       
     }
-    //stocker les informations admin
 };
+//stocker les informations admin
+$_SESSION["admin"] = [
+    "id" => $user["id"],
+    "name" =>
+]
 
 
+
+
+
+
+
+// if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])) {
+//     $req = $conn->prepare('SELECT id FROM admin WHERE email = ?');
+//     $req->execute(['email' => $_POST['email']]);
+//     $user = $req->fetch();
+//     if(password_verify($_POST['password'], $user->password)) {
+//             $_SESSION['admin'] = $user;
+//             header('location:admin-page.php');
+//             exit(); 
+//     };
+// };
 ?>
 
 <!DOCTYPE html>
@@ -76,3 +95,13 @@ if(!empty($_POST)){
         <p>Don't have an account? <a href="registre.php">registre now</a></p>
     </form>
 </div>
+
+
+// $req = $conn->prepare('SELECT * FROM admin WHERE email = :email OR password = :password');
+    // $req->bindValue(":email", $_POST['email'], PDO::PARAM_STR);
+    // $req->execute();
+    // $user =$req->fetch();
+
+    // if(!$user){
+    //     die('ok');
+    // }

@@ -28,6 +28,15 @@ if(!empty($_POST)){
       
     }
     //stocker les informations admin
+$_SESSION["admin"] = [
+    "id"=> $user["id"],
+     "name" => $user["name"],
+     "email" => $user["email"],
+     "password" => $user["password"],
+     "user_type" => $user["user_type"]
+ ];
+ var_dump($_SESSION);
+ 
 };
 
 
