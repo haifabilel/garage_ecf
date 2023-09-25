@@ -133,7 +133,7 @@ footer{
     height: 300px;
 }
 iframe{
-    width:40%;
+    width:50%;
     height: 300px;
     position: absolute;
     z-index: 1;

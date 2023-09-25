@@ -132,10 +132,3 @@ footer{
     background-color:rgba(128, 128, 128, 0.055);
     height: 300px;
 }
-iframe{
-    width:40%;
-    height: 300px;
-    position: absolute;
-    z-index: 1;
-   
-  }

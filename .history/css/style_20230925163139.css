@@ -129,13 +129,6 @@ h2{
 
 /* footer starts */
 footer{
-    background-color:rgba(128, 128, 128, 0.055);
-    height: 300px;
+    background-color: var(--main-color);
+    height
 }
-iframe{
-    width:40%;
-    height: 300px;
-    position: absolute;
-    z-index: 1;
-   
-  }
