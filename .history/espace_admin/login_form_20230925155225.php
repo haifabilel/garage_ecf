@@ -4,25 +4,21 @@ session_start();
 if(!empty($_POST)){
     if(isset($_POST["email"],$_POST["password"]) && !empty($_POST["email"]
     && !empty($_POST["password"]))){
-        
+        if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
+            $errors['email'] ="Votre email n'est pas valide";
+            header('location:admin_page.php');
+        }
        
         $sql = "SELECT * FROM `admin` WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
         $user_type = $query->fetch();
-       
-        if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-            $errors['email'] ="Votre email n'est pas valide";
-         
-        }
-        elseif(!$user_type){
+        if(!$user_type){
             $errors['user_type'] ="Ce user n'existe pas";
         }
-        elseif(!password_verify($_POST["password"], $user_type["password"])){
+        if(!password_verify($_POST["password"], $user_type["password"])){
             $errors['password'] ="Votre password n'est pas valide";
-           
-           }else{
             header('location:admin_page.php');
            };
       

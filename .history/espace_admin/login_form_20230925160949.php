@@ -16,10 +16,10 @@ if(!empty($_POST)){
             $errors['email'] ="Votre email n'est pas valide";
          
         }
-        elseif(!$user_type){
+        if(!$user_type){
             $errors['user_type'] ="Ce user n'existe pas";
         }
-        elseif(!password_verify($_POST["password"], $user_type["password"])){
+        if(!password_verify($_POST["password"], $user_type["password"])){
             $errors['password'] ="Votre password n'est pas valide";
            
            }else{
