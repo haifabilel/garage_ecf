@@ -1,7 +1,7 @@
 <?php
 require_once 'head.php';
 ?>
-<footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py- my-1 border-top">
    <div class="row">
         <div class="col-md-8 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">

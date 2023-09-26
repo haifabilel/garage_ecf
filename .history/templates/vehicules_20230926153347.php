@@ -1,5 +1,5 @@
 <?php
-require_once '../espace_admin/connexion.php';
+require_once './espace_admin/connexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,7 +10,9 @@ require_once '../espace_admin/connexion.php';
         <meta name="description" content="Notre garage est parfaitement équipé, le Garage V.Parrot entretient vos véhicules et propose également des occasions toutes marques garanties. Il assure également le diagnostic et la réparation
          toutes marques de vos véhicules.">
          <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="jquery-3.6.4.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
          <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet"/>
          <!--  carrousel -->
          <link href="https://gosnippets.com/full-screen/bootstrap-carousel-with-cards-in-3-columns" rel="canonical">
@@ -22,48 +24,11 @@ require_once '../espace_admin/connexion.php';
             <!-- Bootstrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
             <!-- CSS Link -->
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
    
 <div class="container-filter">
     <div class="row">
-        <h3 align="center" >Vehicules d'occasions</h3>
-        <div class="col-md-3">
-            <div class="list-group">
-                <h4>Prix</h4>
-                <input type="hidden" id="hidden_minimum_price" value="0">
-                <input type="hidden" id="hidden_maximum_price" value="70000">
-                <p id="price_show">1000 - 70000</p>
-                <div id="price_range"></div>
-            </div>
-            <div class="list-group">
-                <h4>Kilométrage</h4>
-                <input type="hidden" id="hidden_minimum_price" value="0">
-                <input type="hidden" id="hidden_maximum_price" value="70000">
-                <p id="price_show">5000 - 400000</p>
-                <div id="price_range"></div>
-            </div>
-            <div class="list-group">
-                <h4>Année</h4>
-                <input type="hidden" id="hidden_minimum_price" value="0">
-                <input type="hidden" id="hidden_maximum_price" value="70000">
-                <p id="price_show">2000 - 2023</p>
-                <div id="price_range"></div>
-            </div>
-
-       
-        </div>
-   
-   
-   
+        <h3 classe >Vehicules d'occasions</h3>
     </div>
 </div>
-
-
-
-
-
-
-<?php
-require_once '../templates/footer.php';
-?>

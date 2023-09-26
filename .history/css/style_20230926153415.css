@@ -81,9 +81,7 @@ h2{
 h1{
     color: var(--main-color);
 }
-.vehicules{
-    color: red;
-}
+.vehicules
 .container-services{
     width:100wh;
 }
@@ -151,14 +149,12 @@ h1{
 
 /* footer starts */
 footer{
-   margin-top: 7rem;
-    background-color:whitesmoke;
+    background-color:rgba(128, 128, 128, 0.055);
     height: 300px;
     width: 100wh;
-   
 }
 iframe{
-    width:520px;
+    width:500px;
     height: 300px;
     position: absolute;
     z-index: 1;

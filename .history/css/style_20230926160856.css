@@ -152,10 +152,9 @@ h1{
 /* footer starts */
 footer{
    margin-top: 7rem;
-    background-color:whitesmoke;
+    background-color:whitesmoke
     height: 300px;
     width: 100wh;
-   
 }
 iframe{
     width:520px;

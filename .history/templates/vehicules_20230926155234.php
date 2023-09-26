@@ -58,12 +58,3 @@ require_once '../espace_admin/connexion.php';
    
     </div>
 </div>
-
-
-
-
-
-
-<?php
-require_once '../templates/footer.php';
-?>

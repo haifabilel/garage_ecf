@@ -151,14 +151,13 @@ h1{
 
 /* footer starts */
 footer{
-   margin-top: 7rem;
-    background-color:whitesmoke;
+  
+    background-color:blue;
     height: 300px;
     width: 100wh;
-   
 }
 iframe{
-    width:520px;
+    width:500px;
     height: 300px;
     position: absolute;
     z-index: 1;

@@ -65,5 +65,5 @@ require_once '../espace_admin/connexion.php';
 
 
 <?php
-require_once '../templates/footer.php';
+require_once './';
 ?>
