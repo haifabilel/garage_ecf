@@ -10,7 +10,7 @@ require_once 'head.php';
       </div>
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li><a href="#services" class="nav-link" px-2>services</a></li>
-          <li><a href="./templates/vehicules.php" class="nav-link" px-2>Véhicules</a></li>
+          <li><a href="/templates/" class="nav-link" px-2>Véhicules</a></li>
           <li><a href="#contact" class="nav-link" px-2>Contact</a></li>
           <li><a href="#reviews" class="nav-link" px-2>Reviews</a></li>
       </ul>
