@@ -18,19 +18,10 @@ require_once 'connexion.php';
 
 // }
 if(isset($_POST['email'])){
-   $token = uniqid();
-   $url = "http://localhost/garage_ecf/espace_admin/token?token=$token.php";
-   $message = "Voici le lien pour réinitialiser le mot de passe : $url";
-   $headers = 'Content-type: text/plain; charset="utf-8"'. " ";
+    $password = uniqid();
+   $hpassword = password_hash($password, PASSWORD_DEFAULT);
 
-   if(mail($_POST['email'], 'Mot de passe oublié', $message, $headers)){
-    $req = "UPDATE users SET token = ? WHERE email = ?";
-    $stmt = $conn->prepare($req);
-    $stmt->execute([$hpassword, $_POST['email']]);
-    $errors= "Mail envoyé";
-   }else{
-    $message = "Une erreur est survenue";
-   }
+   
 }
 ?>
 <!DOCTYPE html>
@@ -47,8 +38,6 @@ if(isset($_POST['email'])){
     </head>
 <div class="form-container">
     <form action="" method="POST">
-   
-        
         <input type="email" name="email" required placeholder="enter your email">
         <button type="submit" >Send a random password</button>
         

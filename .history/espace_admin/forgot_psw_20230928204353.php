@@ -18,18 +18,19 @@ require_once 'connexion.php';
 
 // }
 if(isset($_POST['email'])){
-   $token = uniqid();
-   $url = "http://localhost/garage_ecf/espace_admin/token?token=$token.php";
-   $message = "Voici le lien pour réinitialiser le mot de passe : $url";
+    $token = uniqid();
+   
+
+   $errors = "Voici le lien pour réinitialiser le mot de passe : $password";
    $headers = 'Content-type: text/plain; charset="utf-8"'. " ";
 
-   if(mail($_POST['email'], 'Mot de passe oublié', $message, $headers)){
-    $req = "UPDATE users SET token = ? WHERE email = ?";
+   if(mail($_POST['email'], 'Mot de passe oublié', $errors, $headers)){
+    $req = "UPDATE users SET password = ? WHERE email = ?";
     $stmt = $conn->prepare($req);
     $stmt->execute([$hpassword, $_POST['email']]);
     $errors= "Mail envoyé";
    }else{
-    $message = "Une erreur est survenue";
+    $errors = "Une erreur est survenue";
    }
 }
 ?>
