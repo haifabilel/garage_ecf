@@ -4,6 +4,19 @@ require_once 'connexion.php';
 
 // $password = "test";
 
+
+// if(isset($_POST['email'], $_POST['password'])){
+//     $req = $conn->prepare('SELECT password FROM admin WHERE email = ?');
+//     $req->execute([$_POST['email']]);
+//     $Hpassword = $req->fetchColumn();
+//     if(password_verify($_POST['password'], $Hpassword)){
+//         echo "ok";
+    
+//     }else{
+//         echo "pas ok";
+//     }
+
+// }
 if(isset($_POST['email'])){
    $token = uniqid();
    $url = "http://localhost/garage_ecf/espace_admin/token?token=$token";
@@ -14,12 +27,11 @@ if(isset($_POST['email'])){
     $req = "UPDATE users SET token = ? WHERE email = ?";
     $stmt = $conn->prepare($req);
     $stmt->execute([$token, $_POST['email']]);
-    $message = "Mail envoyé";
+    $errors= "Mail envoyé";
    }else{
     $message = "Une erreur est survenue";
    }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,12 +47,10 @@ if(isset($_POST['email'])){
     </head>
 <div class="form-container">
     <form action="" method="POST">
-        <?php
-         if(isset($errors)){echo '<span>' .$errors. '</span>';}
-        ?>
-        <h3>Recupération de mot de passe</h3>
-        <input type="email" name="recup_email" required placeholder="entrer votre adresse mail">
-        <button type="submit" name="recup_mdp" >Valider</button>
+   
+        
+        <input type="email" name="email" required placeholder="enter your email">
+        <button type="submit" >Valider</button>
         
     </form>
 </div>

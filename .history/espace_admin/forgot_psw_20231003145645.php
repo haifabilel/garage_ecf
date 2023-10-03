@@ -2,7 +2,7 @@
 require_once 'connexion.php';
 
 
-// $password = "test";
+$password = "test";
 
 if(isset($_POST['email'])){
    $token = uniqid();

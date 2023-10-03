@@ -27,7 +27,7 @@ if(isset($_GET['token']) && $_GET['token'] != ''){
        <input type="submit" value="Confirmer">  
     </form>
 </div>
-<?php
+<?
     }
 }
 if(isset($_POST['newPassword'])){

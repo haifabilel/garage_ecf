@@ -2,7 +2,7 @@
 require_once 'connexion.php';
 
 
-// $password = "test";
+$password = "test";
 
 if(isset($_POST['email'])){
    $token = uniqid();
@@ -14,7 +14,7 @@ if(isset($_POST['email'])){
     $req = "UPDATE users SET token = ? WHERE email = ?";
     $stmt = $conn->prepare($req);
     $stmt->execute([$token, $_POST['email']]);
-    $message = "Mail envoyé";
+    $errors= "Mail envoyé";
    }else{
     $message = "Une erreur est survenue";
    }

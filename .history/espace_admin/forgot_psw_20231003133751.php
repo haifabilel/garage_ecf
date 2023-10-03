@@ -14,12 +14,11 @@ if(isset($_POST['email'])){
     $req = "UPDATE users SET token = ? WHERE email = ?";
     $stmt = $conn->prepare($req);
     $stmt->execute([$token, $_POST['email']]);
-    $message = "Mail envoyé";
+    $errors= "Mail envoyé";
    }else{
     $message = "Une erreur est survenue";
    }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,11 +34,8 @@ if(isset($_POST['email'])){
     </head>
 <div class="form-container">
     <form action="" method="POST">
-        <?php
-         if(isset($errors)){echo '<span>' .$errors. '</span>';}
-        ?>
         <h3>Recupération de mot de passe</h3>
-        <input type="email" name="recup_email" required placeholder="entrer votre adresse mail">
+        <input type="email" name="email" required placeholder="entrer votre adresse mail">
         <button type="submit" name="recup_mdp" >Valider</button>
         
     </form>

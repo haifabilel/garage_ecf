@@ -8,7 +8,18 @@ if(isset($_GET['token']) && $_GET['token'] != ''){
 
  if($email)
  {
-?>
+
+    }
+}
+if(isset($_POST['newPassword'])){
+   $hpassword = password_hash($_POST['newPassword'],PASSWORD_DEFAULT);
+   $req = "UPDATE users SET password = ? ,token = NULL WHERE email = ?";
+   $stmt = $conn->prepare($req);
+   $stmt->execute([$hpassword, $email]);
+   echo "Mot de passe modifié avec succés";
+}
+
+  ?>   
 <!DOCTYPE html>
 <html lang="fr">
  <head>
@@ -27,18 +38,6 @@ if(isset($_GET['token']) && $_GET['token'] != ''){
        <input type="submit" value="Confirmer">  
     </form>
 </div>
-<?php
-    }
-}
-if(isset($_POST['newPassword'])){
-   $hpassword = password_hash($_POST['newPassword'],PASSWORD_DEFAULT);
-   $req = "UPDATE users SET password = ? ,token = NULL WHERE email = ?";
-   $stmt = $conn->prepare($req);
-   $stmt->execute([$hpassword, $email]);
-   echo "Mot de passe modifié avec succés";
-}
-
-  ?>   
 
 
 
