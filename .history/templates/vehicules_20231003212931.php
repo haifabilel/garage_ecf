@@ -46,8 +46,7 @@ require_once '../espace_admin/connexion.php';
         <div class="progress"></div>
     </div>
     <div class="range-input">
-        <input type="range" class="range-min" min="0" max="10000" value="1500">
-        <input type="range" class="range-max" min="0" max="10000" value="150000">
+        <input type="range" class="range-min" min>
     </div>
     <br>
 </div>

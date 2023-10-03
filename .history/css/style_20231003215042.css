@@ -208,9 +208,7 @@ input[type="range"]::-webkit-slider-thumb{
     height: 17px;
     width: 17px;
     border-radius: 50%;
-    pointer-events: auto;
-    -webkit-appearance: none;
-    background: var(--main-color);
+    pointer-events: ;
 }
 /* vehicules page ends */
 /* footer starts */

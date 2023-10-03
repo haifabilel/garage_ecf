@@ -210,7 +210,6 @@ input[type="range"]::-webkit-slider-thumb{
     border-radius: 50%;
     pointer-events: auto;
     -webkit-appearance: none;
-    background: var(--main-color);
 }
 /* vehicules page ends */
 /* footer starts */

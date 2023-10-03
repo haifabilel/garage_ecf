@@ -148,7 +148,7 @@ h1{
 /* registre_page ends */
 /* vehicules page starts */
 .wrapper{
-width: 320px;
+width: 300px;
 background-color: var(--bg-box);
 margin: 10px;
 
@@ -163,7 +163,7 @@ h3{
 }
 .wrapper p{
     padding: 0 20px;
-    font-size: 0.8rem;
+    font-size: 0.rem;
    
 }
 .field{
@@ -175,42 +175,9 @@ input{
 .separator{
 
 }
-.slider{
-    height: 7px;
-    background-color: var(--bg-color);
-    position: relative; 
-    width: 90%;
-    margin:0 20px;
-    border-radius: 5px;
-   
-}
 .slider .progress{
     background-color: var(--main-color);
     margin:0 20px;
-    height: 7px;
-    left:3%;
-    right:3%;
-    position:absolute
-}
-.range-input{
-    position: relative;
-}
-.range-input input{
-    position:absolute;
-    top:-7px;
-    height:7px;
-    width:100%;
-    -webkit-appearance: none;
-    pointer-events: none;
-    background: none;
-}
-input[type="range"]::-webkit-slider-thumb{
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-    pointer-events: auto;
-    -webkit-appearance: none;
-    background: var(--main-color);
 }
 /* vehicules page ends */
 /* footer starts */

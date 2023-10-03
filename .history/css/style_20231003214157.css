@@ -177,7 +177,7 @@ input{
 }
 .slider{
     height: 7px;
-    background-color: var(--bg-color);
+    background-color: #ddd;
     position: relative; 
     width: 90%;
     margin:0 20px;
@@ -200,17 +200,8 @@ input{
     top:-7px;
     height:7px;
     width:100%;
-    -webkit-appearance: none;
-    pointer-events: none;
-    background: none;
-}
-input[type="range"]::-webkit-slider-thumb{
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-    pointer-events: auto;
-    -webkit-appearance: none;
-    background: var(--main-color);
+   
+   -webkit-appearance: none;
 }
 /* vehicules page ends */
 /* footer starts */
