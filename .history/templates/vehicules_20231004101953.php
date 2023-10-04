@@ -37,7 +37,7 @@ require_once '../espace_admin/connexion.php';
         <span>Min</span>
         <input type="number" class="input-min" value="1500">
     </div>
-    <br>
+    <div class="separator">-</div>
     <div class="field">
         <span>Max</span>
         <input type="number" class="input-max" value="150000">
@@ -52,15 +52,15 @@ require_once '../espace_admin/connexion.php';
     </div>
     <br>
     </div>
-    <br>
-<div class="kilométrage">
-    <h3>kilométrage</h3>
+    
+
+    <h3>Prix</h3>
     <p>Utiluser slider ou entrer min max prix</p>
     <div class="field">
         <span>Min</span>
         <input type="number" class="input-min" value="1500">
     </div>
-    <br>
+    <div class="separator">-</div>
     <div class="field">
         <span>Max</span>
         <input type="number" class="input-max" value="150000">
@@ -73,17 +73,14 @@ require_once '../espace_admin/connexion.php';
         <input type="range" class="range-min" min="0" max="10000" value="1500">
         <input type="range" class="range-max" min="0" max="10000" value="150000">
     </div>
-    </div>
     <br>
-  
-    <div class="Années">
-    <h3>Années</h3>
+    <h3>Prix</h3>
     <p>Utiluser slider ou entrer min max prix</p>
     <div class="field">
         <span>Min</span>
         <input type="number" class="input-min" value="1500">
     </div>
-    <br>
+    <div class="separator">-</div>
     <div class="field">
         <span>Max</span>
         <input type="number" class="input-max" value="150000">
@@ -95,7 +92,6 @@ require_once '../espace_admin/connexion.php';
     <div class="range-input">
         <input type="range" class="range-min" min="0" max="10000" value="1500">
         <input type="range" class="range-max" min="0" max="10000" value="150000">
-    </div>
     </div>
     <br>
 </div>

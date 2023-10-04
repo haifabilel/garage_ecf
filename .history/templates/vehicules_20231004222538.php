@@ -37,7 +37,7 @@ require_once '../espace_admin/connexion.php';
         <span>Min</span>
         <input type="number" class="input-min" value="1500">
     </div>
-    <br>
+   
     <div class="field">
         <span>Max</span>
         <input type="number" class="input-max" value="150000">
@@ -60,7 +60,7 @@ require_once '../espace_admin/connexion.php';
         <span>Min</span>
         <input type="number" class="input-min" value="1500">
     </div>
-    <br>
+   
     <div class="field">
         <span>Max</span>
         <input type="number" class="input-max" value="150000">

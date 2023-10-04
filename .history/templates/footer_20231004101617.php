@@ -21,4 +21,4 @@ require_once 'head.php';
       </div>
  </footer>
 
- <script src="../js/script.js"></script>
+ <script></script>

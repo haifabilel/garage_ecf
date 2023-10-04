@@ -152,10 +152,6 @@ width: 320px;
 background-color: var(--bg-box);
 margin: 10px;
 }
-.kilométrage, .Années{
-    margin-bottom: 20px;
-
-}
 h3{
     text-align: center;
     background-color: var(--second-color);
