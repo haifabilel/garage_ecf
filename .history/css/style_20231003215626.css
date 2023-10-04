@@ -166,13 +166,9 @@ h3{
     font-size: 0.8rem;
    
 }
-.field{
-    padding: 0 20px;  
-}
 .field input{
- 
+    padding: 0 20px;
     text-align: center;
-    -moz-appearance:textfield;
 }
 
   
@@ -190,8 +186,8 @@ h3{
     background-color: var(--main-color);
     margin:0 20px;
     height: 7px;
-    left:1%;
-    right:1%;
+    left:3%;
+    right:3%;
     position:absolute
 }
 .range-input{
@@ -200,7 +196,7 @@ h3{
 .range-input input{
     position:absolute;
     top:-7px;
-    height:5px;
+    height:7px;
     width:100%;
     -webkit-appearance: none;
     pointer-events: none;
@@ -212,14 +208,6 @@ input[type="range"]::-webkit-slider-thumb{
     border-radius: 50%;
     pointer-events: auto;
     -webkit-appearance: none;
-    background: var(--main-color);
-}
-input[type="range"]::-moz-range-thumb{
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-    pointer-events: auto;
-    -moz-appearance: none;
     background: var(--main-color);
 }
 /* vehicules page ends */

@@ -190,8 +190,8 @@ h3{
     background-color: var(--main-color);
     margin:0 20px;
     height: 7px;
-    left:1%;
-    right:1%;
+    left:3%;
+    right:3%;
     position:absolute
 }
 .range-input{
@@ -219,7 +219,7 @@ input[type="range"]::-moz-range-thumb{
     width: 17px;
     border-radius: 50%;
     pointer-events: auto;
-    -moz-appearance: none;
+    -appearance: none;
     background: var(--main-color);
 }
 /* vehicules page ends */
