@@ -58,10 +58,10 @@ if(!empty($_POST)){
             <!-- CSS Link -->
         <link rel="stylesheet" href="../css/style.css">
     </head>
-<section>
-<div class="form-container">
+   
+<div class="form-container"
     <form action="" method="POST">
-       <h3>Login now</h3>
+       <h3>Espace dédié aux personnels : Login now</h3>
         <?php
         if(!empty($errors)){
             foreach($errors as $error){
@@ -77,4 +77,3 @@ if(!empty($_POST)){
         <a href="forgot_psw.php">Forgot your Password ?</a>
     </form>
 </div>
-</section>

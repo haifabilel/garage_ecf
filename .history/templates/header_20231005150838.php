@@ -6,7 +6,7 @@ require_once 'head.php';
       <div class="col-md-3 mb-2 mb-md-0">
       <a href="index.php" class="logo">
           <img src="./assets/images/logo-login.png" alt="logo" style="width: 190px; ">
-        </a>
+        </a<h3>Formulaire de Contact</h3>>
       </div>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -25,21 +25,25 @@ require_once 'head.php';
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
+      
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <h3>Formulaire de Contact</h3>
       <div class="form-container">
     <form action="" method="POST">
         <input type="namespace" name="fullname" required placeholder="entrer votre nom complét"> 
         <input type="email" name="email" required placeholder="entrer votre email">
         <input type="" name="password" required placeholder="entrer votre numéro portable">
         <textarea name="message" placeholder="Votre message..." cols="30" rows="10"></textarea>
-        <input type="submit" name="submit" value="login now" class="form-btn">
     </form>
 </div>
+      </div>
+      <div class="modal-footer">
+      <input type="submit" name="submit" value="login now" class="form-btn">
+       
+      </div>
     </div>
   </div>
 </div>

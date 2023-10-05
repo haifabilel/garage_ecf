@@ -29,17 +29,23 @@ require_once 'head.php';
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      
+      
+
       <div class="modal-body">
-      <h3>Formulaire de Contact</h3>
       <div class="form-container">
     <form action="" method="POST">
         <input type="namespace" name="fullname" required placeholder="entrer votre nom complét"> 
         <input type="email" name="email" required placeholder="entrer votre email">
         <input type="" name="password" required placeholder="entrer votre numéro portable">
         <textarea name="message" placeholder="Votre message..." cols="30" rows="10"></textarea>
-        <input type="submit" name="submit" value="login now" class="form-btn">
     </form>
 </div>
+      </div>
+      <div class="modal-footer">
+      <input type="submit" name="submit" value="login now" class="form-btn">
+       
+      </div>
     </div>
   </div>
 </div>

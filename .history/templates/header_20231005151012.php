@@ -40,6 +40,11 @@ require_once 'head.php';
         <input type="submit" name="submit" value="login now" class="form-btn">
     </form>
 </div>
+      </div>
+      <div class="modal-footer">
+      
+       
+      </div>
     </div>
   </div>
 </div>

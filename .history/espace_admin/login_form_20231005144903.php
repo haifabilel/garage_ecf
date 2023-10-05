@@ -77,4 +77,3 @@ if(!empty($_POST)){
         <a href="forgot_psw.php">Forgot your Password ?</a>
     </form>
 </div>
-</section>

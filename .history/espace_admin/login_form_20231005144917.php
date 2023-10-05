@@ -59,6 +59,7 @@ if(!empty($_POST)){
         <link rel="stylesheet" href="../css/style.css">
     </head>
 <section>
+    <h2></h2>
 <div class="form-container">
     <form action="" method="POST">
        <h3>Login now</h3>

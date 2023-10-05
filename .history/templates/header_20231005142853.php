@@ -25,21 +25,18 @@ require_once 'head.php';
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <h3>Formulaire de Contact</h3>
-      <div class="form-container">
-    <form action="" method="POST">
-        <input type="namespace" name="fullname" required placeholder="entrer votre nom complét"> 
-        <input type="email" name="email" required placeholder="entrer votre email">
-        <input type="" name="password" required placeholder="entrer votre numéro portable">
-        <textarea name="message" placeholder="Votre message..." cols="30" rows="10"></textarea>
-        <input type="submit" name="submit" value="login now" class="form-btn">
-    </form>
-</div>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
@@ -59,5 +56,5 @@ require_once 'head.php';
     </div>
    </div>  
   </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+scr
   

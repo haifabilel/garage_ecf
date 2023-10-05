@@ -20,29 +20,25 @@ require_once 'head.php';
       <a href="./espace_admin/login_form.php"  class="button" id="btn-login" >Espace Pro <i class="fa-solid fa-user"></i></a>
       </div>
     </header>
- <!-- Modal -->
-<div class="modal fade" id="buttonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <h3>Formulaire de Contact</h3>
-      <div class="form-container">
+    <div class="form-container">
     <form action="" method="POST">
-        <input type="namespace" name="fullname" required placeholder="entrer votre nom complét"> 
-        <input type="email" name="email" required placeholder="entrer votre email">
-        <input type="" name="password" required placeholder="entrer votre numéro portable">
-        <textarea name="message" placeholder="Votre message..." cols="30" rows="10"></textarea>
+        <h3>Login now</h3>
+        <?php
+        if(!empty($errors)){
+            foreach($errors as $error){
+                echo '<span class="error-msg" >'.$error.'</span>';
+            };
+        };
+        ?>
+        <input type="email" name="email" required placeholder="enter your email">
+        <input type="password" name="password" required placeholder="enter your password">
+       
         <input type="submit" name="submit" value="login now" class="form-btn">
+        <p>Don't have an account? <a href="registre.php">registre now</a></p>
+        <a href="forgot_psw.php">Forgot your Password ?</a>
     </form>
 </div>
-    </div>
-  </div>
-</div>
+
   <!------------ home ------------->
   <section class="home" >
   <div class="container col-xxl-8 px-2 py-6">
@@ -59,5 +55,5 @@ require_once 'head.php';
     </div>
    </div>  
   </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <?php require_once 'contact.php'?>
   

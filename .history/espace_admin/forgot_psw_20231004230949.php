@@ -17,10 +17,12 @@ require_once 'connexion.php';
     </head>
 <div class="form-container">
     <form action="" method="POST">
-        
+        <?php
+         if(isset($errors)){echo '<span>' .$errors. '</span>';}
+        ?>
         <h3>Recupération de mot de passe</h3>
         <input type="email" name="recup_email" required placeholder="entrer votre adresse mail">
-        <button type="submit" class="btn" name="recup_mdp" >Valider</button>
+        <button type="submit" class="btn btn-p" name="recup_mdp" >Valider</button>
         
     </form>
 </div>

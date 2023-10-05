@@ -37,9 +37,13 @@ require_once 'head.php';
         <input type="email" name="email" required placeholder="entrer votre email">
         <input type="" name="password" required placeholder="entrer votre numéro portable">
         <textarea name="message" placeholder="Votre message..." cols="30" rows="10"></textarea>
-        <input type="submit" name="submit" value="login now" class="form-btn">
     </form>
 </div>
+      </div>
+      <div class="modal-footer">
+      
+       
+      </div>
     </div>
   </div>
 </div>

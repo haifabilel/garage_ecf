@@ -25,21 +25,25 @@ require_once 'head.php';
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
+      <h3>Formulaire de Contact</h3>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <h3>Formulaire de Contact</h3>
       <div class="form-container">
     <form action="" method="POST">
-        <input type="namespace" name="fullname" required placeholder="entrer votre nom complét"> 
-        <input type="email" name="email" required placeholder="entrer votre email">
-        <input type="" name="password" required placeholder="entrer votre numéro portable">
-        <textarea name="message" placeholder="Votre message..." cols="30" rows="10"></textarea>
-        <input type="submit" name="submit" value="login now" class="form-btn">
+    <input type="email" name="email" required placeholder="enter your email">
+        <input type="email" name="email" required placeholder="enter your email">
+        <input type="password" name="password" required placeholder="enter your password">
+        <textarea name="message" placeholder="Votre message..." id="" cols="30" rows="10"></textarea>
     </form>
 </div>
+      </div>
+      <div class="modal-footer">
+      <input type="submit" name="submit" value="login now" class="form-btn">
+       
+      </div>
     </div>
   </div>
 </div>
