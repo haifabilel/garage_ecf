@@ -28,7 +28,7 @@ if(!empty($_POST)){
       
     }
   
-    //changer password USER
+    //changer password admin
     // $password = "...";
     // echo password_hash("...",PASSWORD_DEFAULT);
 if (isset($_POST['email'],$_POST['password'])){

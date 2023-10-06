@@ -13,5 +13,10 @@ try {
 
 }
 
-
+//changer password admin
+if (isset($_POST['email'],$_POST['password'])){
+  $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
+  $stmt->execute([$_POST['email']]);
+  $password = $stm
+}
 ?>

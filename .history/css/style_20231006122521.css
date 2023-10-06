@@ -156,7 +156,7 @@ margin: 10px;
     margin-bottom: 20px;
 
 }
- h3{
+ .form-container h3{
     text-align: center;
     background-color:var(--second-color);
     color:white;

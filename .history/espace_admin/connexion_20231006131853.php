@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 //connexion à la bdd
 $user = 'root';
@@ -12,6 +12,4 @@ try {
   file_put_contents('bdlogs.log', $e->getMessage().PHP_EOL, FILE_APPEND);
 
 }
-
-
-?>
+?> -->

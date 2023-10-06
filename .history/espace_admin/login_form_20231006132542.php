@@ -5,7 +5,7 @@ if(!empty($_POST)){
     if(isset($_POST["email"],$_POST["password"]) && !empty($_POST["email"]
     && !empty($_POST["password"]))){
         
-         //stocker les informations admin
+       
         $sql = "SELECT * FROM `admin` WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
@@ -27,15 +27,8 @@ if(!empty($_POST)){
            };
       
     }
-  
-    //changer password USER
-    // $password = "...";
-    // echo password_hash("...",PASSWORD_DEFAULT);
-if (isset($_POST['email'],$_POST['password'])){
-    $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
-    $stmt->execute([$_POST['email']]);
-    $password = $stmt->fetchColumn();
-  }
+    //stocker les informations admin
+    
 };
 
 

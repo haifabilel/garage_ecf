@@ -18,7 +18,7 @@ require_once 'connexion.php';
 <div class="form-container">
     <form action="" method="POST">
         <h3>Recupération de mot de passe</h3>
-        <input type="email" name="email" required placeholder="entrer votre adresse mail">
+        <input type="email" name="recup_email" required placeholder="entrer votre adresse mail">
         <button type="submit" class="btn" name="recup_mdp" >Valider</button>
         
     </form>

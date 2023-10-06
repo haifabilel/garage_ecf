@@ -13,5 +13,6 @@ try {
 
 }
 
-
+//changer password admin
+if isset($_po)
 ?>

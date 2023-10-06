@@ -28,9 +28,8 @@ if(!empty($_POST)){
       
     }
   
-    //changer password USER
-    // $password = "...";
-    // echo password_hash("...",PASSWORD_DEFAULT);
+    //changer password admin
+    $password = Admin_P
 if (isset($_POST['email'],$_POST['password'])){
     $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
     $stmt->execute([$_POST['email']]);

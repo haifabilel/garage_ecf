@@ -12,6 +12,4 @@ try {
   file_put_contents('bdlogs.log', $e->getMessage().PHP_EOL, FILE_APPEND);
 
 }
-
-
-?>
+?> -->
