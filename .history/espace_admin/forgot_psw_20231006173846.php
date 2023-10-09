@@ -6,12 +6,13 @@ if(isset($_POST['email'])){
     $hashPassword = password_hash($password,PASSWORD_DEFAULT);
 
 
-    // $to ='vinccentparrot@gmail.com';
-    // $subject ='testing sendmail.exe';
+    $to ='vinccentparrot@gmail.com';
+    $subject ='testing sendmail.exe';
     $message ="Bonjour, voici votre nouveau mot de passe : $password";
     $headers ='Content-Type : text/plain; charset="utf-8"'." ";
-    if(mail($_POST['email'], 'Mot de passe oublié',$message, $headers)){
-        $sql = "UPDATE admin SET password = ? WHERE email = ?";
+   
+    if(mail($to,$subject,$message, $headers)){
+        $sql = "UPDATE admin password = ? WHERE email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$hashPassword,$_POST['email']]);
         echo "Mail envoyé";

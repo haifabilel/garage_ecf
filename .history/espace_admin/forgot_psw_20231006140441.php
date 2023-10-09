@@ -1,26 +1,19 @@
 <?php
 require_once 'connexion.php';
 
-
-// $password = "test";
-
-
-// if(isset($_POST['email'], $_POST['password'])){
-//     $req = $conn->prepare('SELECT password FROM admin WHERE email = ?');
-//     $req->execute([$_POST['email']]);
-//     $Hpassword = $req->fetchColumn();
-//     if(password_verify($_POST['password'], $Hpassword)){
-//         echo "ok";
-    
-//     }else{
-//         echo "pas ok";
-//     }
-
-// }
 if(isset($_POST['email'])){
     $password = uniqid();
+    $hashPassword = password_hash($password,PASSWORD_DEFAULT);
+
+    $message = "Bonjour, voici votre nouveau mot de passe : $password";
+    $headers ='Content-Type : text/plain; charset="utf-8"'." ";
    
+    if(mail($_POST['email'], 'Mot de passe oublié',$message, $headers)){
+        $sql = "UPDATE admin password = ? WHERE email = ?";
+        $st
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,8 +29,9 @@ if(isset($_POST['email'])){
     </head>
 <div class="form-container">
     <form action="" method="POST">
-        <input type="email" name="email" required placeholder="enter your email">
-        <button type="submit" >Send a random password</button>
+        <h3>Recupération de mot de passe</h3>
+        <input type="email" name="email" required placeholder="entrer votre adresse mail">
+        <button type="submit" class="btn" name="recup_mdp" >Valider</button>
         
     </form>
 </div>
