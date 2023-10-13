@@ -10,7 +10,7 @@ if(isset($_POST['email'])){
     // $subject ='testing sendmail.exe';
     $message ="Bonjour, voici votre nouveau mot de passe : $password";
     $headers ='Content-Type : text/plain; charset="utf-8"'."\r\n";
-    if(mail('vinccentparrot@localhost.com', 'Mot de passe oublié',$message,'vinccentparrot@gmail.com')){
+    if(mail('vinccentparrot@localhost.com', 'Mot de passe oublié',$message,'$headers')){
         $sql = "UPDATE admin SET password = ? WHERE email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$hashPassword,$_POST['email']]);

@@ -24,7 +24,7 @@ require_once 'head.php'
     </head>
    <section id="Contact" class="Contact pt-5">
     <div class="form-container">
-    <form action="p-contact.php" method="POST">
+    <form action="p-contact." method="POST">
        <h3>Formulaire de contact</h3>
         <input type="namespace" name="fullname" required placeholder="entrer votre nom complét"> 
         <input type="email" name="email" required placeholder="entrer votre email">

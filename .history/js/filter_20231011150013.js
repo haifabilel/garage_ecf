@@ -3,6 +3,6 @@ export default class Filter {
         if(element === null){
            return 
         }
-       console.log('okkkkkkkkkkkkkk')
+       console.log('    <script src="./js/script.js"></script>')
     }
 }
