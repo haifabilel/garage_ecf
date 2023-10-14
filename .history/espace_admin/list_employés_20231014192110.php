@@ -36,7 +36,7 @@
         <td><?=$user['name']?></td>
         <td><?=$user['email']?></td>
         <td>
-            <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
+            <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer</a>
         </td>
         </tr>
         <?php 
