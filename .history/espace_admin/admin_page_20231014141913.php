@@ -43,8 +43,8 @@
       </div>
     </header>
     <section class="pannel_admin">
-     <p class="dashboard-title">Pannel admin : Bienvenue Mr Parrot</p>
-    <a href="list_employés.php">Afficher la liste des membres</a>
+<h2 class="dashboard-title">Pannel admin : Bienvenue Mr Parrot</h2>
+
 
 
     </section>

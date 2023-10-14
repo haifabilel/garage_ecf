@@ -18,7 +18,7 @@
 $recupUsers = $conn->query('SELECT * FROM employé');
 while($user = $recupUsers->fetch()){
    ?>
- <p><?= $user['name'].$user['email'];?></p>
+ <p><?
  <?php
 }
 ?>

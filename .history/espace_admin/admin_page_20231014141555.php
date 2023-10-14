@@ -42,9 +42,9 @@
       <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
       </div>
     </header>
-    <section class="pannel_admin">
-     <p class="dashboard-title">Pannel admin : Bienvenue Mr Parrot</p>
-    <a href="list_employés.php">Afficher la liste des membres</a>
+    <section>
+<h2 class="mt-5">Pannel admin : Bienvenue Mr Parrot</h2>
+
 
 
     </section>

@@ -15,13 +15,7 @@
 <body>
    <!-- Afficher tous les membres enregistrés  -->
    <?php
-$recupUsers = $conn->query('SELECT * FROM employé');
-while($user = $recupUsers->fetch()){
-   ?>
- <p><?= $user['name'].$user['email'];?></p>
- <?php
-}
-?>
+$recupUsers = $conn->query('')
 
    ?>
 </body>
