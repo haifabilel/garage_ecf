@@ -28,8 +28,8 @@ if(!empty($_POST)) {
 }
   
     //changer password USER
-//     $password = "Admin_P1992";
-//     echo password_hash("Admin_P1992",PASSWORD_DEFAULT);
+//     $password = "Admin_P92";
+//     echo password_hash("...",PASSWORD_DEFAULT);
 // if (isset($_POST['email'],$_POST['password'])){
 //     $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
 //     $stmt->execute([$_POST['email']]);
