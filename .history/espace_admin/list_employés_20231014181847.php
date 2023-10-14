@@ -22,6 +22,8 @@
 <tr>
 <th>Nom</th>
 <th>Email</th>
+<th>Portable</th>
+<th>Age</th>
 <th>Button</th>
 </tr>
 </thead>

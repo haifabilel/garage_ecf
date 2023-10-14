@@ -22,6 +22,8 @@
 <tr>
 <th>Nom</th>
 <th>Email</th>
+<th>Portable</th>
+<th>Age</th>
 <th>Button</th>
 </tr>
 </thead>
@@ -35,9 +37,11 @@
         <tr>
         <td><?=$user['name']?></td>
         <td><?=$user['email']?></td>
+        <td><?=$user['portable']?></td>
+        <td><?=$user['age']?></td>
         <td>
-            <a class="btn btn-primary" href="modifier.php?id=<?=$user['id']?>">Modifier</a>
-            <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer</a>
+            <a class="btn btn-primary" href="modifier.php">Modifier</a>
+            <a class="btn btn-primary" href="">Supprimer</a>
         </td>
         </tr>
         <?php 

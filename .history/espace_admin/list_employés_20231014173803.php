@@ -1,4 +1,5 @@
 <?php
+ require_once ('connexion.php');
  session_start();
 
 
@@ -22,27 +23,44 @@
 <tr>
 <th>Nom</th>
 <th>Email</th>
+<th>Portable</th>
+<th>Age</th>
 <th>Button</th>
 </tr>
 </thead>
 <tbody>
     <!-- Parcourir la liste des employés -->
     <?php
-     require_once ('connexion.php');
-     $req = $conn->query('SELECT * FROM employé');
+     $req =$conn->prepare('SELECT * FROM employé');
      while($user = $req->fetch()){
         ?>
-        <tr>
-        <td><?=$user['name']?></td>
-        <td><?=$user['email']?></td>
-        <td>
-            <a class="btn btn-primary" href="modifier.php?id=<?=$user['id']?>">Modifier</a>
-            <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer</a>
-        </td>
-        </tr>
+        <td></td>
+        
+        
         <?php 
      }
     ?>
+    
+<!-- <tr>
+<td>first_user</td>
+<td>first_user@gmail.com</td>
+<td>06000000</td>
+<td>35 ans</td>
+<td>
+   <a class="btn btn-primary" href="">Modifier</a>
+   <a class="btn btn-primary" href="">Supprimer</a>
+</td>
+</tr>
+<tr>
+<td>second_user</td>
+<td>first_user@gmail.com</td>
+<td>052312322</td>
+<td>28 ans</td>
+<td>
+   <a class="btn btn-primary" href="">Modifier</a>
+   <a class="btn btn-primary" href="">Supprimer</a>
+</td>
+</tr> -->
 </tbody>
 </table>
    </div>
