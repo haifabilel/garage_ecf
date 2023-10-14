@@ -28,9 +28,15 @@
 <th>Button</th>
 </tr>
 </thead>
+<tfoot>
+<tr>
+<td colspan="5">
+<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+</td>
+</tr>
+</tfoot>
 <tbody>
-    
-<!-- <tr>
+<tr>
 <td>first_user</td>
 <td>first_user@gmail.com</td>
 <td>06000000</td>
@@ -42,14 +48,14 @@
 </tr>
 <tr>
 <td>second_user</td>
-<td>first_user@gmail.com</td>
-<td>052312322</td>
-<td>28 ans</td>
+<td>cell2_2</td>
+<td>cell3_2</td>
+<td>cell4_2</td>
 <td>
    <a class="btn btn-primary" href="">Modifier</a>
    <a class="btn btn-primary" href="">Supprimer</a>
 </td>
-</tr> -->
+</tr>
 </tbody>
 </table>
    </div>

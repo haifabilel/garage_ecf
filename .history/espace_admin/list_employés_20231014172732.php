@@ -29,7 +29,6 @@
 </tr>
 </thead>
 <tbody>
-    
 <!-- <tr>
 <td>first_user</td>
 <td>first_user@gmail.com</td>

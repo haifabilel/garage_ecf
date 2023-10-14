@@ -28,9 +28,9 @@
 <th>Button</th>
 </tr>
 </thead>
+
 <tbody>
-    
-<!-- <tr>
+<tr>
 <td>first_user</td>
 <td>first_user@gmail.com</td>
 <td>06000000</td>
@@ -49,7 +49,7 @@
    <a class="btn btn-primary" href="">Modifier</a>
    <a class="btn btn-primary" href="">Supprimer</a>
 </td>
-</tr> -->
+</tr>
 </tbody>
 </table>
    </div>

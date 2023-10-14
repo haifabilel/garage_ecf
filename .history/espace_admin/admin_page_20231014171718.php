@@ -45,7 +45,7 @@
     <section class="pannel_admin">
      <p class="dashboard-title">Pannel admin : Bienvenue Mr Parrot</p>
      <?php  
-     require_once('list_employés.php')
+     require_once('list_employé')
      ?>
 
 

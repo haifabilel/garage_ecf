@@ -18,40 +18,29 @@
    <!-- Afficher tous les membres enregistrés  -->
    <div class="container_user my-5">
      <h2>liste des employés</h2>
-     <table class="blueTable">
-<thead>
-<tr>
-<th>Nom</th>
-<th>Email</th>
-<th>Portable</th>
-<th>Age</th>
-<th>Button</th>
-</tr>
-</thead>
-<tbody>
-    
-<!-- <tr>
-<td>first_user</td>
-<td>first_user@gmail.com</td>
-<td>06000000</td>
-<td>35 ans</td>
-<td>
-   <a class="btn btn-primary" href="">Modifier</a>
-   <a class="btn btn-primary" href="">Supprimer</a>
-</td>
-</tr>
-<tr>
-<td>second_user</td>
-<td>first_user@gmail.com</td>
-<td>052312322</td>
-<td>28 ans</td>
-<td>
-   <a class="btn btn-primary" href="">Modifier</a>
-   <a class="btn btn-primary" href="">Supprimer</a>
-</td>
-</tr> -->
-</tbody>
-</table>
+     <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Portable</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>first_user</td>
+                <td>first_user@gmail.com</td>
+                <td>60000000</td>
+                <td>35 ans</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="">Modifier</a>
+                    <a class="btn btn-primary btn-sm" href="">Supprimer</a>
+                </td>
+            </tr>
+        </tbody>
+     </table>
+
    </div>
 
 

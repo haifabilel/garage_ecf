@@ -266,12 +266,10 @@ table.blueTable {
     width: 80%;
     text-align: left;
     border-collapse: collapse;
-    margin-left: 8rem;
   }
   table.blueTable td, table.blueTable th {
     border: 1px solid #AAAAAA;
     padding: 3px 2px;
-    text-align: center;
   }
   table.blueTable tbody td {
     font-size: 13px;
