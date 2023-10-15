@@ -17,7 +17,7 @@
    <!-- Afficher tous les membres enregistrés  -->
    <div class="container_user my-5">
      <h2>liste des employés</h2>
-    <a href="registre.php" class="btn btn-primary" style="margin-left:45%; margin-bottom:20px;">Ajouter Employé</a>
+     <button class="btn btn-primary" href></button>
      <table class="blueTable">
 <thead>
 <tr>

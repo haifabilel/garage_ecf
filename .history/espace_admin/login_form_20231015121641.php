@@ -78,11 +78,11 @@ if(!empty($_POST)) {
         ?>
         <input type="email" name="email" required placeholder="enter your email">
         <input type="password" name="password" required placeholder="enter your password">
+        <input type="submit" name="submit" value="login now" class="form-btn">
         <select name="user_type" >
             <option  value="admin">admin</option>
             <option value="employé">employé</option>
         </select>
-        <input type="submit" name="submit" value="login now" class="form-btn">
         <p>Don't have an account? <a href="registre.php">registre now</a></p>
         <a href="forgot_psw.php">Forgot your Password ?</a>
     </form>

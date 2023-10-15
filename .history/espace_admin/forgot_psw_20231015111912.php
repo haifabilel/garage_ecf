@@ -9,18 +9,18 @@ if(isset($_POST['email'])){
 
 
 //     // $to ='vinccentparrot@gmail.com';
-    $subject ='testing sendmail.exe';
-    $message ="Bonjour, voici votre nouveau mot de passe : $password";
-   $headers = "Content-Type : text/plain; charset=utf-8\r\n";
-    if(mail('vinccentparrot@localhost.com', 'Mot de passe oublié',$message,$headers)){
-        $sql = "UPDATE admin SET password = ? WHERE email = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$hashPassword,$_POST['email']]);
-        echo "Mail envoyé";
-    }else{
-        echo "erreur";
-    }
-}
+//     // $subject ='testing sendmail.exe';
+//     $message ="Bonjour, voici votre nouveau mot de passe : $password";
+//    $headers = "Content-Type : text/plain; charset=utf-8\r\n";
+//     if(mail('vinccentparrot@gmail.com', 'Mot de passe oublié',$message,$headers)){
+//         $sql = "UPDATE admin SET password = ? WHERE email = ?";
+//         $stmt = $conn->prepare($sql);
+//         $stmt->execute([$hashPassword,$_POST['email']]);
+//         echo "Mail envoyé";
+//     }else{
+//         echo "erreur";
+//     }
+// }
 
 
 ?>

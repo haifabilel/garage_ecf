@@ -6,7 +6,7 @@ if(!empty($_POST)) {
     && !empty($_POST["password"]))) {
 
         //stocker les informations admin
-        $sql = "SELECT * FROM `admin` WHERE `email` = :email";
+        $sql = "SELECT user_type FROM admin UNION SELECT user_type FROM employé WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
@@ -21,7 +21,7 @@ if(!empty($_POST)) {
             $errors['password'] = "Votre password n'est pas valide";
 
         } else {
-            header('location:admin_page.php');
+            if($user_type['user_type'] == admin)
         };
 
     }
@@ -92,3 +92,8 @@ if(!empty($_POST)) {
 <?php
 require_once '../templates/footer.php';
 ?>
+
+<!-- 
+} else {
+            header('location:admin_page.php');
+        }; -->

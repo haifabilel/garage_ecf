@@ -30,13 +30,13 @@
           <img src="../assets/images/1.png" alt="logo" style="width: 190px; height: 140px; ">
         </a>
       </div>
-
+      <div class="title"></div>
       <div class="col-md-3 text-end">
       <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
       </div>
     </header>
     <section class="pannel_admin">
-     <p class="dashboard-title">Pannel admin : Bienvenue Mr Parrot</p>
+     
      <?php  
      require_once('list_employés.php')
      ?>
