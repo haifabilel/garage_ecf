@@ -38,11 +38,18 @@ define('CRENEAUX', [
 [
   [8, 12],
   [14, 19]
+],
+[
+  [8, 12],
+  [14, 19]
+],
+[
+  [8, 12],
+  [14, 19]
 ]
-
 ]);
 
-// $creneaux =creneaux_html(CRENEAUX);
+
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">

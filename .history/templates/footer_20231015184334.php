@@ -42,7 +42,7 @@ define('CRENEAUX', [
 
 ]);
 
-// $creneaux =creneaux_html(CRENEAUX);
+$creneaux =creneaux_html(CRENEAUX);
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">

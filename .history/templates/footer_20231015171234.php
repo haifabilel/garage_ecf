@@ -4,45 +4,17 @@ require_once 'head.php';
 function creneaux_html (array $creneaux){
 $phrases = [];
 foreach ($creneaux as $creneau){
-  $phrases[] = "de <strong> {$creneau[0]}h</strong> / <strong>{$creneau[1]}h</strong>";
+  $phrases[] = "de <strong> {$creneau[0]}h</strong> à <strong>{$creneau[1]}h</strong>";
 }
-return 'Ouvert '. implode(' - ', $phrases);
+return 'Ouvert '. implode(' et ', $phrases);
 };
-define('jours',[
-  'Lundi',
-  'Mardi',
-  'Mercredi',
-  'Jeudi',
-  'Vendredi',
-  'Samedi',
-  'Dimanche'
 
-]);
 define('CRENEAUX', [
-[
-  [8, 12],
-  [14, 19]
-],
-[
-  [8, 12],
-  [14, 19]
-],
-[
-  [8, 12],
-  [14, 19]
-],
-[
-  [8, 12],
-  [14, 19]
-],
-[
-  [8, 12],
-  [14, 19]
-]
-
+[8, 12],
+[14, 19]
 ]);
 
-// $creneaux =creneaux_html(CRENEAUX);
+$creneaux = creneaux_html(CRENEAUX);
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
@@ -60,13 +32,8 @@ define('CRENEAUX', [
           </ul>
       </div>
     </div>
-   <div class="col-md-4 ">
-    <h3>les horaires d'ouverture</h3>
-    <ul>
-      <?php foreach($JOURS as $k=> $jours): ?>
-        <li><?= creneaux_html(CRENEAUX[$k]); ?></li>
-      <?php endforeach ;?>
-    </ul>
+   <div class="col-md-6 d-flex align-items-center">
+    <!-- <h3>les horaires d'ouverture</h3> -->
      <?= $creneaux ?>
    </div>
  </footer>

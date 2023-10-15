@@ -42,7 +42,7 @@ define('CRENEAUX', [
 
 ]);
 
-// $creneaux =creneaux_html(CRENEAUX);
+
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
@@ -63,7 +63,7 @@ define('CRENEAUX', [
    <div class="col-md-4 ">
     <h3>les horaires d'ouverture</h3>
     <ul>
-      <?php foreach($JOURS as $k=> $jours): ?>
+      <?php foreach(jour as $k=> $jours): ?>
         <li><?= creneaux_html(CRENEAUX[$k]); ?></li>
       <?php endforeach ;?>
     </ul>

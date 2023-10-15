@@ -6,7 +6,7 @@ $phrases = [];
 foreach ($creneaux as $creneau){
   $phrases[] = "de <strong> {$creneau[0]}h</strong> / <strong>{$creneau[1]}h</strong>";
 }
-return 'Ouvert '. implode(' - ', $phrases);
+return 'Ouvert '. implode(' et ', $phrases);
 };
 define('jours',[
   'Lundi',
@@ -38,11 +38,18 @@ define('CRENEAUX', [
 [
   [8, 12],
   [14, 19]
+],
+[
+  [8, 12],
+  [14, 19]
+],
+[
+  [8, 12],
+  [14, 19]
 ]
-
 ]);
 
-// $creneaux =creneaux_html(CRENEAUX);
+
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
