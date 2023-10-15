@@ -3,7 +3,7 @@ require_once 'head.php';
 require_once 'config.php';
 
 function creneaux_html (array $creneaux){
-  if(count($creneaux) === 0){
+  if(empty($creneaux) === 0){
     return 'Fermé';
   }
 $phrases = [];
@@ -13,6 +13,7 @@ foreach ($creneaux as $creneau){
 return 'Ouvert '. implode(' - ', $phrases);
 };
 
+// $creneaux =creneaux_html(CRENEAUX);
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
@@ -40,6 +41,7 @@ return 'Ouvert '. implode(' - ', $phrases);
       </li>
       <?php endforeach ;?>
     </ul>
+     <?= $creneaux ?>
    </div>
  </footer>
 

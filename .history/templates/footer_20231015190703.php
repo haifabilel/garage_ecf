@@ -40,6 +40,7 @@ return 'Ouvert '. implode(' - ', $phrases);
       </li>
       <?php endforeach ;?>
     </ul>
+     <?= $creneaux ?>
    </div>
  </footer>
 

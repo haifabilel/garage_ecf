@@ -13,6 +13,7 @@ foreach ($creneaux as $creneau){
 return 'Ouvert '. implode(' - ', $phrases);
 };
 
+// $creneaux =creneaux_html(CRENEAUX);
 
 ?>
 <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
@@ -35,11 +36,12 @@ return 'Ouvert '. implode(' - ', $phrases);
     <ul>
       <?php foreach(jours as $k=> $jours): ?>
         <li>
-          <strong><?= $jours ?></strong> :
+          <strong><</strong>
           <?= creneaux_html(CRENEAUX[$k]); ?>
       </li>
       <?php endforeach ;?>
     </ul>
+     <?= $creneaux ?>
    </div>
  </footer>
 
