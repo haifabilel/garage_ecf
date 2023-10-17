@@ -29,8 +29,8 @@ if(!empty($_POST)) {
        
     }
 }
-// $sql = "SELECT * FROM admin INNER JOIN employé
-// ON employé.id = admin.id";
+$sql = "SELECT * FROM admin INNER JOIN employé
+ON employé.Id = admin.Idemployé";
 
 
     //changer password USER
@@ -74,7 +74,7 @@ if(!empty($_POST)) {
 <section>
 <div class="form-container">
     <form action="" method="POST">
-       <h3 style="color: white;">Login now</h3>
+       <h3>Login now</h3>
         <?php
         if(!empty($errors)){
             foreach($errors as $error){

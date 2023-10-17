@@ -1,50 +1,49 @@
-<?php 
- require_once ('connexion.php');
+<?php
+require_once ('connexion.php');
 session_start();
-if(!empty($_POST)) {
-    if(isset($_POST["email"],$_POST["password"]) && !empty($_POST["email"]
-    && !empty($_POST["password"]))) {
 
-        //stocker les informations admin
-        $sql = "SELECT * FROM `admin` WHERE `email` = :email";
-        $query = $conn->prepare($sql);
-        $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
-        $query->execute();
-        $user_type = $query->fetch();
+if(!empty($_POST)){
+    $errors = array();
 
-        if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = "Votre email n'est pas valide";
-
-        } elseif(!$user_type) {
-            $errors['user_type'] = "Ce user n'existe pas";
-
-        } elseif(!$user_type["password"]) {
-            $errors['password'] = "Votre password n'est pas valide";
-
-        } else {
-            header('location:admin_page.php');
+    if(empty($_POST['name']) || !preg_match('/^[a-zA-Z0-9_]+$/',$_POST['name'])){
+        $errors['name'] = "Votre name n'est pas valide";
+    }else{
+        $req = $conn->prepare('SELECT id FROM employé  WHERE name = ?');
+        $req->execute([$_POST['name']]);
+        $user = $req-> fetch();
+        if($user){
+            $errors['name'] = 'Ce name est déja utilusé';
+           
         };
+    };
 
-        
-       
-    }
-}
-// $sql = "SELECT * FROM admin INNER JOIN employé
-// ON employé.id = admin.id";
+// Verfier le format de l'email
+    if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        $errors['email'] ="Votre email n'est pas valide";
+    }else{
+        $req = $conn->prepare('SELECT id FROM employé WHERE email = ?');
+        $req-> execute([$_POST['email']]);
+        $user = $req-> fetch();
+        if($user){
+            $errors['email'] = 'Cet email est déja utilusé';
+        };
+    };
 
-
-    //changer password USER
-//     $password = "";
-//     echo password_hash("Admin_P1992",PASSWORD_DEFAULT);
-// if (isset($_POST['email'],$_POST['password'])){
-//     $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
-//     $stmt->execute([$_POST['email']]);
-//     $hpassword = $stmt->fetchColumn();
-
-// };
-
-
+//Verfier si le password est le meme password confirm
+    if(empty($_POST['password']) || $_POST['password'] != $_POST['cpassword']){
+        $errors['password'] ="Votre password n'est pas valide";
+    };
+//insertion donnée employé
+    if(empty($errors)){
+      $req = $conn->prepare("INSERT INTO employé SET name = ? ,email = ?,  password = ?, role = ? ");  
+     //Crypter le mote de passe avec la methode BCrypt
+      $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
+      $req->execute([$_POST['name'],$_POST['email'], $password, $_POST['user_type']]);
+      header('location:login_form.php');
+    }; 
+};
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -71,10 +70,10 @@ if(!empty($_POST)) {
             <!-- CSS Link -->
         <link rel="stylesheet" href="../css/style.css">
     </head>
-<section>
+   
 <div class="form-container">
     <form action="" method="POST">
-       <h3 style="color: white;">Login now</h3>
+        <h3>Registre now</h3>
         <?php
         if(!empty($errors)){
             foreach($errors as $error){
@@ -82,19 +81,25 @@ if(!empty($_POST)) {
             };
         };
         ?>
-        <input type="email" name="email" required placeholder="enter your email">
+        <input type="text" name="name" required placeholder="enter your name">
+        <input type="email" name="email" required placeholder="enter your mail">
         <input type="password" name="password" required placeholder="enter your password">
+        <input type="password" name="cpassword" required placeholder="confirm your password">
         <select name="user_type" >
             <option  value="admin">admin</option>
             <option value="employé">employé</option>
         </select>
-        <input type="submit" name="submit" value="login now" class="form-btn">
-        <p>Don't have an account? <a href="registre.php">registre now</a></p>
-        <a href="forgot_psw.php">Forgot your Password ?</a>
+        <input type="submit" name="submit" value="register now" class="form-btn">
+        <p>already have an account? <a href="login_form.php">login now</a></p>
     </form>
 </div>
-</section>
 
-<?php
-require_once '../templates/footer.php';
-?>
+
+
+
+
+
+
+
+
+

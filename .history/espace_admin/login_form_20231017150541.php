@@ -6,7 +6,7 @@ if(!empty($_POST)) {
     && !empty($_POST["password"]))) {
 
         //stocker les informations admin
-        $sql = "SELECT * FROM `admin` WHERE `email` = :email";
+        $sql="SELECT * FROM employé"
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
@@ -30,9 +30,8 @@ if(!empty($_POST)) {
     }
 }
 // $sql = "SELECT * FROM admin INNER JOIN employé
-// ON employé.id = admin.id";
-
-
+// ON employé.Id = admin.Idemployé";
+  
     //changer password USER
 //     $password = "";
 //     echo password_hash("Admin_P1992",PASSWORD_DEFAULT);
@@ -74,7 +73,7 @@ if(!empty($_POST)) {
 <section>
 <div class="form-container">
     <form action="" method="POST">
-       <h3 style="color: white;">Login now</h3>
+       <h3>Login now</h3>
         <?php
         if(!empty($errors)){
             foreach($errors as $error){

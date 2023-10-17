@@ -74,7 +74,7 @@ if(!empty($_POST)) {
 <section>
 <div class="form-container">
     <form action="" method="POST">
-       <h3 style="color: white;">Login now</h3>
+       <h3 style="">Login now</h3>
         <?php
         if(!empty($errors)){
             foreach($errors as $error){
