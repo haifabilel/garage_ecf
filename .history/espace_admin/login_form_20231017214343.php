@@ -6,7 +6,7 @@ if(!empty($_POST)) {
     && !empty($_POST["password"]))) {
 
         //stocker les informations admin
-        $sql = "SELECT * FROM `admin` WHERE `email` = :email";
+        $sql = "SELECT * FROM `employé` WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
@@ -22,12 +22,8 @@ if(!empty($_POST)) {
             $errors['password'] = "Votre password n'est pas valide";
 
         }else {
-            if($user_type['user_type'] == 'admin'){
-                header('location:admin_page.php');
-            }else{
-                header('location:employé_page.php');
-            }
-           
+            if($user_type['user_type'] == 'admin'){}
+            header('location:admin_page.php');
         };
 
         
@@ -95,6 +91,7 @@ if(!empty($_POST)) {
         </select>
         <input type="submit" name="submit" value="login now" class="form-btn">
         <p>Don't have an account? <a href="registre.php">registre now</a></p>
+        <a href="forgot_psw.php">Forgot your Password ?</a>
     </form>
 </div>
 </section>

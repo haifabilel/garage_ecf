@@ -265,8 +265,8 @@ footer{
     display:block;
     width:80%;
 }
-.panel{
-    margin-top:10rem;
+.container_panel{
+    display: flex;
 }
 /* Table user */
 table.blueTable {

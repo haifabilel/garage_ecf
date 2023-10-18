@@ -6,7 +6,7 @@ if(!empty($_POST)) {
     && !empty($_POST["password"]))) {
 
         //stocker les informations admin
-        $sql = "SELECT * FROM `admin` WHERE `email` = :email";
+        $sql = "SELECT * FROM `employé` WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
