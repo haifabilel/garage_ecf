@@ -113,14 +113,15 @@
         <div class="form-group">
            <textarea name="user_review" id="user_review" class="form-control" placeholder="Enter your review" ></textarea>
         </div>
-        <div class="form-group text-center mt-4">
-            <button type="button" class="btn btn-primary" id="save">Valider</button>
+        <div class="form-group">
+            <button></button>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-</section>
-
-<script src="../js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

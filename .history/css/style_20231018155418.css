@@ -273,9 +273,7 @@ footer{
     width:80%;
     margin-left:15%;   
 }
-.container_reviews .card{
-    margin-top:20px;
-}
+..container_reviews .card
 .container_reviews .card:hover{
     background-color: white;
 }

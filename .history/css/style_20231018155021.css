@@ -271,19 +271,12 @@ footer{
 /* -----------------Reviews starts------------ */
 .container_reviews{
     width:80%;
-    margin-left:15%;   
-}
-.container_reviews .card{
-    margin-top:20px;
+    margin-left:15%; 
 }
 .container_reviews .card:hover{
     background-color: white;
 }
-.container_reviews h3{
-   margin-left: 20px;
-    width:80%;
-   
-}
+.container_reviews h3
 
 /* -----------------Reviews ENDS------------ */
 /* Table user */
