@@ -69,9 +69,8 @@ $('#save_review').click(function(){
     }
     else
     {
-
         $.ajax({
-            url:"reviews.php",
+            url:"employé_page.",
             method:"POST",
             data:{rating_data:rating_data, user_name:user_name, user_review:user_review},
             success:function(data)

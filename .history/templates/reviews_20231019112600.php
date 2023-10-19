@@ -1,29 +1,5 @@
 <?php
-require_once '../espace_admin/connexion.php';
-
-if(isset($_POST["rating_data"]))
-{
-
-	$data = array(
-		':user_name'		=>	$_POST["user_name"],
-		':user_rating'		=>	$_POST["rating_data"],
-		':user_review'		=>	$_POST["user_review"],
-		':datetime'			=>	time()
-	);
-
-	$query = "INSERT INTO review_table (user_name, user_rating, user_review, datetime) 
-	VALUES (:user_name, :user_rating, :user_review, :datetime)
-	";
-
-	$statement = $conn->prepare($query);
-
-	$statement->execute($data);
-
-	echo "Merci";
-
-}
-
-
+// require_once 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -114,8 +90,8 @@ if(isset($_POST["rating_data"]))
                         </p>
     				</div>
     				<div class="col-sm-4 text-center">
-    					<h4 class="mt-4 mb-3">Donner votre avis</h4>
-    					<button type="button" name="add_review" id="add_review" class="btn btn-primary">Review </button>
+    					<h4 class="mt-4 mb-3">Write Review Here</h4>
+    					<button type="button" name="add_review" id="add_review" class="btn btn-primary">Review <i class="fa-solid fa-star-sharp-half-stroke"></i></button>
     				</div>
     			</div>
     		</div>
@@ -142,7 +118,7 @@ if(isset($_POST["rating_data"]))
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 	        	</h4>
-                <!-- <form   action="../espace_admin/employé_page.php"  method="$_POST"> -->
+                <form action="employé_page.php" method="$_POST">
 	        	<div class="form-group">
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
 	        	</div>
@@ -150,9 +126,9 @@ if(isset($_POST["rating_data"]))
 	        		<textarea name="user_review" id="user_review" class="form-control" placeholder="Type Review Here"></textarea>
 	        	</div>
 	        	<div class="form-group text-center mt-4">
-	        		<button type="submit" class="btn btn-primary" id="save_review">Submit</button>
+	        		<button type="button" class="btn btn-primary" id="save_review">Submit</button>
 	        	</div>
-                <!-- </form> -->
+                </form>
 	      	</div>
     	</div>
   	</div>

@@ -8,7 +8,7 @@ $('#add_review').click(function(){
     $('#review_modal').modal('show');
 
 });
-//Changeer la couleur de l'etoile en passant le curseur
+//Changeer la couleur de l'etoile en passant
 $(document).on('mouseenter', '.submit_star', function(){
 
     var rating = $(this).data('rating');
@@ -23,7 +23,7 @@ $(document).on('mouseenter', '.submit_star', function(){
     }
 
 });
-//Réinitialiser le background color de l'étoile
+
 function reset_background()
 {
     for(var count = 1; count <= 5; count++)
@@ -55,7 +55,7 @@ $(document).on('click', '.submit_star', function(){
     rating_data = $(this).data('rating');
 
 });
-//enregitrer le choix de nombre d'étoile
+
 $('#save_review').click(function(){
 
     var user_name = $('#user_name').val();
@@ -64,14 +64,13 @@ $('#save_review').click(function(){
 
     if(user_name == '' || user_review == '')
     {
-        alert("Veuillez remplir tous les champs");
+        alert("Please Fill Both Field");
         return false;
     }
     else
     {
-
         $.ajax({
-            url:"reviews.php",
+            url:"submit_rating.php",
             method:"POST",
             data:{rating_data:rating_data, user_name:user_name, user_review:user_review},
             success:function(data)

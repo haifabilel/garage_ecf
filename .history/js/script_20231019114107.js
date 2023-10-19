@@ -64,14 +64,13 @@ $('#save_review').click(function(){
 
     if(user_name == '' || user_review == '')
     {
-        alert("Veuillez remplir tous les champs");
+        alert("Veuillez remplir t");
         return false;
     }
     else
     {
-
         $.ajax({
-            url:"reviews.php",
+            url:"submit_rating.php",
             method:"POST",
             data:{rating_data:rating_data, user_name:user_name, user_review:user_review},
             success:function(data)

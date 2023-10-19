@@ -71,7 +71,7 @@ $('#save_review').click(function(){
     {
 
         $.ajax({
-            url:"reviews.php",
+            url:"../espace_admin/employé_page.php",
             method:"POST",
             data:{rating_data:rating_data, user_name:user_name, user_review:user_review},
             success:function(data)
