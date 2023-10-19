@@ -1,4 +1,4 @@
-// ----------------star rating-----------------
+STAR RATIN
 var rating_data = 0;
 
 $('#add_review').click(function(){

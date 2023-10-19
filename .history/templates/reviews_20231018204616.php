@@ -112,12 +112,12 @@
 	        	</button>
 	      	</div>
 	      	<div class="modal-body">
-	      		<h4 class="text-center mt-2 mb-4">
+	      		<h4 class="text-center stars mt-2 mb-4">
 	        		<i class="fa-regular fa-star submit_star mr-1" id="submit_star_1" data-rating="1"></i>
                     <i class="fa-regular fa-star submit_star mr-1" id="submit_star_2" data-rating="2"></i>
-                    <i class="fa-regular fa-star  submit_star mr-1" id="submit_star_3" data-rating="3"></i>
-                    <i class="fa-regular fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
-                    <i class="fa-regular fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
+                    <i class="fa-regular fa-star submit_star mr-1" id="submit_star_3" data-rating="3"></i>
+                    <i class="fa-regular fa-star submit_star mr-1" id="submit_star_4" data-rating="4"></i>
+                    <i class="fa-regular fa-star submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 	        	</h4>
 	        	<div class="form-group">
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
@@ -134,8 +134,24 @@
 </div>
 </section>
 
-<script>
 
+<script>
+$(document).ready(function(){
+  
+  var rating_data = 0;
+  $('#add_review').click(function(){
+      $('#review_modal').modal('show');
+  });
+  //changer la couleur de l'étoile en passant la souris
+  $(document).on('mousseenter','.submit_star',function(){
+      var rating = $(this).data('rating');
+      for(var count = 1; count <= rating; count++){
+          $('#submit_star_'+count).addClass('text-primary');
+          
+      }
+  });
+
+});
 
 </script>
 <!-- <script src="../js/script.js"></script> -->

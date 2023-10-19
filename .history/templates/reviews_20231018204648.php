@@ -112,12 +112,12 @@
 	        	</button>
 	      	</div>
 	      	<div class="modal-body">
-	      		<h4 class="text-center mt-2 mb-4">
+	      		<h4 class="text-center stars mt-2 mb-4">
 	        		<i class="fa-regular fa-star submit_star mr-1" id="submit_star_1" data-rating="1"></i>
                     <i class="fa-regular fa-star submit_star mr-1" id="submit_star_2" data-rating="2"></i>
-                    <i class="fa-regular fa-star  submit_star mr-1" id="submit_star_3" data-rating="3"></i>
-                    <i class="fa-regular fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
-                    <i class="fa-regular fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
+                    <i class="fa-regular fa-star submit_star mr-1" id="submit_star_3" data-rating="3"></i>
+                    <i class="fa-regular fa-star submit_star mr-1" id="submit_star_4" data-rating="4"></i>
+                    <i class="fa-regular fa-star submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 	        	</h4>
 	        	<div class="form-group">
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
@@ -134,10 +134,26 @@
 </div>
 </section>
 
-<script>
 
+<script>
+$(document).ready(function(){
+  
+  var rating_data = 0;
+  $('#add_review').click(function(){
+      $('#review_modal').modal('show');
+  });
+  //changer la couleur de l'étoile en passant la souris
+  $(document).on('mousseenter','.submit_star',function(){
+      var rating = $(this).data('rating');
+      for(var count = 1; count <= rating; count++){
+          $('#submit_star_'+count).addClass('text-primary');
+          
+      }
+  });
+
+});
 
 </script>
 <!-- <script src="../js/script.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
