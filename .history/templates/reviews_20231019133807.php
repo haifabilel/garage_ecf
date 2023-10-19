@@ -80,7 +80,7 @@ if(isset($_POST["rating_data"]))
                             </div>
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>4</b> <i class="fas fa-star text-primary"></i></div>
+                            <div class="progress-label-left"><b>4</b> <i class="fas fa-star text-warning"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_four_star_review">0</span>)</div>
                             <div class="progress">
@@ -88,7 +88,7 @@ if(isset($_POST["rating_data"]))
                             </div>               
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>3</b> <i class="fas fa-star text-primary"></i></div>
+                            <div class="progress-label-left"><b>3</b> <i class="fas fa-star text-warning"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_three_star_review">0</span>)</div>
                             <div class="progress">
@@ -96,7 +96,7 @@ if(isset($_POST["rating_data"]))
                             </div>               
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>2</b> <i class="fas fa-star text-primary"></i></div>
+                            <div class="progress-label-left"><b>2</b> <i class="fas fa-star text-warning"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_two_star_review">0</span>)</div>
                             <div class="progress">
@@ -104,7 +104,7 @@ if(isset($_POST["rating_data"]))
                             </div>               
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>1</b> <i class="fas fa-star text-primary"></i></div>
+                            <div class="progress-label-left"><b>1</b> <i class="fas fa-star text-warning"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_one_star_review">0</span>)</div>
                             <div class="progress">
@@ -161,4 +161,3 @@ if(isset($_POST["rating_data"]))
 <script src="../js/script.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
-<?php  require_once 'footer.php' ?>

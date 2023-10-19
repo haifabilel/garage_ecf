@@ -31,7 +31,7 @@ return 'Ouvert '. implode(' - ', $phrases);
       </div>
     </div>
     <div class="col-md-2 ">
-       <a  href="./templates/reviews.php" type="button" class="btn btn-primary">Ajouter un avis</a>
+       <a  type="button" class="btn btn-primary">Ajouter un avis</a>
     </div>
    <div class="col-md-4 ">
     <h3>les horaires d'ouverture</h3>

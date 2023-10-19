@@ -283,11 +283,7 @@ footer{
 }
 .container_reviews h3{
    margin-left: 20px;
-    width:80%; 
-    color:var(--bg-color);
-}
-..container_reviews span{
-    color: var(--main-color);
+    width:80%;  
 }
 .submit_star:hover{
     transform: scale(1.1);

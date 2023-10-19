@@ -31,7 +31,7 @@ function reset_background()
 
         $('#submit_star_'+count).addClass('star-light');
 
-        $('#submit_star_'+count).removeClass('text-primary');
+        $('#submit_star_'+count).removeClass('text-warning');
 
     }
 }
@@ -45,7 +45,7 @@ $(document).on('mouseleave', '.submit_star', function(){
 
         $('#submit_star_'+count).removeClass('star-light');
 
-        $('#submit_star_'+count).addClass('text-primary');
+        $('#submit_star_'+count).addClass('text-warning');
     }
 
 });

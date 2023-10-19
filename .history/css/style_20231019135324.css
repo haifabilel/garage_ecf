@@ -287,7 +287,7 @@ footer{
     color:var(--bg-color);
 }
 ..container_reviews span{
-    color: var(--main-color);
+    color: ;
 }
 .submit_star:hover{
     transform: scale(1.1);
