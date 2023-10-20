@@ -28,7 +28,7 @@
     </header>
 <body>
    <!-- Afficher tous les membres enregistrés  -->
-   <div class="container_user">
+   <div class="container_user my-5">
      <h2>liste des avis clients</h2>
     <!-- <a href="registre.php" class="btn btn-primary" style="margin-left:45%; margin-bottom:20px;">Ajouter Employé</a> -->
      <table class="blueTable">

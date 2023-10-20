@@ -14,24 +14,12 @@
     <!-- CSS Link -->
      <link rel="stylesheet" href="../css/style.css">
 </head>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-      <a href="../index.php" class="logo">
-          <img src="../assets/images/1.png" alt="logo" style="width: 190px; height: 140px; ">
-        </a>
-      </div>
-
-      <div class="col-md-3 text-end">
-      <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      <a href="../templates/reviews.php"  class="button" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-    </div>
-    </header>
 <body>
    <!-- Afficher tous les membres enregistrés  -->
-   <div class="container_user">
+   <div class="container_user my-5">
      <h2>liste des avis clients</h2>
     <!-- <a href="registre.php" class="btn btn-primary" style="margin-left:45%; margin-bottom:20px;">Ajouter Employé</a> -->
-     <table class="blueTable">
+     <!-- <table class="blueTable">
 <thead>
 <tr>
 <th>Nom</th>
@@ -40,29 +28,36 @@
 <th>Date</th>
 </tr>
 </thead>
-<tbody>
+<tbody> -->
     <!-- Parcourir la liste des avis -->
     <?php
      require_once ('connexion.php');
      $req = $conn->query('SELECT * FROM review_table');
      while($user = $req->fetch()){
-        ?>
-        
-        <tr>
+        $review_content[] = array(
+			'user_name'		=>	$row["user_name"],
+			'user_review'	=>	$row["user_review"],
+			'rating'		=>	$row["user_rating"],
+			'datetime'		=>	date('l jS, F Y h:i:s A', $row["datetime"])
+		);
+      
+      ?>
+     
+        <!-- <tr>
         <td><?=$user['user_name']?></td>
         <td><?=$user['user_rating']?></td>
         <td><?=$user['user_review']?></td>
-        <td><?=date('l jS, F Y h:i:s A', $user["datetime"])?></td>
+        <td><?=$user['datetime']?></td>
         <td>
-            <a class="btn btn-primary" href="supprimer_avis.php?review_id=<?=$user['review_id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
-            <a class="btn btn-primary" href="supprimer_user.php?review_id=<?=$user['review_id']?>">Approuver <i class="fa-regular fa-trash-can"></i></a>
+            <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['review_id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
+            <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['review_id']?>">Approuver <i class="fa-regular fa-trash-can"></i></a>
         </td>
         </tr>
         <?php 
      }
     ?>
 </tbody>
-</table>
+</table> -->
    </div>
 
 

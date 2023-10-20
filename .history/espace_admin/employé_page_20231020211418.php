@@ -14,21 +14,9 @@
     <!-- CSS Link -->
      <link rel="stylesheet" href="../css/style.css">
 </head>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-      <a href="../index.php" class="logo">
-          <img src="../assets/images/1.png" alt="logo" style="width: 190px; height: 140px; ">
-        </a>
-      </div>
-
-      <div class="col-md-3 text-end">
-      <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      <a href="../templates/reviews.php"  class="button" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-    </div>
-    </header>
 <body>
    <!-- Afficher tous les membres enregistrés  -->
-   <div class="container_user">
+   <div class="container_user my-5">
      <h2>liste des avis clients</h2>
     <!-- <a href="registre.php" class="btn btn-primary" style="margin-left:45%; margin-bottom:20px;">Ajouter Employé</a> -->
      <table class="blueTable">
