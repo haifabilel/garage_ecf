@@ -43,7 +43,7 @@
     <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
   </div>
   <div class="form-group">
-    <label>Example file input</label>
+    <label>I</label>
     <input type="file" class="form-control-file" name="image" accept=".jpg, .png, .svg" required>
   </div>
       

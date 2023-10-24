@@ -27,32 +27,21 @@
 <!-- Modal -->
 <div class="modal fade" id="ServiceAdmin" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
-  <form action="" method="POST">
+    <form action="" method="POST">
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Ajouter service</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <div class="form-group">
-      <label >Titre</label>
-       <input type="text" class="form-control" name="titre" placeholder="Titre de service" required>
-      </div>
-      <div class="form-group">
-    <label>Description</label>
-    <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
-  </div>
-  <div class="form-group">
-    <label>Example file input</label>
-    <input type="file" class="form-control-file" name="image" accept=".jpg, .png, .svg" required>
-  </div>
-      
+       
+
+       </form>
       </div>
       <div class="modal-footer">
       <button type="submit" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Submit</button>
       </div>
     </div>
-     </form>
   </div>
 </div>
 

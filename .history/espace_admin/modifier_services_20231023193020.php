@@ -34,18 +34,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <div class="form-group">
-      <label >Titre</label>
-       <input type="text" class="form-control" name="titre" placeholder="Titre de service" required>
-      </div>
-      <div class="form-group">
-    <label>Description</label>
-    <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
-  </div>
-  <div class="form-group">
-    <label>Example file input</label>
-    <input type="file" class="form-control-file" name="image" accept=".jpg, .png, .svg" required>
-  </div>
+       
+     
       
       </div>
       <div class="modal-footer">

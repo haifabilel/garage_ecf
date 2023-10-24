@@ -36,15 +36,15 @@
       <div class="modal-body">
       <div class="form-group">
       <label >Titre</label>
-       <input type="text" class="form-control" name="titre" placeholder="Titre de service" required>
+       <input type="text" class="form-control" name="titre" required>
       </div>
       <div class="form-group">
-    <label>Description</label>
-    <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
+    <label>Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="form-group">
-    <label>Example file input</label>
-    <input type="file" class="form-control-file" name="image" accept=".jpg, .png, .svg" required>
+    <label for="exampleFormControlFile1">Example file input</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
       
       </div>

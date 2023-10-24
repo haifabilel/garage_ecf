@@ -44,7 +44,7 @@
   </div>
   <div class="form-group">
     <label>Example file input</label>
-    <input type="file" class="form-control-file" name="image" accept=".jpg, .png, .svg" required>
+    <input type="file" class="form-control-file" name="image" accept=".jpg, .png">
   </div>
       
       </div>
