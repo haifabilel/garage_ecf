@@ -1,8 +1,9 @@
 <?php
  require_once '../templates/config.php';
- require_once ('head_admin.php');
+
 
 ?>
+
 <section class="horaires">
     <h2>Horaires d'ouverture / fermeture</h2>
     <form >

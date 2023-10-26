@@ -1,6 +1,5 @@
 <?php
 require_once ('connexion.php');
-require_once ('head_admin.php');
 session_start();
 
 if(!empty($_POST)){
@@ -44,6 +43,8 @@ if(!empty($_POST)){
     }; 
 };
 ?>
+
+
    
 <div class="form-container">
     <form action="" method="POST">

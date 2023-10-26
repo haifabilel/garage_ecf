@@ -1,5 +1,5 @@
 <?php
- require_once ('head_admin.php');
+
  session_start();
 
 
@@ -11,12 +11,12 @@
         </a>
       </div>
 
-      <div class="col-md-3">
-      <a href="logout.php"  class="btn btn-primary" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      <a href="../templates/reviews.php"  class="btn btn-primary" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      <div class="col-md-3 text-end">
+      <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      <a href="../templates/reviews.php"  class="button" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
     </div>
     </header>
-<section>
+<body>
    <!-- Afficher tous les membres enregistrés  -->
    <div class="container_user">
      <h2>liste des avis clients en attente</h2>
@@ -27,10 +27,9 @@
 <th>Rating</th>
 <th>Avis</th>
 <th>Date</th>
-<th>Action</th>
 </tr>
 </thead>
-<section>
+<tbody>
     <!-- Parcourir la liste des avis -->
     <?php
      require_once ('connexion.php');

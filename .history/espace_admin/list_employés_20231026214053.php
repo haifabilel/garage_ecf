@@ -1,6 +1,6 @@
 <?php
  session_start();
- require_once ('head_admin.php');
+
 
 ?>
 
@@ -41,5 +41,5 @@
    </div>
    <a href="admin_page.php" class="btn btn-primary back">Back <i class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i></a>
 
-   </section>
+</body>
 </html>

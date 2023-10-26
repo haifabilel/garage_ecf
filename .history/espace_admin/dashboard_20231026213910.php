@@ -1,5 +1,5 @@
 <?php
- require_once ('head_admin.php');
+
 ?>
 <!-- <!DOCTYPE html>
 <html lang="en">

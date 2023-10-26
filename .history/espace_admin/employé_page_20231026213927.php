@@ -1,9 +1,19 @@
 <?php
- require_once ('head_admin.php');
+
  session_start();
 
 
 ?>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- CSS Link -->
+     <link rel="stylesheet" href="../css/style.css">
+</head>
 <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
       <a href="../index.php" class="logo">
@@ -11,12 +21,12 @@
         </a>
       </div>
 
-      <div class="col-md-3">
-      <a href="logout.php"  class="btn btn-primary" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      <a href="../templates/reviews.php"  class="btn btn-primary" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      <div class="col-md-3 text-end">
+      <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      <a href="../templates/reviews.php"  class="button" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
     </div>
-    </header>
-<section>
+    </header> -->
+<body>
    <!-- Afficher tous les membres enregistrés  -->
    <div class="container_user">
      <h2>liste des avis clients en attente</h2>
@@ -27,10 +37,9 @@
 <th>Rating</th>
 <th>Avis</th>
 <th>Date</th>
-<th>Action</th>
 </tr>
 </thead>
-<section>
+<tbody>
     <!-- Parcourir la liste des avis -->
     <?php
      require_once ('connexion.php');

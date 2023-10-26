@@ -27,7 +27,6 @@
 <th>Rating</th>
 <th>Avis</th>
 <th>Date</th>
-<th>Action</th>
 </tr>
 </thead>
 <section>

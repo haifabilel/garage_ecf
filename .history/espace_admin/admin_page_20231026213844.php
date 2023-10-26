@@ -1,6 +1,6 @@
 <?php 
  require_once ('connexion.php');
- require_once ('head_admin.php');
+ require_once ('head_admin.php')
 
 
 

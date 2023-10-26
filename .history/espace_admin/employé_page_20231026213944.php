@@ -1,22 +1,11 @@
 <?php
- require_once ('head_admin.php');
+
  session_start();
 
 
 ?>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-      <a href="../index.php" class="logo">
-          <img src="../assets/images/1.png" alt="logo" style="width: 190px; height: 140px; ">
-        </a>
-      </div>
 
-      <div class="col-md-3">
-      <a href="logout.php"  class="btn btn-primary" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      <a href="../templates/reviews.php"  class="btn btn-primary" id="btn-login" >Ajouter avis <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-    </div>
-    </header>
-<section>
+<body>
    <!-- Afficher tous les membres enregistrés  -->
    <div class="container_user">
      <h2>liste des avis clients en attente</h2>
@@ -27,10 +16,9 @@
 <th>Rating</th>
 <th>Avis</th>
 <th>Date</th>
-<th>Action</th>
 </tr>
 </thead>
-<section>
+<tbody>
     <!-- Parcourir la liste des avis -->
     <?php
      require_once ('connexion.php');
