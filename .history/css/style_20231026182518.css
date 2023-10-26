@@ -394,7 +394,7 @@ li{
     color: var(--bg-color);
 
 }
-
+.container_card
 .content_services{
     align-items: center;
     justify-content: space-between;

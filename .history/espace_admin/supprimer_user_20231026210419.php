@@ -4,7 +4,6 @@ session_start();
 
 //recupération de l'id
 if(isset($_GET['id']) AND !empty($_GET['id'])){
-        //Caster avec int
     $id =(int)$_GET['id'];
     $recupUser = $conn->prepare('SELECT * FROM employé WHERE id = :id');
      //Sécuriser contre les injections sql
@@ -12,7 +11,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
      $recupUser->execute();
     if($recupUser->rowCount() > 0){
         $bannirUser = $conn->prepare('DELETE FROM employé WHERE id = ?');
-        $bannirUser->execute(array($id));
+        $bannirUser->execute(array($getid));
         header('location:admin_page.php');
     }
 }

@@ -4,7 +4,7 @@ session_start();
 
 //recupération de l'id
 if(isset($_GET['id']) AND !empty($_GET['id'])){
-        //Caster avec int
+    
     $id =(int)$_GET['id'];
     $recupUser = $conn->prepare('SELECT * FROM employé WHERE id = :id');
      //Sécuriser contre les injections sql
