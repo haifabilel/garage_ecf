@@ -20,7 +20,8 @@ if(isset($_POST['addService'])){
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-};
+
+}
 ?>
 
 
@@ -73,13 +74,12 @@ if(isset($_POST['addService'])){
         <td><?=$user['titre']?></td>
         <td><?=$user['description']?></td>
         <td>
-        <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br>
-          <a class="btn btn-primary" href="supprimer_service.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
+        <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
+          <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
         </td>
         </tr>
-      
         <?php 
-     };
+     }
     ?>
 </tbody>
 </table>
@@ -99,12 +99,14 @@ if(isset($_POST['addService'])){
       <div class="modal-body">
       <div class="form-group">
      
-       <input type="text" name="titre" class="form-control"  placeholder="Titre de service" required><br>
+       <input type="text" name="titre" class="form-control"  placeholder="Titre de service" required>
       </div>
       <div class="form-group">
-    <textarea class="form-control" name="description" placeholder="Description..."required></textarea><br>
+    <label>Description</label>
+    <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
   </div>
   <div class="form-group mb-3">
+  <label for="formFile" class="form-label">Default file input example</label>
   <input type="file" name="image" class="form-control">
 </div>
       

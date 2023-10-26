@@ -20,7 +20,8 @@ if(isset($_POST['addService'])){
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-};
+
+}
 ?>
 
 
@@ -50,8 +51,37 @@ if(isset($_POST['addService'])){
     </div>
   <!-- Afficher la liste des services enregistrés dans ma bdd -->
   <div class="container_user my-5">
-  <h2>liste des services</h2>
- <table class="blueTable">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col"></th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+     <h2>liste des services</h2>
+     <table class="blueTable">
 <thead>
 <tr>
 <th>Image</th>
@@ -69,17 +99,16 @@ if(isset($_POST['addService'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-        <td><img src="<?=$user['image']?>" alt="image_card" style="height:200px; width:100%;" ></td>
+        <td><?=$user['image']?></td>
         <td><?=$user['titre']?></td>
         <td><?=$user['description']?></td>
         <td>
-        <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br>
-          <a class="btn btn-primary" href="supprimer_service.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
+        <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
+          <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
         </td>
         </tr>
-      
         <?php 
-     };
+     }
     ?>
 </tbody>
 </table>
@@ -98,13 +127,15 @@ if(isset($_POST['addService'])){
       </div>
       <div class="modal-body">
       <div class="form-group">
-     
-       <input type="text" name="titre" class="form-control"  placeholder="Titre de service" required><br>
+      <label >Titre</label>
+       <input type="text" name="titre" class="form-control"  placeholder="Titre de service" required>
       </div>
       <div class="form-group">
-    <textarea class="form-control" name="description" placeholder="Description..."required></textarea><br>
+    <label>Description</label>
+    <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
   </div>
   <div class="form-group mb-3">
+  <label for="formFile" class="form-label">Default file input example</label>
   <input type="file" name="image" class="form-control">
 </div>
       

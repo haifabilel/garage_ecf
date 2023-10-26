@@ -20,7 +20,8 @@ if(isset($_POST['addService'])){
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-};
+
+}
 ?>
 
 
@@ -74,12 +75,13 @@ if(isset($_POST['addService'])){
         <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br>
-          <a class="btn btn-primary" href="supprimer_service.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
+          <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
         </td>
         </tr>
       
         <?php 
      };
+     exit();
     ?>
 </tbody>
 </table>

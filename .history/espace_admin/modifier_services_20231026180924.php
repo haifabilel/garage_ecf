@@ -20,7 +20,8 @@ if(isset($_POST['addService'])){
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-};
+
+}
 ?>
 
 
@@ -73,13 +74,16 @@ if(isset($_POST['addService'])){
         <td><?=$user['titre']?></td>
         <td><?=$user['description']?></td>
         <td>
-        <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br>
-          <a class="btn btn-primary" href="supprimer_service.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
+        <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Modifier <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>Des jantes éraflées ? Une rayure ou une bosse sur votre carrosserie voiture ? Une griffure sur votre tableau de bord ? Ne vous inquiétez pas, au Garage Renault des Ardoines, nous nous occupons de tout. Nos experts se tiennent à votre disposition pour réparer, protéger et entretenir la carrosserie de votre véhicule. Nous nous engageons à réaliser un redressage de qualité de votre carrosserie. Alors n’attendez plus, contactez-nous pour nous confier l’entretien et les réparations de votre carrosserie !
+
+Débosselage carrosserie, rayures, griffures
+Réparations jantes, pare-chocs, bas de caisse, phares
+Lavage intérieur/extérieur, dépoussiérage, lustrage
+          <a class="btn btn-primary" href="supprimer_user.php?id=<?=$user['id']?>">Supprimer <i class="fa-regular fa-trash-can"></i></a>
         </td>
         </tr>
-      
         <?php 
-     };
+     }
     ?>
 </tbody>
 </table>
