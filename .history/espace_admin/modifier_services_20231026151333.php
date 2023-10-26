@@ -2,24 +2,13 @@
 require_once 'connexion.php';
 
 if(isset($_POST['addService'])){
-    $titre = $_POST['titre'];
-    $desc = $_POST['description'];
-    $image = $_FILES['image'];
-    $img_loc = $_FILES['image']['tmp_name'];
-    $img_name = $_FILES['image']['name'];
-    $img_des = "../uploads/".$img_name;
-    move_uploaded_file($img_loc,'../uploads/'.$img_name);
+    $titre = $_POST['card_titre'];
+    $desc = $_POST['card_description'];
+    $image = $_POST['image'];
 
-    $query = "INSERT INTO services (titre ,description, image)
-    VALUES (:titre, :description, :image)";
-    $statement = $conn->prepare($query);
-
-    $data = [
-        ':titre' => $titre,
-        ':description' => $desc,
-        ':image' => $img_des,
-    ];
-    $stat = $statement->execute($data);
+    $query = "INSERT INTO services (card_titre , card_description, image)
+    VALUES (:card_titre, :card_description, :image)";
+    $statement = $conn->prepare($q)
 }
 ?>
 
@@ -62,20 +51,20 @@ if(isset($_POST['addService'])){
       <div class="modal-body">
       <div class="form-group">
       <label >Titre</label>
-       <input type="text" name="titre" class="form-control"  placeholder="Titre de service" required>
+       <input type="text" class="form-control" name="rard_titre" placeholder="Titre de service" required>
       </div>
       <div class="form-group">
     <label>Description</label>
-    <textarea class="form-control" name="description" placeholder="Description..."required></textarea>
+    <textarea class="form-control" name="card_description" placeholder="Description..."required></textarea>
   </div>
-  <div class="form-group mb-3">
-  <label for="formFile" class="form-label">Default file input example</label>
-  <input type="file" name="image" class="form-control">
-</div>
+  <div class="form-group">
+    <label>Example file input</label>
+    <input type="file" class="form-control-file" name="image" accept=".jpg, .png, .svg" >
+  </div>
       
       </div>
       <div class="modal-footer">
-      <button type="submit" name="addService" class="btn btn-primary" >Submit</button>
+      <button type="submit" class="btn btn-primary" name="addService">Submit</button>
       </div>
     </div>
      </form>

@@ -17,7 +17,7 @@ if(isset($_POST['addService'])){
     $data = [
         ':titre' => $titre,
         ':description' => $desc,
-        ':image' => $img_des,
+        ':image' => $image,
     ];
     $stat = $statement->execute($data);
 }

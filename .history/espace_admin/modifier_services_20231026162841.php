@@ -5,10 +5,9 @@ if(isset($_POST['addService'])){
     $titre = $_POST['titre'];
     $desc = $_POST['description'];
     $image = $_FILES['image'];
-    $img_loc = $_FILES['image']['tmp_name'];
-    $img_name = $_FILES['image']['name'];
-    $img_des = "../uploads/".$img_name;
-    move_uploaded_file($img_loc,'../uploads/'.$img_name);
+   $img_loc = $_FILES['image']['tmp_name'];
+   $img_name = $_FILES['image']['name'];
+   move_uploaded_file($img_loc,$img_name)
 
     $query = "INSERT INTO services (titre ,description, image)
     VALUES (:titre, :description, :image)";
@@ -17,7 +16,7 @@ if(isset($_POST['addService'])){
     $data = [
         ':titre' => $titre,
         ':description' => $desc,
-        ':image' => $img_des,
+        ':image' => $image,
     ];
     $stat = $statement->execute($data);
 }
