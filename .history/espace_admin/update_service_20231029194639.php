@@ -2,7 +2,7 @@
 
 require_once ('head_admin.php');
 require_once ('connexion.php');
-//Recupérer l'id de l'url
+//Recupérer l'id fe
 $id = $_GET['id'];
 $req =$conn->query("SELECT * FROM services WHERE id = $id");
 $row = $req-> fetch();
