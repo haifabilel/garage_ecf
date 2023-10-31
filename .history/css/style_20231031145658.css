@@ -339,8 +339,8 @@ footer{
 .back_reviews:hover{
     transform: scale(1.1);
 }
-.btn-primary:hover{
-    transform: scale(1.1);
+.btn-primary{
+    
 }
 /* -----------------Reviews starts------------ */
 .container_reviews{
@@ -362,11 +362,7 @@ footer{
     height:300px;
     margin-top: 40px; 
 }
-.titre_avis{
-    color:var(--bg-color);
-    font-size: 1.5rem;
-    margin-left: 20px;
-}
+
 .container_reviews .card:hover{
     background-color: white;
 }

@@ -26,7 +26,7 @@ if(!empty($_POST)) {
             if($user_type['user_type'] == 'admin'){
                 header('location:admin_page.php');
             }else{
-                header('location:espace_employé.php');
+                header('location:espace_emplyé.php');
             }
            
         };

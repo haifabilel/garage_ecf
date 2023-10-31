@@ -3,7 +3,7 @@ require_once './espace_admin/connexion.php';
 require_once 'head.php';
 ?>
 
-<section class="service_section" id="services">
+<section class="service_section" id>
 <h2>Nos Services</h2>
 
     <div class="row">

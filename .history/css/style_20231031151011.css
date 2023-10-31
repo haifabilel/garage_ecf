@@ -363,9 +363,7 @@ footer{
     margin-top: 40px; 
 }
 .titre_avis{
-    color:var(--bg-color);
-    font-size: 1.5rem;
-    margin-left: 20px;
+    color:var(--bg-color)
 }
 .container_reviews .card:hover{
     background-color: white;

@@ -21,7 +21,7 @@
       </div>
     </header>
     <section class="pannel_admin">
-     <p class="dashboard-title">Pannel admin</p>
+     <p class="dashboard-title">Pannel Empl</p>
      <img src="../uploads/Bienvenue Mr.Parrot (2).png" alt="image_admin" class="image_admin">
     </section>
 
