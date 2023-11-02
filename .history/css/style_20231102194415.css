@@ -186,7 +186,7 @@ h1{
     border-radius: 5px;
    
 }
-.btn_button:hover{
+.btn_button ..btn-buton:hover{
     transform: scale(1.1);
 }
 .btn-back{
@@ -302,9 +302,6 @@ input[type="range"]::-moz-range-thumb{
 .card-deck .card{
    margin-bottom:20px;
  
-}
-.btn-buton:hover{
-    background-color: var(--main-color);
 }
 /* vehicules page ends */
 /* footer starts */

@@ -303,9 +303,7 @@ input[type="range"]::-moz-range-thumb{
    margin-bottom:20px;
  
 }
-.btn-buton:hover{
-    background-color: var(--main-color);
-}
+.btn-buton:hover
 /* vehicules page ends */
 /* footer starts */
 footer{

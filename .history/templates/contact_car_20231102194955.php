@@ -28,14 +28,14 @@ require_once '../espace_admin/connexion.php'
     
 <section id="Contact" class="Contact pt-5">
     <div class="form-container">
-    <form action="traitement_contact_car.php" method="POST">
+    <form action="traitement_contact.php" method="POST">
        <h3>Formulaire de contact</h3>
        <?php
         $id = $_GET['id'];
         $req =$conn->query("SELECT * FROM voitures WHERE id = $id");
         $user= $req-> fetch();
         ?>
-        <input type="text" name="objet" value="Brand : <?php echo $user['brand']; ?>"  required> 
+        <input type="text" name="objet"  required> 
         <input type="text" name="nom"  placeholder="entrer votre nom " required> 
         <input type="text" name="prenom"  placeholder="entrer votre prénom" required> 
         <input type="email" name="email" placeholder="entrer votre email"required>

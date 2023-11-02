@@ -169,15 +169,7 @@ h1{
     margin-left:45.5%;
 
 }
-.btn-buton{
-    padding: 12px 35px;
-    background: var(--second-color);
-    color:var(--bg-color);
-    font-size: 1.2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-left:39%;
-}
+
 .btn_button{
     padding: 10px 30px;
     background: var(--second-color);
@@ -302,9 +294,6 @@ input[type="range"]::-moz-range-thumb{
 .card-deck .card{
    margin-bottom:20px;
  
-}
-.btn-buton:hover{
-    background-color: var(--main-color);
 }
 /* vehicules page ends */
 /* footer starts */
