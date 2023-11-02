@@ -156,7 +156,7 @@ h1{
     color:white;
     margin:10px 0;
     display: block;
-    background-color:var(--main-color);
+    background-color:var(--second-color);
     font-size: 20px;
 }
 .btn-button{
@@ -406,7 +406,7 @@ table.blueTable {
     margin-left: 8rem;
   }
   table.blueTable td, table.blueTable th {
-   
+    border: 1px solid #AAAAAA;
     text-align: center;
   }
   .td_image{
@@ -497,7 +497,3 @@ li{
 }
 
 /* section véhicules ends */
-.preloader{
-  position: fixed;  
-  
-}

@@ -156,7 +156,7 @@ h1{
     color:white;
     margin:10px 0;
     display: block;
-    background-color:var(--main-color);
+    background-color:var(--seco);
     font-size: 20px;
 }
 .btn-button{
@@ -497,7 +497,3 @@ li{
 }
 
 /* section véhicules ends */
-.preloader{
-  position: fixed;  
-  
-}

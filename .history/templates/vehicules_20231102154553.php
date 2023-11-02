@@ -28,9 +28,6 @@ require_once '../espace_admin/connexion.php';
         <link rel="stylesheet" href="../css/style.css">
     </head>
    <section>
-    <div class="preloader">
-      <span class="loader" > </span>
-    </div>
    <div class="wrapper js-filter">
     <div class="row">
         <div class="col-md-3 js-filter-form">

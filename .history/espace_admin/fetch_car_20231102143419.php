@@ -32,7 +32,7 @@ if(isset($_POST['addCar'])){
         <p>Véhicules</p>
     </div>
        <div class="content_button mt-2">
-          <button class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#ajoutCar">Ajouter Véhicule <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutCar">Ajouter Véhicule <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
           <a href="espace_employé.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
@@ -60,8 +60,8 @@ if(isset($_POST['addCar'])){
         ?>
         <tr>
         <td class="td_image"><img src="../uploads/<?php echo $user['image']; ?>" alt="image_car" class="image_car" ></td>
-        <td><?=$user['brand']?></td>
-        <td><?=$user['prix']?></td>
+        <td><?=$user['brand']?></td><br>
+        <td><?=$user['prix']?></td><br>
         <td><?=$user['kilométrage']?></td>
         <td><?=$user['année']?></td>
         </tr>

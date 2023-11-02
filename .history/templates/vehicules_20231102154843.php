@@ -29,7 +29,7 @@ require_once '../espace_admin/connexion.php';
     </head>
    <section>
     <div class="preloader">
-      <span class="loader" > </span>
+      <span cla > </span>
     </div>
    <div class="wrapper js-filter">
     <div class="row">
