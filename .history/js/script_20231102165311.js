@@ -86,11 +86,7 @@ $('#save_review').click(function(){
     }
 });
 //========spiner loader page==========
-
-setTimeout(() => {
-    document.querySelector('.preloader').style.display = "none";
-}, 500);
-
+document.querySelector('.preloader').style.display = "none";
 
 
 

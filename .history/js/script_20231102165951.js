@@ -89,7 +89,7 @@ $('#save_review').click(function(){
 
 setTimeout(() => {
     document.querySelector('.preloader').style.display = "none";
-}, 500);
+}, 1500);
 
 
 

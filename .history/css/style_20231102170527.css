@@ -520,7 +520,7 @@ li{
     width: 100px;
     height: 100px;
     border: 10px solid white;
-    border-color: white #2288ff white #2288ff;
+    border-color: #192f6a #2288ff #192f6a #2288ff;
     position: absolute;
     border-radius: 50%;
     animation: loader 1s infinite ease-in-out;

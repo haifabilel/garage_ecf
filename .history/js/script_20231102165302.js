@@ -85,12 +85,7 @@ $('#save_review').click(function(){
         })
     }
 });
-//========spiner loader page==========
-
-setTimeout(() => {
-    document.querySelector('.preloader').style.display = "none";
-}, 500);
-
+//========spiner loader page=========sty.display = "none";
 
 
 
