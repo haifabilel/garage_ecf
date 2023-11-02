@@ -27,35 +27,105 @@ require_once '../espace_admin/connexion.php';
             <!-- CSS Link -->
         <link rel="stylesheet" href="../css/style.css">
     </head>
-   <!-- Loader page -->
+   <section>
     <div class="preloader">
       <span class="loader" > </span>
     </div>
-  <section>
-   
-  <div class="row">
+   <div class="wrapper js-filter">
+    <div class="row">
+        <div class="col-md-3 js-filter-form">
+    <div class="prix">
+    <h3>Prix</h3>
+    <p>Utiluser slider ou entrer min max prix</p>
+    <div class="field">
+        <span>Min</span>
+        <input type="number" class="input-min" value="1500">
+    </div>
+    <br>
+    <div class="field">
+        <span>Max</span>
+        <input type="number" class="input-max" value="150000">
+    </div>
+    <br>
+    <div class="slider">
+        <div class="progress"></div>
+    </div>
+    <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="1500">
+        <input type="range" class="range-max" min="0" max="10000" value="150000">
+    </div>
+    <br>
+    </div>
+    <br>
+<div class="kilométrage">
+    <h3>kilométrage</h3>
+    <p>Utiluser slider ou entrer min max prix</p>
+    <div class="field">
+        <span>Min</span>
+        <input type="number" class="input-min" value="1500">
+    </div>
+    <br>
+    <div class="field">
+        <span>Max</span>
+        <input type="number" class="input-max" value="150000">
+    </div>
+    <br>
+    <div class="slider">
+        <div class="progress"></div>
+    </div>
+    <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="1500">
+        <input type="range" class="range-max" min="0" max="10000" value="150000">
+    </div>
+    </div>
+    <br>
+  
+    <div class="Années">
+    <h3>Années</h3>
+    <p>Utiluser slider ou entrer min max prix</p>
+    <div class="field">
+        <span>Min</span>
+        <input type="number" class="input-min" value="1500">
+    </div>
+    <br>
+    <div class="field">
+        <span>Max</span>
+        <input type="number" class="input-max" value="150000">
+    </div>
+    <br>
+    <div class="slider">
+        <div class="progress"></div>
+    </div>
+    <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="1500">
+        <input type="range" class="range-max" min="0" max="10000" value="150000">
+    </div>
+    </div>
+    <br>
+   </div>
+  
+   <div class="col-md-9 d-flex js-filter-content">
+   <div class="card-deck">
+    <div class="card">
     <?php
   $req = $conn->query('SELECT * FROM voitures');
 while($user = $req->fetch()) {
     ?>
-    <div class="col-lg-4 d-flex">
+    <img class="card-img-top" src="../uploads/<?php echo $user['image']; ?>"" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title"><?php echo $user['brand'] ; ?>:</h5>
+      <p class="card-text"><?php echo $user['prix']; ?>:</p>
+      <p class="card-text"><?php echo $user['année']; ?>:</p>
+      <p class="card-text"><?php echo $user['kilométrage']; ?>:</p>
+    </div>
+    <button class="btn btn-primary">Détail</button><br>
     
-          <div class="card">
-
-         <img class="card-img-top" src="../uploads/<?php echo $user['image']; ?>" alt="Card image cap">
-         <div class="card-body">
-          <h5 class="card-title text-center"><?php echo $user['brand']; ?></h5>
-          <p class="card-text">Prix: <?php echo $user['prix']; ?></p>
-          <p class="card-text">kilométrage: <?php echo $user['kilométrage']; ?></p>
-          <p class="card-text">Année: <?php echo $user['année']; ?></p>
-          <a href="contact_car.php?id=<?=$user['id']?>" type="submit" class="btn btn-primary">Contacter</a>
-          <a href="" type="submit" class="btn btn-primary mx-2">Détails</a>
-        </div>
-       
-      </div>
-     
-      </div>
-      <?php } ;?>
+  </div>
+  <button type="submit" class="btn btn-primary">Contact</button>
+ 
+  </div>
+  </div>
+ 
 </section>
 <script src="../js/script.js"></script>
 

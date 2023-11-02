@@ -495,9 +495,7 @@ li{
 .image_car{
   width:250px
 }
-.card-title{
-    background-color: var(--main-color);
-}
+card-text
 /* section véhicules ends */
 .preloader{
   position: fixed;  

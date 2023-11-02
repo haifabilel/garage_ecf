@@ -42,14 +42,10 @@ while($user = $req->fetch()) {
     
           <div class="card">
 
-         <img class="card-img-top" src="../uploads/<?php echo $user['image']; ?>" alt="Card image cap">
+         <img class="card-img-top" src="./uploads/<?php echo $user['image']; ?>" alt="Card image cap">
          <div class="card-body">
           <h5 class="card-title text-center"><?php echo $user['brand']; ?></h5>
-          <p class="card-text">Prix: <?php echo $user['prix']; ?></p>
-          <p class="card-text">kilométrage: <?php echo $user['kilométrage']; ?></p>
-          <p class="card-text">Année: <?php echo $user['année']; ?></p>
-          <a href="contact_car.php?id=<?=$user['id']?>" type="submit" class="btn btn-primary">Contacter</a>
-          <a href="" type="submit" class="btn btn-primary mx-2">Détails</a>
+          <p class="card-text"><?php echo $user['pri']; ?></p>
         </div>
        
       </div>

@@ -48,7 +48,7 @@ while($user = $req->fetch()) {
           <p class="card-text">Prix: <?php echo $user['prix']; ?></p>
           <p class="card-text">kilométrage: <?php echo $user['kilométrage']; ?></p>
           <p class="card-text">Année: <?php echo $user['année']; ?></p>
-          <a href="contact_car.php?id=<?=$user['id']?>" type="submit" class="btn btn-primary">Contacter</a>
+          <a href="contact_car" type="submit" class="btn btn-primary">Contacter</a>
           <a href="" type="submit" class="btn btn-primary mx-2">Détails</a>
         </div>
        

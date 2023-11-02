@@ -495,7 +495,7 @@ li{
 .image_car{
   width:250px
 }
-.card-title{
+.card-title card-body.card-text{
     background-color: var(--main-color);
 }
 /* section véhicules ends */
