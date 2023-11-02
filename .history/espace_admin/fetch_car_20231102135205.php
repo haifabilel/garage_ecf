@@ -3,7 +3,7 @@ require_once 'connexion.php';
 require_once ('head_admin.php');
 
 //Ajouter Véhicule
-if(isset($_POST['addCar'])){
+if(isset($_POST['addCar']) && isset($_FILES['image'])){
     $brand = $_POST['brand'];
     $prix = $_POST['prix'];
     $kilométrage = $_POST['kilométrage'];
@@ -13,14 +13,18 @@ if(isset($_POST['addCar'])){
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
-    
-  
-    $query = "INSERT INTO voitures (brand, prix, kilométrage, année, image)
-     VALUES ('$brand','$prix','$kilométrage','$année','$img_des')";
-     $statement = $conn->prepare($query);
 
-    
-    
+    $query = "INSERT INTO `voitures`(``, `brand`, `prix`, `kilométrage`, `année`, `image`)
+     VALUES ('[:brand]','[:prix]','[value-3]','[value-4]','[value-5]','[value-6]')";
+    $statement = $conn->prepare($query);
+  
+    $data = [
+        ':brand' => $brand,
+        ':prix' => $prix,
+        ':kilométrage' => $kilométrage,
+        ':année' => $année,
+        ':image' => $img_des,
+    ];
     $stat = $statement->execute();
     header('location:fetch_car.php');
 };
@@ -59,11 +63,12 @@ if(isset($_POST['addCar'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-        <td class="td_image"><img src="../uploads/<?php echo $user['image']; ?>" alt="image_car" class="image_car" ></td>
-        <td><?=$user['brand']?></td>
-        <td><?=$user['prix']?></td>
+        <td><img src="../uploads/<?php echo $user['image']; ?>" alt="image_car" style="height:150px; width:250px;" ></td>
+        <td><?=$user['Brand']?></td>
+        <td><?=$user['Prix']?></td>
         <td><?=$user['kilométrage']?></td>
         <td><?=$user['année']?></td>
+        <td>
         </tr>
       
         <?php 
@@ -86,13 +91,13 @@ if(isset($_POST['addCar'])){
          <input type="text" name="brand" class="form-control"  placeholder="Brand" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="prix" class="form-control"  placeholder="prix" required><br>
+         <input type="number" name="prix" class="form-control"  placeholder="prix" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="kilométrage" class="form-control"  placeholder="kilométrage" required><br>
+         <input type="number" name="kilométrage" class="form-control"  placeholder="kilométrage" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="année" class="form-control"  placeholder="année de construction" required><br>
+         <input type="number" name="année" class="form-control"  placeholder="année de construction" required><br>
       </div>
       <div class="form-group mb-3">
          <input type="file" name="image" class="form-control">

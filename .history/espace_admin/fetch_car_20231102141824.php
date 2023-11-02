@@ -18,7 +18,6 @@ if(isset($_POST['addCar'])){
     $query = "INSERT INTO voitures (brand, prix, kilométrage, année, image)
      VALUES ('$brand','$prix','$kilométrage','$année','$img_des')";
      $statement = $conn->prepare($query);
-
     
     
     $stat = $statement->execute();
@@ -59,11 +58,12 @@ if(isset($_POST['addCar'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-        <td class="td_image"><img src="../uploads/<?php echo $user['image']; ?>" alt="image_car" class="image_car" ></td>
+        <td><img src="./uploads/?php echo $user['image']; ?>" alt="image_car" style="height:150px; width:250px;" ></td>
         <td><?=$user['brand']?></td>
         <td><?=$user['prix']?></td>
         <td><?=$user['kilométrage']?></td>
         <td><?=$user['année']?></td>
+        <td>
         </tr>
       
         <?php 

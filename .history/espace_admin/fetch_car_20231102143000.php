@@ -59,7 +59,7 @@ if(isset($_POST['addCar'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-        <td class="td_image"><img src="../uploads/<?php echo $user['image']; ?>" alt="image_car" class="image_car" ></td>
+        <td class=""><img src="../uploads/<?php echo $user['image']; ?>" alt="image_car" class="image_car" ></td>
         <td><?=$user['brand']?></td>
         <td><?=$user['prix']?></td>
         <td><?=$user['kilométrage']?></td>

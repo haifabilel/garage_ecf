@@ -406,11 +406,8 @@ table.blueTable {
     margin-left: 8rem;
   }
   table.blueTable td, table.blueTable th {
-    /* border: 1px solid #AAAAAA; */
+    border: 1px solid #AAAAAA;
     text-align: center;
-  }
-  .td_image{
-    width: 250px;
   }
   table.blueTable tbody td {
     font-size: 13px;
@@ -493,7 +490,7 @@ li{
 /* --------------- service_admin ends------ */
 /* section véhicules starts*/
 .image_car{
-  width:250px
+  width:200px
 }
 
 /* section véhicules ends */
