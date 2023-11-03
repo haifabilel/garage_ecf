@@ -44,7 +44,7 @@ require_once '../espace_admin/connexion.php'
         <button type="submit" name="submit" class="btn_button" value="Envoyer" class="form-btn">Envoyer</button>
     </form>
 </div>
-<a href="vehicules.php" class="btn-buton">Retour aux annonces <i class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i></a>
+<a href="../index.php" class="btn-button">Back <i class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i></a>
   </section>
 
 <?php
