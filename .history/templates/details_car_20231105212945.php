@@ -56,7 +56,8 @@ if(isset($_POST['addDétails'])){
   </div>
   <?php 
  $id =(int)$_GET['id'];
-  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
+  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id =:id");
+  $req->bindValue(':id', $id, PDO::PARAM_INT);
   $user= $req-> fetch();
      ?>
   <div class="carousel-inner">

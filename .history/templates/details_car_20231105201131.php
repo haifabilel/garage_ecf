@@ -55,19 +55,18 @@ if(isset($_POST['addDétails'])){
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
- $id =(int)$_GET['id'];
-  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
+  $req =$conn->query("SELECT * FROM details_voitures");
   $user= $req-> fetch();
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
+      <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-150" alt="image1">
     </div>
     <div class="carousel-item">
-      <img  src="../uploads/<?php echo $user['image2']; ?>" class="d-block w-100" alt="image2">
+      <img  src="../uploads/<?php echo $user['image2']; ?>" class="d-block w-150" alt="image2">
     </div>
     <div class="carousel-item">
-      <img src="../uploads/<?php echo $user['image3']; ?>" class="d-block w-100" alt="image3">
+      <img src="../uploads/<?php echo $user['image3']; ?>" class="d-block w-150" alt="image3">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

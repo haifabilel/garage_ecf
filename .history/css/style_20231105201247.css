@@ -552,14 +552,10 @@ li{
 /* loader page ends */
 /* détailles_car starts */
 #carouselExampleIndicators{
-    width: 50%;
-    height: 350px;
+    width: 40%;
     margin-left: 25%;
     margin-top: 5%;
     box-shadow: 5px 5px 10px -1px #808080;
-}
-.d-block{
-    height: 350px;
 }
 .table_car{
     margin-top: 10px;

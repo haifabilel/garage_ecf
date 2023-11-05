@@ -55,9 +55,9 @@ if(isset($_POST['addDétails'])){
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
- $id =(int)$_GET['id'];
-  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
-  $user= $req-> fetch();
+ 
+  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details");
+  while($user = $req->fetch()) {
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -70,6 +70,7 @@ if(isset($_POST['addDétails'])){
       <img src="../uploads/<?php echo $user['image3']; ?>" class="d-block w-100" alt="image3">
     </div>
   </div>
+  <?php ?>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>

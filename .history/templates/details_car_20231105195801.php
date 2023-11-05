@@ -3,7 +3,7 @@ require_once 'head.php';
 require_once '../espace_admin/connexion.php';
 
 if(isset($_POST['addDétails'])){
-  $caractéristique = $_POST['caractéristique'];
+  $caractristique = $_POST['caractéristique'];
   $liste_équipements = $_POST['liste_équipements'];
   $options_installés = $_POST['options_installés'];
   // $image = $_FILES['image'];
@@ -14,12 +14,11 @@ if(isset($_POST['addDétails'])){
   $img_name2 = $_FILES['image2']['name'];
 
   $img_loc3 = $_FILES['image3']['tmp_name'];
-  $img_name3 = $_FILES['image3']['name'];
-
+  $img_name3 = $_FILES['image3']['name'].
  
-  // move_uploaded_file($img_loc1, $img_des1.$img_name1);
-  // move_uploaded_file($img_loc2, $img_des2.$img_name2);
-  // move_uploaded_file($img_loc3, $img_des3.$img_name3);
+  move_uploaded_file($img_loc1, $img_des1.$img_name1);
+  move_uploaded_file($img_loc2, $img_des2.$img_name2);
+  move_uploaded_file($img_loc3, $img_des3.$img_name3);
 
 
  
@@ -55,8 +54,7 @@ if(isset($_POST['addDétails'])){
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
- $id =(int)$_GET['id'];
-  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
+  $req =$conn->query("SELECT * FROM details_voitures");
   $user= $req-> fetch();
      ?>
   <div class="carousel-inner">
