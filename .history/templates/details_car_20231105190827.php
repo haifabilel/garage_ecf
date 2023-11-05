@@ -14,7 +14,11 @@ if(isset($_POST['addDétails'])){
   $img_name2 = $_FILES['image2']['name'];
 
   $img_loc3 = $_FILES['image3']['tmp_name'];
-  $img_name3 = $_FILES['image3']['name'].
+  $img_name3 = $_FILES['image3']['name'];
+
+  $img_des1 = "../uploads/".$img_name1;
+  $img_des2 = "../uploads/".$img_name2;
+  $img_des3 = "../uploads/".$img_name3;
  
   move_uploaded_file($img_loc1, $img_des1.$img_name1);
   move_uploaded_file($img_loc2, $img_des2.$img_name2);
@@ -26,7 +30,7 @@ if(isset($_POST['addDétails'])){
   
 
   $query = "INSERT INTO details_voitures (caractéristique, liste_équipements, options_installés, image1, image2, image3)
-   VALUES ('$caractéristique','$liste_équipements','$options_installés','$img_name1','$img_name2','$img_name3')";
+   VALUES ('$caractéristique','$liste_équipements','$options_installés','$img_des1','$img_des2','$img_des3')";
    $statement = $conn->prepare($query);
    
    $stat = $statement->execute();
@@ -59,10 +63,10 @@ if(isset($_POST['addDétails'])){
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
+      <img src="<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
     </div>
     <div class="carousel-item">
-      <img  src="../uploads/<?php echo $user['image2']; ?>" class="d-block w-100" alt="image2">
+      <img  src="<?php echo $user['image2']; ?>" class="d-block w-100" alt="image2">
     </div>
     <div class="carousel-item">
       <img src="../uploads/<?php echo $user['image3']; ?>" class="d-block w-100" alt="image3">

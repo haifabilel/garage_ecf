@@ -16,7 +16,7 @@ if(isset($_POST['addDétails'])){
   $img_loc3 = $_FILES['image3']['tmp_name'];
   $img_name3 = $_FILES['image3']['name'].
  
-  move_uploaded_file($img_loc1, $img_des1.$img_name1);
+  // move_uploaded_file($img_loc1, $img_des1.$img_name1);
   move_uploaded_file($img_loc2, $img_des2.$img_name2);
   move_uploaded_file($img_loc3, $img_des3.$img_name3);
 

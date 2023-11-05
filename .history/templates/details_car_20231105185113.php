@@ -14,21 +14,27 @@ if(isset($_POST['addDétails'])){
   $img_name2 = $_FILES['image2']['name'];
 
   $img_loc3 = $_FILES['image3']['tmp_name'];
-  $img_name3 = $_FILES['image3']['name'].
- 
-  move_uploaded_file($img_loc1, $img_des1.$img_name1);
-  move_uploaded_file($img_loc2, $img_des2.$img_name2);
-  move_uploaded_file($img_loc3, $img_des3.$img_name3);
+  $img_name3 = $_FILES['image3']['name'];
 
+  $img_des = "../uploads/";
+  $data =[];
+  $data = [$img_name1,$img_name2,$img_name3];
+  
+  $images = implode(' ',$data);
 
  
 
   
 
-  $query = "INSERT INTO details_voitures (caractéristique, liste_équipements, options_installés, image1, image2, image3)
-   VALUES ('$caractéristique','$liste_équipements','$options_installés','$img_name1','$img_name2','$img_name3')";
+  $query = "INSERT INTO details_voitures (caractéristique, liste_équipements, options_installés, image1, image2)
+   VALUES ('$caractéristique','$liste_équipements','$options_installés','$images')";
    $statement = $conn->prepare($query);
-   
+   if($statement){
+    move_uploaded_file($img_loc1, $img_des.$img_name1);
+    move_uploaded_file($img_loc2, $img_des.$img_name2);
+    move_uploaded_file($img_loc3, $img_des.$img_name3);
+    move_uploaded_file($img_loc4, $img_des.$img_name4);
+  }
    $stat = $statement->execute();
   header('location:details_car.php');
 };
@@ -59,13 +65,13 @@ if(isset($_POST['addDétails'])){
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
+      <img src="../uploads/<?php echo $user['image']; ?>" class="d-block w-100" alt="image1">
     </div>
     <div class="carousel-item">
-      <img  src="../uploads/<?php echo $user['image2']; ?>" class="d-block w-100" alt="image2">
+      <img  src="./uploads/<?php echo $user['image']; ?>" class="d-block w-100" alt="image2">
     </div>
     <div class="carousel-item">
-      <img src="../uploads/<?php echo $user['image3']; ?>" class="d-block w-100" alt="image3">
+      <img src="../uploads/<?php echo $user['image']; ?>" class="d-block w-100" alt="image3">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

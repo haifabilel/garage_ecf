@@ -2,36 +2,7 @@
 require_once 'head.php';
 require_once '../espace_admin/connexion.php';
 
-if(isset($_POST['addDétails'])){
-  $caractéristique = $_POST['caractéristique'];
-  $liste_équipements = $_POST['liste_équipements'];
-  $options_installés = $_POST['options_installés'];
-  // $image = $_FILES['image'];
-  $img_loc1 = $_FILES['image1']['tmp_name'];
-  $img_name1 = $_FILES['image1']['name'];
-
-  $img_loc2 = $_FILES['image2']['tmp_name'];
-  $img_name2 = $_FILES['image2']['name'];
-
-  $img_loc3 = $_FILES['image3']['tmp_name'];
-  $img_name3 = $_FILES['image3']['name'].
- 
-  move_uploaded_file($img_loc1, $img_des1.$img_name1);
-  move_uploaded_file($img_loc2, $img_des2.$img_name2);
-  move_uploaded_file($img_loc3, $img_des3.$img_name3);
-
-
- 
-
   
-
-  $query = "INSERT INTO details_voitures (caractéristique, liste_équipements, options_installés, image1, image2, image3)
-   VALUES ('$caractéristique','$liste_équipements','$options_installés','$img_name1','$img_name2','$img_name3')";
-   $statement = $conn->prepare($query);
-   
-   $stat = $statement->execute();
-  header('location:details_car.php');
-};
 
 
 
@@ -42,7 +13,7 @@ if(isset($_POST['addDétails'])){
         <p>Véhicules</p>
     </div>
        <div class="content_button mt-2">
-          <a href="vehicules.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
+          <a href="vehicules.php" class="btn btn-primary m">Back  <i class="bi bi-backspace"></i></a>
           <a href="vehicules.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutDétails">Ajouter détails <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
        </div>
     </div>
@@ -53,19 +24,15 @@ if(isset($_POST['addDétails'])){
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <?php 
-  $req =$conn->query("SELECT * FROM details_voitures");
-  $user= $req-> fetch();
-     ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
+      <img src="../uploads/pare_brise.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img  src="../uploads/<?php echo $user['image2']; ?>" class="d-block w-100" alt="image2">
+      <img src="../uploads/mecanique.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../uploads/<?php echo $user['image3']; ?>" class="d-block w-100" alt="image3">
+      <img src="../uploads/mercedes-benz-1370536_640.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -77,21 +44,23 @@ if(isset($_POST['addDétails'])){
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<?php
+  
+  $id = $_GET['id'];
+        $req =$conn->query("SELECT fiche_technique FROM voitures WHERE id = $id");
+        $user= $req-> fetch();
+     ?>
 <div class="table_car">
 <table class="blueTable">
 <thead>
 <tr>
-<th>Tableau de caractéristiques</th>
-<th>Liste des équipements</th>
-<th>Options installés</th>
+<th>Fiche technique</th>
 
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><?=$user['caractéristique']?></td>
-<td><?=$user['liste_équipements']?></td>
-<td><?=$user['options_installés']?></td>
+<td><?=$user['fiche_technique']?></td>
 </tr>
 </tbody>
 </table>
@@ -110,28 +79,24 @@ if(isset($_POST['addDétails'])){
       </div>
       <div class="modal-body">
       <div class="form-group">
-         <input type="text" name="caractéristique" class="form-control"  placeholder="carectéristique" required><br>
+         <input type="text" name="brand" class="form-control"  placeholder="Brand" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="liste_équipements" class="form-control"  placeholder="liste des équipements" required><br>
+         <input type="text" name="prix" class="form-control"  placeholder="prix" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="options_installés" class="form-control"  placeholder="options installés" required><br>
+         <input type="text" name="kilométrage" class="form-control"  placeholder="kilométrage" required><br>
+      </div>
+      <div class="form-group">
+         <input type="text" name="année" class="form-control"  placeholder="année de construction" required><br>
       </div>
       <div class="form-group mb-3">
-         <input type="file" name="image1" class="form-control" >
+         <input type="file" name="image" class="form-control" multiple="" >
       </div>
-      <div class="form-group mb-3">
-         <input type="file" name="image2" class="form-control" >
-      </div>
-      <div class="form-group mb-3">
-         <input type="file" name="image3" class="form-control" >
-      </div>
-
       
       </div>
       <div class="modal-footer">
-      <button type="submit" name="addDétails" class="btn btn-primary" >Valider</button>
+      <button type="submit" name="addCar" class="btn btn-primary" >Valider</button>
       </div>
     </div>
      </form>
