@@ -1,6 +1,6 @@
 <?php
 require_once 'head.php';
-// require_once './lib/config.php';
+require_once '../lib/config.php';
 
 function creneaux_html (array $creneaux){
   if(count($creneaux) === 0){

@@ -8,5 +8,5 @@
 --CREATE TABLE `review_table` (`review_id` INT NOT NULL AUTO_INCREMENT , `user_name` VARCHAR(50) NOT NULL , `user_rating` VARCHAR(5) NOT NULL , `user_review` VARCHAR(255) NOT NULL , `datetime` DATETIME NOT NULL , PRIMARY KEY (`review_id`));
 --ALTER TABLE `review_table` CHANGE `review_id` `review_id` INT NOT NULL AUTO_INCREMENT, CHANGE `user_rating` `user_rating` INT NOT NULL, CHANGE `user_review` `user_review` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL, CHANGE `datetime` `datetime` INT NOT NULL;
 --CREATE TABLE`services` (`id` INT NOT NULL AUTO_INCREMENT , `card_titre` VARCHAR(100) NOT NULL , `card_description` TEXT NOT NULL , `image` VARCHAR(255) NOT
---CREATE TABLE `ecf`.`details_voitures` (`id_details` INT NOT NULL AUTO_INCREMENT , `fiche_techniques` TEXT NOT NULL , `image` LONGBLOB NOT NULL , PRIMARY KEY (`id_details`))
+
 --SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details;

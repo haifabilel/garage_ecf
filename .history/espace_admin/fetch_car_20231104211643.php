@@ -56,7 +56,7 @@ if(isset($_POST['addCar'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-        <td class="td_image"><img src="../uploads/<?php echo $user['image']; ?>"  alt="image_car" class="image_car" ></td>
+        <td class="td_image"><img src="..<?php echo $user['image']; ?>" alt="image_car" class="image_car" ></td>
         <td><?=$user['brand']?></td>
         <td><?=$user['prix']?></td>
         <td><?=$user['kilométrage']?></td>
@@ -92,7 +92,7 @@ if(isset($_POST['addCar'])){
          <input type="text" name="année" class="form-control"  placeholder="année de construction" required><br>
       </div>
       <div class="form-group mb-3">
-         <input type="file" name="image" class="form-control" multiple="" >
+         <input type="file" name="image" class="form-control">
       </div>
       
       </div>
