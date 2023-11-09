@@ -37,7 +37,7 @@ if(isset($_POST["action"])) {
 
           <div class="card">
 
-         <img class="card-img-top img-fluid" src="../uploads/<?php echo $user['image']; ?>" alt="Card image cap">
+         <img class="card-img-top img" src="../uploads/<?php echo $user['image']; ?>" alt="Card image cap">
          <div class="card-body">
           <h5 class="card-title text-center"><?php echo $user['brand']; ?></h5>
           <p class="card-text">Prix: <?php echo $user['prix']; ?></p>

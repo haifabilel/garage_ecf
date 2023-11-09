@@ -34,7 +34,7 @@ $(document).ready(function(){
             filter_data();
         }
     }); 
-      $('#kilometrage_range').slider({
+      $('#Kilometrage_range').slider({
         range:true,
         min:5000,
         max:250000,

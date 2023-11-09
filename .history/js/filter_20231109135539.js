@@ -7,10 +7,6 @@ $(document).ready(function(){
         var action = 'fetch_data';
         var minimum_price = $('#hidden_minimum_price').val();
         var maximum_price = $('#hidden_maximum_price').val();
-        var minimum_kilometrage = $('#hidden_minimum_kilometrage').val();
-        var maximum_kilometrage = $('#hidden_maximum_kilometrage').val();
-        var minimum_année = $('#hidden_minimum_année').val();
-        var maximum_année = $('#hidden_maximum_année').val();
         $.ajax({
             url:"vehicules.php",
             method:"POST",
@@ -33,8 +29,8 @@ $(document).ready(function(){
             $('#hidden_maximum_price').val(ui.values[1]);
             filter_data();
         }
-    }); 
-      $('#kilometrage_range').slider({
+    });
+       $('#kilométrage_range').slider({
         range:true,
         min:5000,
         max:250000,
@@ -42,9 +38,9 @@ $(document).ready(function(){
         step:500,
         stop:function(event, ui)
         {
-            $('#kilometrage_show').html(ui.values[0] + ' - ' + ui.values[1]);
-            $('#hidden_minimum_kilometrage').val(ui.values[0]);
-            $('#hidden_maximum_kilometrage').val(ui.values[1]);
+            $('#kilo_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
             filter_data();
         }
     }) 
@@ -57,8 +53,8 @@ $(document).ready(function(){
         stop:function(event, ui)
         {
             $('#année_show').html(ui.values[0] + ' - ' + ui.values[1]);
-            $('#hidden_minimum_année').val(ui.values[0]);
-            $('#hidden_maximum_année').val(ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
             filter_data();
         }
     }) 

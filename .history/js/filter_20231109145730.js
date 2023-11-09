@@ -14,7 +14,9 @@ $(document).ready(function(){
         $.ajax({
             url:"vehicules.php",
             method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price},
+            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price,
+                minimum_kilometrage:minimum_kilometrage, maximum_kilometrage:maximum_kilometrage,
+                minimum_price:minimum_année, maximum_price:maximum_année},
             success:function(data){
                 $('.filter_data').html(data);
             }
@@ -34,7 +36,7 @@ $(document).ready(function(){
             filter_data();
         }
     }); 
-      $('#kilometrage_range').slider({
+      $('#Kilometrage_range').slider({
         range:true,
         min:5000,
         max:250000,
@@ -42,7 +44,7 @@ $(document).ready(function(){
         step:500,
         stop:function(event, ui)
         {
-            $('#kilometrage_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#kilométrage_show').html(ui.values[0] + ' - ' + ui.values[1]);
             $('#hidden_minimum_kilometrage').val(ui.values[0]);
             $('#hidden_maximum_kilometrage').val(ui.values[1]);
             filter_data();

@@ -39,7 +39,7 @@ require_once '../espace_admin/connexion.php';
                 <input type="hidden" id="hidden_minimum_année" value="11990" />
                 <input type="hidden" id="hidden_maximum_année" value="2022" />
                 <p id="Année_show">1990 - 2022</p>
-                <div id="année_range"></div>
+                <div id="Année_range"></div>
             </div>                
         </div>
 

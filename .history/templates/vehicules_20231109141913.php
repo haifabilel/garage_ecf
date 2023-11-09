@@ -23,7 +23,7 @@ require_once 'head.php';
     <?php
 if(isset($_POST["action"])) {
     $query = $conn->query("SELECT * FROM voitures");
-    if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])) {
+    if(isset($_POST["minimum_price"], $_POST["maximum_price"],) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])) {
         $query = $conn->query("SELECT * FROM voitures WHERE prix BETWEEN '" . $_POST["minimum_price"] . "' AND '" . $_POST["maximum_price"] . "'");
     }
 
@@ -58,7 +58,7 @@ if(isset($_POST["action"])) {
 } ?>
 </section>
 <script src="../js/script.js"></script>
-<script src="../js/filter.js"></script>
+
 
 
 

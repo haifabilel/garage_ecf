@@ -27,19 +27,19 @@ require_once '../espace_admin/connexion.php';
         <div class="col-md-3">                                
             <div class="list-group">
                 <h3>kilométrage</h3>
-                <input type="hidden" id="hidden_minimum_kilometrage" value="15000" />
-                <input type="hidden" id="hidden_maximum_kilometrage" value="250000" />
-                <p id="kilometrage_show">15000 - 250000</p>
-                <div id="kilometrage_range"></div>
+                <input type="hidden" id="hidden_minimum_price" value="15000" />
+                <input type="hidden" id="hidden_maximum_price" value="250000" />
+                <p id="kilométrage_show">15000 - 250000</p>
+                <div id="price_range"></div>
             </div>                
         </div>
         <div class="col-md-3">                                
             <div class="list-group">
                 <h3>Année</h3>
-                <input type="hidden" id="hidden_minimum_année" value="11990" />
-                <input type="hidden" id="hidden_maximum_année" value="2022" />
-                <p id="Année_show">1990 - 2022</p>
-                <div id="année_range"></div>
+                <input type="hidden" id="hidden_minimum_price" value="11990" />
+                <input type="hidden" id="hidden_maximum_price" value="50000" />
+                <p id="price_show">1990 - 2022</p>
+                <div id="price_range"></div>
             </div>                
         </div>
 

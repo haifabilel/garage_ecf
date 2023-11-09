@@ -1,13 +1,12 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
-
 ?>
 
    <!-- Loader page -->
-    <!-- <div class="preloader">
+    <div class="preloader">
       <span class="loader" > </span>
-    </div> -->
+    </div>
     <div class="container_services p-3 ">
     <div class="content_services d-flex">
         <p>Véhicules</p>
@@ -16,28 +15,23 @@ require_once 'head.php';
           <a href="../index.php" class="btn btn-primary">Accueil  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
-    <?php require_once 'filtre_car.php' ?>
   <section>
-    
+    <?php require_once 'filtre_car.php' ?>
   <div class="row">
     <?php
 if(isset($_POST["action"])) {
-    $query = $conn->query("SELECT * FROM voitures");
+    $req = $conn->query('SELECT * FROM voitures');
     if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])) {
         $query = $conn->query("SELECT * FROM voitures WHERE prix BETWEEN '" . $_POST["minimum_price"] . "' AND '" . $_POST["maximum_price"] . "'");
     }
-
-    $output = '';
-    if($query->rowCount() > 0) {
-        while ($user = $query ->fetch()) {
-            $output = '';
+    if($req->rowCount() > 0) {
+        while($user = $req->fetch()) {
             ?>
-    
     <div class="col-lg-4 d-flex">
 
           <div class="card">
 
-         <img class="card-img-top img-fluid" src="../uploads/<?php echo $user['image']; ?>" alt="Card image cap">
+         <img class="card-img-top" src="../uploads/<?php echo $user['image']; ?>" alt="Card image cap">
          <div class="card-body">
           <h5 class="card-title text-center"><?php echo $user['brand']; ?></h5>
           <p class="card-text">Prix: <?php echo $user['prix']; ?></p>
@@ -50,15 +44,20 @@ if(isset($_POST["action"])) {
       </div>
 
       </div>
-      <?php  }
+      <?php
+        }
     } else {
-        $output = '<h3>No Data Found</h3>';
+        echo 'not found';
     }
-    echo $output;
-} ?>
+}
+     ;?>
 </section>
 <script src="../js/script.js"></script>
-<script src="../js/filter.js"></script>
 
 
 
+
+
+<?php
+require_once '../templates/footer.php';
+?>

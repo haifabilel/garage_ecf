@@ -58,7 +58,7 @@ if(isset($_POST["action"])) {
 } ?>
 </section>
 <script src="../js/script.js"></script>
-<script src="../js/filter.js"></script>
+
 
 
 
