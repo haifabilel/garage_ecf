@@ -8,7 +8,7 @@ require_once 'head.php';
     <!-- <div class="preloader">
       <span class="loader" > </span>
     </div> -->
-    <div class="container_services p-3 ">
+    <div class="container_services p-3 " >
     <div class="content_services d-flex">
         <p>Véhicules</p>
     </div>
@@ -16,6 +16,7 @@ require_once 'head.php';
           <a href="../index.php" class="btn btn-primary">Accueil  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
+    
     <?php require_once 'filtre_car.php' ?>
   <section>
     

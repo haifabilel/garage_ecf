@@ -16,6 +16,7 @@ require_once 'head.php';
           <a href="../index.php" class="btn btn-primary">Accueil  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
+    
     <?php require_once 'filtre_car.php' ?>
   <section>
     

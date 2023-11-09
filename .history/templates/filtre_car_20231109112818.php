@@ -15,7 +15,7 @@ require_once '../espace_admin/connexion.php';
 <div class="container">
     <div class="row">
     
-        <div class="col-md-3">                                
+        <!-- <div class="col-md-3">                                
             <div class="list-group">
                 <h3>Price</h3>
                 <input type="hidden" id="hidden_minimum_price" value="1500" />
@@ -23,14 +23,14 @@ require_once '../espace_admin/connexion.php';
                 <p id="price_show">1500 - 50000</p>
                 <div id="price_range"></div>
             </div>                
-        </div>
+        </div> -->
 
            <div class="filter_data">
         </div>
     </div>
     </div>
 </div>
-<script src="../js/filter.js"></script>
+
 
 </body>
 </html>

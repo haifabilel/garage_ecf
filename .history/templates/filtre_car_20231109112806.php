@@ -18,19 +18,21 @@ require_once '../espace_admin/connexion.php';
         <div class="col-md-3">                                
             <div class="list-group">
                 <h3>Price</h3>
-                <input type="hidden" id="hidden_minimum_price" value="1500" />
-                <input type="hidden" id="hidden_maximum_price" value="50000" />
-                <p id="price_show">1500 - 50000</p>
+                <input type="hidden" id="hidden_minimum_price" value="0" />
+                <input type="hidden" id="hidden_maximum_price" value="65000" />
+                <p id="price_show">1 - 5000</p>
                 <div id="price_range"></div>
             </div>                
         </div>
-
+        <div class="col-md-9">
+            <br />
            <div class="filter_data">
         </div>
     </div>
     </div>
 </div>
-<script src="../js/filter.js"></script>
 
+
+<script src="../js/filter.js"></script>
 </body>
 </html>

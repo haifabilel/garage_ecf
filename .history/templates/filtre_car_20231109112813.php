@@ -30,7 +30,7 @@ require_once '../espace_admin/connexion.php';
     </div>
     </div>
 </div>
-<script src="../js/filter.js"></script>
 
+<script src="../js/filter.js"></script>
 </body>
 </html>

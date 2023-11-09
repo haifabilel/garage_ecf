@@ -5,9 +5,9 @@ require_once 'head.php';
 ?>
 
    <!-- Loader page -->
-    <!-- <div class="preloader">
+    <div class="preloader">
       <span class="loader" > </span>
-    </div> -->
+    </div>
     <div class="container_services p-3 ">
     <div class="content_services d-flex">
         <p>Véhicules</p>
