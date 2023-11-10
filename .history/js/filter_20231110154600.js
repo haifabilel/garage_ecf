@@ -1,0 +1,67 @@
+//systéme filtre véhicule
+$(document).ready(function(){
+    filter_data();
+    function filter_data()
+    {
+        
+        var action = 'fetch_data';
+        var minimum_prix = $('#hidden_minimum_prix').val();
+        var maximum_prix = $('#hidden_maximum_prix').val();
+        var minimum_kilometrage = $('#hidden_minimum_kilometrage').val();
+        var maximum_kilometrage = $('#hidden_maximum_kilometrage').val();
+        var minimum_année = $('#hidden_minimum_année').val();
+        var maximum_année = $('#hidden_maximum_année').val();
+        $.ajax({
+            url:"fetch_data.php",
+            method:"POST",
+            data:{action:action, minimum_prix:minimum_prix, maximum_prix:maximum_prix,
+                minimum_kilometrage:minimum_kilometrage, maximum_kilometrage:maximum_kilometrage,
+                minimum_année:minimum_année, maximum_année:maximum_année},
+            success:function(data){
+                $('.filter_data').html(data);
+            }
+        });
+    }
+    $('#prix_range').slider({
+        range:true,
+        min:1500,
+        max:50000,
+        values:[1500, 50000],
+        step:500,
+        stop:function(event, ui)
+        {
+            $('#prix_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_prix').val(ui.values[0]);
+            $('#hidden_maximum_prix').val(ui.values[1]);
+            filter_data();
+        }
+    }); 
+      $('#kilometrage_range').slider({
+        range:true,
+        min:5000,
+        max:250000,
+        values:[5000, 250000],
+        step:500,
+        stop:function(ui)
+        {
+            $('#kilometrage_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_kilometrage').val(ui.values[0]);
+            $('#hidden_maximum_kilometrage').val(ui.values[1]);
+            filter_data();
+        }
+    }) 
+    $('#année_range').slider({
+        range:true,
+        min:1990,
+        max:2022,
+        values:[1990, 2022],
+        step:1,
+        stop:function(ui)
+        {
+            $('#année_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_année').val(ui.values[0]);
+            $('#hidden_maximum_année').val(ui.values[1]);
+            filter_data();
+        }
+    }) 
+});
