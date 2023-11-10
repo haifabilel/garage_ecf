@@ -36,17 +36,14 @@ require_once '../espace_admin/connexion.php';
         <div class="col-md-3">                                
             <div class="list-group">
                 <h3>Année</h3>
-                <input type="hidden" id="hidden_minimum_année" value="1990" />
+                <input type="hidden" id="hidden_minimum_année" value="11990" />
                 <input type="hidden" id="hidden_maximum_année" value="2022" />
                 <p id="année_show">1990 - 2022</p>
                 <div id="année_range"></div>
             </div>                
         </div>
 
-        <div class="col-md-9">
-            <br />
-           <div class="row filter_data"></div>
-    </div>
+       
     </div>
 </div>
 <script src="../js/filter.js"></script>

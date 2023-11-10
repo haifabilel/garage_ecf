@@ -9,8 +9,7 @@ if (!isset($_POST["action"])) {
         <p>Véhicules</p>
     </div>
     <div class="content_button mt-2">
-        <a href="../index.php" class="btn btn-primary mx-2">Accueil  <i class="bi bi-backspace"></i></a>
-        <a href="fetch_data.php" class="btn btn-primary mx-2">Réinitialiser filtre <i class="fa-solid fa-arrows-rotate"></i></a>
+        <a href="../index.php" class="btn btn-primary">Accueil  <i class="bi bi-backspace"></i></a>
     </div>
 </div>
 
@@ -49,7 +48,7 @@ if (isset($_POST["action"])) {
                         <p class="card-text">Prix: <?php echo $user['prix']; ?></p>
                         <p class="card-text">kilométrage: <?php echo $user['kilométrage']; ?></p>
                         <p class="card-text">Année: <?php echo $user['année']; ?></p>
-                        <a href="contact_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary mx-2 ">Contacter</a>
+                        <a href="contact_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary ">Contacter</a>
                         <a href="details_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary mx-2">Détails</a>
                     </div>
                 </div>
@@ -60,12 +59,11 @@ if (isset($_POST["action"])) {
         $output = '<h3>No Data Found</h3>';
     }
 }
-require_once '../templates/footer.php';
 ?>
 
 </section>
 
 <script src="../js/script.js"></script>
 <?php
-
+// require_once '../templates/footer.php';
 ?>

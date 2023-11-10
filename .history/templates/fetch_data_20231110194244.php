@@ -2,6 +2,7 @@
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
 
+// Inclure l'en-tête et le contenu avant la section des véhicules
 if (!isset($_POST["action"])) {
 ?>
 <div class="container_services p-3 ">
@@ -17,24 +18,14 @@ if (!isset($_POST["action"])) {
 <section class="filtre_car w-100">
     <?php require_once 'filtre_car.php' ?>
     <div class="row ">
-      
 <?php
 }
 
+// Inclure le contenu spécifique aux véhicules lorsqu'une action est définie
 if (isset($_POST["action"])) {
     $query = "SELECT * FROM voitures WHERE 1";
 
-    if (isset($_POST["minimum_année"], $_POST["maximum_année"]) && !empty($_POST["minimum_année"]) && !empty($_POST["maximum_année"])) {
-        $query .= " AND année BETWEEN '" . $_POST["minimum_année"] . "' AND '" . $_POST["maximum_année"] . "'";
-    }
-
-    if (isset($_POST["minimum_kilometrage"], $_POST["maximum_kilometrage"]) && !empty($_POST["minimum_kilometrage"]) && !empty($_POST["maximum_kilometrage"])) {
-        $query .= " AND kilométrage BETWEEN '" . $_POST["minimum_kilometrage"] . "' AND '" . $_POST["maximum_kilometrage"] . "'";
-    }
-
-    if (isset($_POST["minimum_prix"], $_POST["maximum_prix"]) && !empty($_POST["minimum_prix"]) && !empty($_POST["maximum_prix"])) {
-        $query .= " AND prix BETWEEN '" . $_POST["minimum_prix"] . "' AND '" . $_POST["maximum_prix"] . "'";
-    }
+    // ... (votre code de filtre)
 
     $result = $conn->query($query);
 
@@ -60,12 +51,11 @@ if (isset($_POST["action"])) {
         $output = '<h3>No Data Found</h3>';
     }
 }
-require_once '../templates/footer.php';
 ?>
 
 </section>
 
 <script src="../js/script.js"></script>
 <?php
-
+require_once '../templates/footer.php';
 ?>

@@ -548,13 +548,13 @@ li{
     margin-left: 50px;
     box-shadow: 5px 5px 10px -1px #808080;
     gap:10px;
-    width: 400px;
+    width: 500px;
     height:400px;
     margin-top: 40px;
 }
 .filtre_car .row {
     margin-top: 2rem;
-    width: 100%;
+    width: 126%;
     margin-left: -60px;
 }
 .card-title{

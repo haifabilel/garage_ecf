@@ -60,7 +60,6 @@ if (isset($_POST["action"])) {
         $output = '<h3>No Data Found</h3>';
     }
 }
-require_once '../templates/footer.php';
 ?>
 
 </section>

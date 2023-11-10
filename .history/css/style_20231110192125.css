@@ -548,15 +548,11 @@ li{
     margin-left: 50px;
     box-shadow: 5px 5px 10px -1px #808080;
     gap:10px;
-    width: 400px;
+    width: 600px;
     height:400px;
     margin-top: 40px;
 }
-.filtre_car .row {
-    margin-top: 2rem;
-    width: 100%;
-    margin-left: -60px;
-}
+
 .card-title{
     background-color: var(--main-color);
     color: var(--bg-color);
@@ -756,9 +752,9 @@ table.blueTable {
     margin-bottom:20px;
  }
  .content_services p{
-    display: none;
+    font-size: 1.7rem;
  }
  .card_car{
-    margin-left:12px;
+    margin-left:
  }
 }
