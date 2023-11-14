@@ -49,7 +49,7 @@ if(isset($_POST["rating_data"]))
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Entrer votre nom complét" />
 	        	</div><br>
 	        	<div class="form-group">
-	        		<textarea name="user_review" id="user_review" class="form-control " placeholder="Votre avis"></textarea>
+	        		<textarea name="user_review" id="user_review" class="form-control " placeholder="V"></textarea>
 	        	</div>
 	        	<div class="form-group text-center mt-4">
 	        		<button type="submit" class="btn btn-primary" id="save_review">Submit</button>
