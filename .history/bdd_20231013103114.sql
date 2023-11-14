@@ -1,5 +1,0 @@
---CREATE TABLE ecf;
---CREATE TABLE `ecf`.`admin` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `email` VARCHAR(255) NOT NULL , `user_type` VARCHAR(255) NOT NULL DEFAULT 'admin' , PRIMARY KEY (`id`)) 
---CREATE TABLE `ecf`.`admin` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `email` VARCHAR(255) NOT NULL , `user_type` VARCHAR(255) NOT NULL DEFAULT 'employé' , PRIMARY KEY (`id`)) 
---CREATE TABLE `ecf`.`voitures` (`id` INT NOT NULL AUTO_INCREMENT , `brand` VARCHAR(50) NOT NULL , `prix` DECIMAL(100) NOT NULL , `kilométrage` DECIMAL(255) NOT NULL , `année` INT NOT NULL , `photo` VARCHAR(20) NOT NULL , PRIMARY KEY (`id`))
---

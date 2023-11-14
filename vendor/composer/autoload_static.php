@@ -30,6 +30,7 @@ class ComposerStaticInit4e7cdc8497e2dffe5a9da14d7d0398d7
         ),
         'D' => 
         array (
+            'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\Common\\Lexer\\' => 22,
         ),
     );
@@ -59,9 +60,13 @@ class ComposerStaticInit4e7cdc8497e2dffe5a9da14d7d0398d7
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
+        'Doctrine\\Deprecations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
+        ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+            0 => __DIR__ . '/..' . '/doctrine/lexer/src',
         ),
     );
 
