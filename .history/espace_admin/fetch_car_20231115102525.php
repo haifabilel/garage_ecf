@@ -7,7 +7,7 @@ if(isset($_POST['addCar'])){
     $brand = $_POST['brand'];
     $prix = $_POST['prix'];
     $kilometrage = $_POST['kilometrage'];
-    $annee = $_POST['annee'];
+    $année = $_POST['année'];
     $image = $_FILES['image'];
     $img_loc = $_FILES['image']['tmp_name'];
     $img_name = $_FILES['image']['name'];
@@ -15,8 +15,8 @@ if(isset($_POST['addCar'])){
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
     
   
-    $query = "INSERT INTO voitures (brand, prix, kilometrage, annee, image)
-     VALUES ('$brand','$prix','$kilometrage','$annee','$img_des')";
+    $query = "INSERT INTO voitures (brand, prix, kilometrage, année, image)
+     VALUES ('$brand','$prix','$kilometrage','$année','$img_des')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
     header('location:fetch_car.php');
@@ -59,8 +59,8 @@ if(isset($_POST['addCar'])){
         <td class="td_image img-fluid"><img src="../uploads/<?php echo $user['image']; ?>"  alt="image_car" class="image_car" ></td>
         <td><?=$user['brand']?></td>
         <td><?=$user['prix']?></td>
-        <td><?=$user['kilometrage']?></td>
-        <td><?=$user['annee']?></td>
+        <td><?=$user['kilométrage']?></td>
+        <td><?=$user['année']?></td>
         </tr>
       
         <?php 
@@ -86,10 +86,10 @@ if(isset($_POST['addCar'])){
          <input type="text" name="prix" class="form-control"  placeholder="prix" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="kilometrage" class="form-control"  placeholder="kilométrage" required><br>
+         <input type="text" name="kilométrage" class="form-control"  placeholder="kilométrage" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="annee" class="form-control"  placeholder="année de construction" required><br>
+         <input type="text" name="année" class="form-control"  placeholder="année de construction" required><br>
       </div>
       <div class="form-group mb-3">
          <input type="file" name="image" class="form-control" multiple="" >

@@ -25,7 +25,7 @@ if (isset($_POST["action"])) {
     $query = "SELECT * FROM voitures WHERE 1";
 
     if (isset($_POST["minimum_année"], $_POST["maximum_année"]) && !empty($_POST["minimum_année"]) && !empty($_POST["maximum_année"])) {
-        $query .= " AND annee BETWEEN '" . $_POST["minimum_année"] . "' AND '" . $_POST["maximum_année"] . "'";
+        $query .= " AND année BETWEEN '" . $_POST["minimum_année"] . "' AND '" . $_POST["maximum_année"] . "'";
     }
 
     if (isset($_POST["minimum_kilometrage"], $_POST["maximum_kilometrage"]) && !empty($_POST["minimum_kilometrage"]) && !empty($_POST["maximum_kilometrage"])) {

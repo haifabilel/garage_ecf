@@ -25,7 +25,7 @@ if (isset($_POST["action"])) {
     $query = "SELECT * FROM voitures WHERE 1";
 
     if (isset($_POST["minimum_année"], $_POST["maximum_année"]) && !empty($_POST["minimum_année"]) && !empty($_POST["maximum_année"])) {
-        $query .= " AND annee BETWEEN '" . $_POST["minimum_année"] . "' AND '" . $_POST["maximum_année"] . "'";
+        $query .= " AND année BETWEEN '" . $_POST["minimum_année"] . "' AND '" . $_POST["maximum_année"] . "'";
     }
 
     if (isset($_POST["minimum_kilometrage"], $_POST["maximum_kilometrage"]) && !empty($_POST["minimum_kilometrage"]) && !empty($_POST["maximum_kilometrage"])) {
@@ -48,7 +48,7 @@ if (isset($_POST["action"])) {
                         <h5 class="card-title1 text-center"><?php echo $user['brand']; ?></h5>
                         <p class="card-text1">Prix: <?php echo $user['prix']; ?></p>
                         <p class="card-text1">kilométrage: <?php echo $user['kilometrage']; ?></p>
-                        <p class="card-text1">Année: <?php echo $user['annee']; ?></p>
+                        <p class="card-text1">Année: <?php echo $user['année']; ?></p>
                         <a href="contact_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary car mx-2 ">Contacter</a>
                         <a href="details_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary car mx-2">Détails</a>
                     </div>

@@ -11,7 +11,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
      $recupUser->bindValue(":id", $id, PDO::PARAM_INT);
      $recupUser->execute();
     if($recupUser->rowCount() > 0){
-        $bannirUser = $conn->prepare('DELETE FROM employe WHERE id = ?');
+        $bannirUser = $conn->prepare('DELETE FROM employé WHERE id = ?');
         $bannirUser->execute(array($id));
         header('location:admin_page.php');
     }

@@ -89,7 +89,7 @@ if(isset($_POST['addCar'])){
          <input type="text" name="kilometrage" class="form-control"  placeholder="kilométrage" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="annee" class="form-control"  placeholder="année de construction" required><br>
+         <input type="text" name="année" class="form-control"  placeholder="année de construction" required><br>
       </div>
       <div class="form-group mb-3">
          <input type="file" name="image" class="form-control" multiple="" >

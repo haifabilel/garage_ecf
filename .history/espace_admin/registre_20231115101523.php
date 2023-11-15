@@ -36,7 +36,7 @@ if(!empty($_POST)){
     };
 //insertion donnée employé
     if(empty($errors)){
-      $req = $conn->prepare("INSERT INTO employe SET name = ? ,email = ?,  password = ?, user_type = ? ");  
+      $req = $conn->prepare("INSERT INTO employé SET name = ? ,email = ?,  password = ?, user_type = ? ");  
      //Crypter le mote de passe avec la methode BCrypt
       $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
       $req->execute([$_POST['name'],$_POST['email'], $password, $_POST['user_type']]);
@@ -66,7 +66,7 @@ if(!empty($_POST)){
         <input type="password" name="cpassword" required placeholder="confirm your password">
         <select name="user_type" >
             <option  value="admin">admin</option>
-            <option value="employe">employé</option>
+            <option value="employé">employé</option>
         </select>
         <input type="submit" name="submit" value="register now" class="form-btn">
         <p>already have an account? <a href="login_form.php">login now</a></p>

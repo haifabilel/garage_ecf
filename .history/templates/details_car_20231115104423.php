@@ -118,7 +118,7 @@ if(isset($_POST['addDétails'])){
          <input type="text" name="liste_equipements" class="form-control"  placeholder="liste des équipements" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="options_installes" class="form-control"  placeholder="options installés" required><br>
+         <input type="text" name="options_installés" class="form-control"  placeholder="options installés" required><br>
       </div>
       <div class="form-group mb-3">
          <input type="file" name="image1" class="form-control" >

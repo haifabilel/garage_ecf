@@ -27,7 +27,7 @@ if(isset($_POST['addDétails'])){
   
 
   $query = "INSERT INTO details_voitures (caracteristique, liste_equipements, options_installes, image1, image2, image3)
-   VALUES ('$caracteristique','$liste_equipements','$options_installes','$img_name1','$img_name2','$img_name3')";
+   VALUES ('$caracteristique','$liste_equipements','$options_installés','$img_name1','$img_name2','$img_name3')";
    $statement = $conn->prepare($query);
    
    $stat = $statement->execute();
@@ -91,9 +91,9 @@ if(isset($_POST['addDétails'])){
 </thead>
 <tbody>
 <tr>
-<td><?=$user['caracteristique']?></td>
-<td><?=$user['liste_equipements']?></td>
-<td><?=$user['options_installes']?></td>
+<td><?=$user['caractéristique']?></td>
+<td><?=$user['liste_équipements']?></td>
+<td><?=$user['options_installés']?></td>
 </tr>
 </tbody>
 </table>
@@ -112,13 +112,13 @@ if(isset($_POST['addDétails'])){
       </div>
       <div class="modal-body">
       <div class="form-group">
-         <input type="text" name="caracteristique" class="form-control"  placeholder="carectéristique" required><br>
+         <input type="text" name="caractéristique" class="form-control"  placeholder="carectéristique" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="liste_equipements" class="form-control"  placeholder="liste des équipements" required><br>
+         <input type="text" name="liste_équipements" class="form-control"  placeholder="liste des équipements" required><br>
       </div>
       <div class="form-group">
-         <input type="text" name="options_installes" class="form-control"  placeholder="options installés" required><br>
+         <input type="text" name="options_installés" class="form-control"  placeholder="options installés" required><br>
       </div>
       <div class="form-group mb-3">
          <input type="file" name="image1" class="form-control" >
