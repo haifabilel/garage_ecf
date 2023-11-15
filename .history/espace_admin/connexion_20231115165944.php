@@ -1,12 +1,12 @@
 <?php
 
 //connexion à la bdd
-$user = 'dsf3j3ycnocrz0mt';
+$user = 'dsf3j3y';
 $pass = 'kxtv9ef1towu7wlm';
 $host = 'esilxl0nthgloe1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com';
 $db_name = 'wyk5nombobh9yvg1';
 try {
-    $conn = new PDO('mysql://dsf3j3ycnocrz0mt:kxtv9ef1towu7wlm@esilxl0nthgloe1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wyk5nombobh9yvg1');
+    $conn = new PDO('mysql:$host;3306;$db_name',$user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
  
 }catch(PDOException $e){
