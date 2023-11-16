@@ -57,7 +57,7 @@ if(isset($_POST['addService'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-        <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card" style="height:150px; width:250px;" ></td>
+        <td><img  src="../uploads/<?php echo $user['image']; ?>" alt="image_card" style="height:150px; width:250px;" ></td>
         <td><?=$user['titre']?></td>
         <td><?=$user['description']?></td>
         <td>
@@ -105,5 +105,6 @@ if(isset($_POST['addService'])){
   </div>
 </div>
 </html>
-
+<?php
+require_once '../templates/footer.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -920,11 +920,5 @@ color: var(--main-color);
    .titre_empl{
     display:none;
    }
-   .titre_time{
-    font-size: 1.5rem;
-    margin-left: 45px;
-   }
-   .section_horaire .blueTable{
-    margin-bottom: 70%;
-   }
+   .titre
 }

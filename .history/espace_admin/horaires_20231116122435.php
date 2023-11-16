@@ -21,8 +21,8 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
           <a href="admin_page.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
-<section class="section_horaire">
-    <h2 class="titre_time mt-4">Update les horaires d'ouverture / fermeture du garage</h2>
+<section >
+    <h2 class="mt-4">Update les horaires d'ouverture / fermeture du garage</h2>
     <table class="blueTable">
 <thead>
 <tr>
@@ -32,6 +32,7 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
 <th>Action</th>
 </tr>
 </thead>
+<section>
     <!-- Parcourir la liste des avis -->
     <?php
    

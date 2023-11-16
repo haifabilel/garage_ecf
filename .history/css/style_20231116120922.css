@@ -362,7 +362,7 @@ input[type="range"]::-moz-range-thumb{
 footer{
     background-color:var(--second-color);
     height: 300px;
-    margin-top:6.5rem;
+    margin-top:5.5rem;
     color:var(--bg-color);
 }
 .contact-infos{
@@ -537,7 +537,7 @@ table.blueTable {
     width: 80%;
     text-align: left;
     border-collapse: collapse;
-    margin-left: 20px;
+    /* margin-left: 8rem; */
   }
   table.blueTable td, table.blueTable th {
     border: 1px solid #AAAAAA;
@@ -841,7 +841,7 @@ table.blueTable {
     margin-top: -10%;
  }
  .form-container{
-    margin-top: 10px;
+    margin-top: -15%;
  }
  #back_contact, #back_car{
     margin: 7.5rem;
@@ -916,15 +916,5 @@ color: var(--main-color);
    }
    .dashboard-title{
     margin-left: 45%;
-   }
-   .titre_empl{
-    display:none;
-   }
-   .titre_time{
-    font-size: 1.5rem;
-    margin-left: 45px;
-   }
-   .section_horaire .blueTable{
-    margin-bottom: 70%;
    }
 }
