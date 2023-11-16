@@ -8,7 +8,7 @@ require_once '../espace_admin/connexion.php';
     <div class="content_header d-flex">
         <p>Contact</p>
     </div>
-       <div class="content_button ">
+       <div class="content_button mb-2">
           <a href="fetch_data.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
        </div>
     </div>  

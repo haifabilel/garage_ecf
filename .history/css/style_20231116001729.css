@@ -618,7 +618,7 @@ li{
     color: var(--bg-color);
     justify-content: space-between;
     display: flex;
-    
+    width: 400px;
 }
 
 .content_header{

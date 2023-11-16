@@ -411,7 +411,9 @@ span.matin,.apres_midi{
 .contact-infos_car h5{
     font-size:2rem;
 }
-
+.reviews-section_car{
+    margin-top:0px;
+}
 .reviews-section_car h5{
     font-size:2rem;
     margin-top:-60px;
@@ -618,7 +620,6 @@ li{
     color: var(--bg-color);
     justify-content: space-between;
     display: flex;
-    
 }
 
 .content_header{
@@ -740,12 +741,12 @@ width: 300px;
 table.blueTable {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
-    width: 95%;
+    width: 80%;
     text-align: left;
   }
   table.blueTable td, table.blueTable th {
-    border: 7px solid #FFFFFF;
-   
+    border: 10px solid #FFFFFF;
+    padding: 3px 2px;
   }
 
   table.blueTable thead {
@@ -840,7 +841,7 @@ table.blueTable {
     margin-top: -10%;
  }
  .form-container{
-    margin-top: -15%;
+    margin-top: 3%;
  }
  #back_contact, #back_car{
     margin: 7.5rem;
