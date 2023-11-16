@@ -35,7 +35,7 @@ if(isset($_POST['addCar'])){
     </div>
 
      <!-- Afficher la liste des véhicules enregistrés dans ma bdd -->
-  <section class="fetch_car">
+  <section class>
      <div class="container_card my-5">
         <h2>liste des véhicules</h2>
   

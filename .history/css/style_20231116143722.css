@@ -235,22 +235,6 @@ h1{
    color:var(--bg-color);
    background-color: var(--main-color);
 }
-.password-container {
-    position: relative;
-  }
-  
-  .toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  #eye-icon {
-    font-size: 1.2em;
-  }
-  
 /* registre_page ends */
 /* vehicules page starts */
 
@@ -932,7 +916,6 @@ color: var(--main-color);
    }
    .dashboard-title{
     margin-left: 45%;
-    font-size: 1.5rem;
    }
    .titre_empl{
     display:none;
@@ -960,15 +943,5 @@ color: var(--main-color);
    .titre_avis{
     display:none;
    }
-   .container_user h2{
-    font-size: 1.5rem;
-    margin-left: 42px;
-   }
-   .container_user .blueTable{
-    margin-left: 5px;
-    margin-bottom: 80%;
-   }
-   .container_card tbody{
-    white-space: nowrap;
-   }
+   .container_user h2
 }

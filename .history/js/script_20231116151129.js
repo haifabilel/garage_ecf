@@ -85,7 +85,7 @@ $('#save_review').click(function(){
         })
     }
 });
-// Affichage mot de passe dans le formulaire login
+A
 function togglePasswordVisibility() {
     var passwordInput = document.getElementById("password");
     var eyeIcon = document.getElementById("eye-icon");

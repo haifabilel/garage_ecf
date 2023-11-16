@@ -1,5 +1,5 @@
 CREATE TABLE admin (id INT NOT NULL AUTO_INCREMENT , name VARCHAR(255) NOT NULL , email VARCHAR(255) NOT NULL,password VARCHAR (255)NOT NULL , user_type VARCHAR(255) NOT NULL,PRIMARY KEY (id));
-INSERT INTO admin (id, name, email, password, user_type) VALUES (1, 'admin', 'vinccentparrot@gmail.com', '$2y$10$FmjW6DoMhnBHTYGtE2V52ud/Pty0GWU254T8oBaIbPXwVEZ8agKhW', 'admin'),(6, 'second_user', 'second_user@gmail.com', '$2y$10$8p5HunD7Y9Fy8djX3gQWwOmBVEfR9PAdYibXoPlVsRnMpdzjw490i', 'employe');
+INSERT INTO admin (id, name, email, password, user_type) VALUES (1, 'admin', 'vinccentparrot@gmail.com', '', 'admin'),(6, 'second_user', 'second_user@gmail.com', '$2y$10$8p5HunD7Y9Fy8djX3gQWwOmBVEfR9PAdYibXoPlVsRnMpdzjw490i', 'employe');
 CREATE TABLE employe (id INT NOT NULL AUTO_INCREMENT , name VARCHAR(50) NOT NULL , email VARCHAR(255) NOT NULL,password VARCHAR (255)NOT NULL , user_type VARCHAR(255) NOT NULL,PRIMARY KEY (id));
 INSERT INTO employe (id, name, email, password, user_type) VALUES (5, 'second_user', 'second_user@gmail.com', '$2y$10$8p5HunD7Y9Fy8djX3gQWwOmBVEfR9PAdYibXoPlVsRnMpdzjw490i', 'employe');
 CREATE TABLE voitures (id int NOT NULL AUTO_INCREMENT,id_details int NOT NULL,brand varchar(255) NOT NULL,prix int NOT NULL, kilometrage int NOT NULL, annee int NOT NULL,image longblob NOT NULL,PRIMARY KEY (id));

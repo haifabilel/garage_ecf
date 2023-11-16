@@ -85,20 +85,16 @@ $('#save_review').click(function(){
         })
     }
 });
-// Affichage mot de passe dans le formulaire login
 function togglePasswordVisibility() {
     var passwordInput = document.getElementById("password");
-    var eyeIcon = document.getElementById("eye-icon");
+    var checkbox = document.getElementById("showPassword");
   
-    if (passwordInput.type === "password") {
+    if (checkbox.checked) {
       passwordInput.type = "text";
-      eyeIcon.className = "fa fa-eye-slash";
     } else {
       passwordInput.type = "password";
-      eyeIcon.className = "fa fa-eye";
     }
   }
-  
   
 
 

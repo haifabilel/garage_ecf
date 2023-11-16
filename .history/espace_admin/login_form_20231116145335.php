@@ -39,14 +39,14 @@ if(!empty($_POST)) {
 
 
     //changer password USER
-//     $password = "Admin_P92**";
-//     echo password_hash("Admin_P92**",PASSWORD_DEFAULT);
-// if (isset($_POST['email'],$_POST['password'])){
-//     $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
-//     $stmt->execute([$_POST['email']]);
-//     $hpassword = $stmt->fetchColumn();
+    $password = "Admin";
+    echo password_hash("Admin_P1992",PASSWORD_DEFAULT);
+if (isset($_POST['email'],$_POST['password'])){
+    $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
+    $stmt->execute([$_POST['email']]);
+    $hpassword = $stmt->fetchColumn();
 
-// };
+};
 
 
 ?>
@@ -67,12 +67,7 @@ if(!empty($_POST)) {
         };
         ?>
         <input type="email" name="email" required placeholder="entrer une adresse email">
-        <div class="password-container">
-        <input type="password" name="password" id="password" required placeholder="entrer un mot de passe">
-        <span class="toggle-password" onclick="togglePasswordVisibility()">
-        <i class="fa fa-eye" id="eye-icon"></i>
-        </span>
-        </div>
+        <input type="password" name="password" required placeholder="entrer un mot de passe">
         <input type="submit" name="submit" value="login now" class="form-btn">
        
     </form>
@@ -82,4 +77,3 @@ if(!empty($_POST)) {
 <?php
 require_once '../templates/footer.php';
 ?>
-<script src="../js/script.js"></script>

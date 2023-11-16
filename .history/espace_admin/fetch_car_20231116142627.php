@@ -35,9 +35,8 @@ if(isset($_POST['addCar'])){
     </div>
 
      <!-- Afficher la liste des véhicules enregistrés dans ma bdd -->
-  <section class="fetch_car">
-     <div class="container_card my-5">
-        <h2>liste des véhicules</h2>
+  <div class="container_card my-5">
+   <h2>liste des véhicules</h2>
   
  <table class="blueTable">
 <thead>
@@ -69,7 +68,7 @@ if(isset($_POST['addCar'])){
     ?>
 </tbody>
 </table>
-</section>
+
 <!-- Modal ajout car-->
 <div class="modal fade" id="ajoutCar" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog">

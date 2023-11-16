@@ -35,12 +35,13 @@ if(!empty($_POST)) {
        
     }
 }
-
+// $sql = "SELECT * FROM admin INNER JOIN employé
+// ON employé.id = admin.id";
 
 
     //changer password USER
-//     $password = "Admin_P92**";
-//     echo password_hash("Admin_P92**",PASSWORD_DEFAULT);
+//     $password = "";
+//     echo password_hash("Admin_P1992",PASSWORD_DEFAULT);
 // if (isset($_POST['email'],$_POST['password'])){
 //     $stmt = $conn->prepare('SELECT password From admin WHERE email = ?');
 //     $stmt->execute([$_POST['email']]);
@@ -51,8 +52,10 @@ if(!empty($_POST)) {
 
 ?>
 <div class="container_header p-3 ">
+    
        <div class="content_button mt-2">
-          <a href="../index.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
+          <button class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
+          <a href="admin_page.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
 <section>
@@ -67,12 +70,7 @@ if(!empty($_POST)) {
         };
         ?>
         <input type="email" name="email" required placeholder="entrer une adresse email">
-        <div class="password-container">
-        <input type="password" name="password" id="password" required placeholder="entrer un mot de passe">
-        <span class="toggle-password" onclick="togglePasswordVisibility()">
-        <i class="fa fa-eye" id="eye-icon"></i>
-        </span>
-        </div>
+        <input type="password" name="password" required placeholder="entrer un mot de passe">
         <input type="submit" name="submit" value="login now" class="form-btn">
        
     </form>
@@ -82,4 +80,3 @@ if(!empty($_POST)) {
 <?php
 require_once '../templates/footer.php';
 ?>
-<script src="../js/script.js"></script>

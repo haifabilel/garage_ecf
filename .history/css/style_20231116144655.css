@@ -235,22 +235,6 @@ h1{
    color:var(--bg-color);
    background-color: var(--main-color);
 }
-.password-container {
-    position: relative;
-  }
-  
-  .toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  #eye-icon {
-    font-size: 1.2em;
-  }
-  
 /* registre_page ends */
 /* vehicules page starts */
 
@@ -967,8 +951,5 @@ color: var(--main-color);
    .container_user .blueTable{
     margin-left: 5px;
     margin-bottom: 80%;
-   }
-   .container_card tbody{
-    white-space: nowrap;
    }
 }

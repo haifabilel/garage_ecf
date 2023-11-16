@@ -71,8 +71,8 @@ if(!empty($_POST)) {
         <input type="password" name="password" id="password" required placeholder="entrer un mot de passe">
         <span class="toggle-password" onclick="togglePasswordVisibility()">
         <i class="fa fa-eye" id="eye-icon"></i>
-        </span>
-        </div>
+         </span>
+  </div>
         <input type="submit" name="submit" value="login now" class="form-btn">
        
     </form>
