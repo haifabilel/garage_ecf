@@ -41,8 +41,8 @@
 </nav>
     </header>
     <section class="pannel_admin">
-     <h2 class="dashboard-title">Pannel admin</h2>
-     <img src="../uploads/Bienvenue Mr.Parrot (2).png" alt="image_admin" class="image_admin img-fluid">
+     <p class="dashboard-title">Pannel admin</p>
+     <img src="../uploads/Bienvenue Mr.Parrot (2).png" alt="image_admin" class="image_admin img">
     </section>
 
   <?php  

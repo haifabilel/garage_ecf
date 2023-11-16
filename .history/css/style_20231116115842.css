@@ -823,8 +823,8 @@ table.blueTable {
     margin-left: 0;
  }
  .container_reviews .card{
-    width: 370px;
-    height: 300px;
+    width: max-content;
+    height: 370px;
     margin-bottom: 30px;
     margin: 0 10px;
  }
