@@ -19,7 +19,7 @@ if(!empty($_POST)) {
         } elseif(!$user_type) {
             $errors['user_type'] = "Ce user n'existe pas";
 
-        } elseif(!password_verify($_POST["password"], $user_type["password"])) {
+        } elseif(!$user_type["password"]) {
             $errors['password'] = "Votre password n'est pas valide";
 
         }else {
@@ -63,8 +63,8 @@ if(!empty($_POST)) {
             };
         };
         ?>
-        <input type="email" name="email" required placeholder="entrer une adresse email">
-        <input type="password" name="password" required placeholder="entrer un mot de passe">
+        <input type="email" name="email" required placeholder="entrer u email">
+        <input type="password" name="password" required placeholder="enter your password">
         <input type="submit" name="submit" value="login now" class="form-btn">
        
     </form>

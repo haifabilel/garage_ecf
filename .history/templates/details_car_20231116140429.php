@@ -47,7 +47,7 @@ if(isset($_POST['addDétails'])){
           <a href="vehicules.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutDétails">Ajouter détails <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
        </div>
     </div>
-<section class="section_details">
+<section class="section">
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
