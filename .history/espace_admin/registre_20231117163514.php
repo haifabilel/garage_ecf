@@ -63,8 +63,8 @@ if(!empty($_POST)){
         ?>
         <input type="text" name="name" required placeholder="entrer votre nom complét">
         <input type="email" name="email" required placeholder="entrer un email">
-        <input type="password" name="password" required placeholder="entrer un mot de passe">
-        <input type="password" name="cpassword" required placeholder="confirmer votre mot de passe">
+        <input type="password" name="password" required placeholder="enter your password">
+        <input type="password" name="cpassword" required placeholder="confirm your password">
         <select name="user_type" >
             <option  value="admin">admin</option>
             <option value="employe">employé</option>

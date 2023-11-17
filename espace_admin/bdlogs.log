@@ -1,2 +1,5 @@
 SQLSTATE[HY000] [1049] Base 'ecff' inconnue
 SQLSTATE[HY000] [1049] Base 'ecff' inconnue
+SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'gbaiajt3dsgh3pgn'@'@localhost' (mot de passe: OUI)
+SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'gbaiajt3dsgh3pgn'@'@localhost' (mot de passe: OUI)
+SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'gbaiajt3dsgh3pgn'@'@localhost' (mot de passe: OUI)

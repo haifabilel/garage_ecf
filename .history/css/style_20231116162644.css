@@ -553,7 +553,7 @@ table.blueTable {
     width: 80%;
     text-align: left;
     border-collapse: collapse;
-    
+    margin-left: 20px;
   }
   table.blueTable td, table.blueTable th {
     border: 1px solid #AAAAAA;

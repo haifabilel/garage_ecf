@@ -50,7 +50,7 @@ if(!empty($_POST)){
           <a href="admin_page.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
        </div>
     </div>
-<section>
+<section></section>
 <div class="form-container">
     <form action="" method="POST">
         <h3>Registre now</h3>
@@ -61,10 +61,10 @@ if(!empty($_POST)){
             };
         };
         ?>
-        <input type="text" name="name" required placeholder="entrer votre nom complét">
-        <input type="email" name="email" required placeholder="entrer un email">
-        <input type="password" name="password" required placeholder="entrer un mot de passe">
-        <input type="password" name="cpassword" required placeholder="confirmer votre mot de passe">
+        <input type="text" name="name" required placeholder="enter your name">
+        <input type="email" name="email" required placeholder="enter your mail">
+        <input type="password" name="password" required placeholder="enter your password">
+        <input type="password" name="cpassword" required placeholder="confirm your password">
         <select name="user_type" >
             <option  value="admin">admin</option>
             <option value="employe">employé</option>
@@ -73,11 +73,9 @@ if(!empty($_POST)){
         <p>already have an account? <a href="login_form.php">login now</a></p>
     </form>
 </div>
-</section>
 
-<?php
-require_once '../templates/footer.php';
-?>
+
+
 
 
 

@@ -9,7 +9,7 @@
 }
 /*Variables*/
 :root{
-    --main-color:#2288ff;
+    --main-color:#register;
     --second-color:#192f6a;
     --text-color:#314862;
     --bg-color:#fff;
@@ -553,7 +553,7 @@ table.blueTable {
     width: 80%;
     text-align: left;
     border-collapse: collapse;
-    
+    margin-left: 20px;
   }
   table.blueTable td, table.blueTable th {
     border: 1px solid #AAAAAA;
