@@ -4,17 +4,17 @@ require_once 'head.php';
 if(isset($_POST["rating_data"]))
 {
 
-	
-		$user_name=	$_POST["user_name"];
-		$user_rating= $_POST["rating_data"];
-		$user_review= $_POST["user_review"];
-		$datetime	=	time();
-	
+	$data = array(
+		$user_name		=>	$_POST["user_name"],
+		$user_rating		=>	$_POST["rating_data"],
+		$user_review		=>	$_POST["user_review"],
+		$datetime			=>	time()
+	);
 
 	$query ="INSERT INTO review_table (user_name, user_rating, user_review, datetime) 
-	VALUES ($user_name, $user_rating, $user_review, $datetime)";
+	VALUES (:user_name, :user_rating, :user_review, :datetime)";
 	$statement = $conn->prepare($query);
-	$statement->execute();
+	$statement->execute($data);
 
 };
 

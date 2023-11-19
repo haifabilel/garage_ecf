@@ -6,8 +6,8 @@ if(isset($_POST["rating_data"]))
 
 	
 		$user_name=	$_POST["user_name"];
-		$user_rating= $_POST["rating_data"];
 		$user_review= $_POST["user_review"];
+		$user_rating= $_POST["rating_data"];
 		$datetime	=	time();
 	
 

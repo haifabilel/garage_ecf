@@ -21,7 +21,9 @@ if(isset($_POST['submit'])){
 
 
 
-<div class="container_header p-3 ">
+
+   <section id="Contact" class="Contact pt-5">
+    <div class="container_header p-3 ">
     <div class="content_header d-flex">
         <p>Contact</p>
     </div>
@@ -29,7 +31,6 @@ if(isset($_POST['submit'])){
           <a href="../index.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
        </div>
     </div>  
-   <section id="Contact" class="Contact pt-5">
     <div class="form-container">
     <form  method="POST">
        <h3>Formulaire de contact</h3>
