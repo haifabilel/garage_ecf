@@ -9,7 +9,7 @@
  $pass ='l7he3z6ycjvanvxa';
 try {
     // $conn = new PDO('mysql:host=localhost;dbname=ecf',$user, $pass);
-    $conn = new PDO('mysql://xt2ic7ctkonp78fq:l7he3z6ycjvanvxa@ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/uzaznfs5dbj6jir9');
+    $conn = new PDO('');
     $conn->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
 
 }catch(PDOException $e){
