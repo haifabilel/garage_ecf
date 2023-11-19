@@ -8,8 +8,8 @@ $pass = '';
 //  $user = 'y02xmjobhds0ymdj';
 //  $pass ='uj1dj6ugs57n1fbs';
 try {
-    $conn = new PDO('mysql:host=localhost;dbname=ecf',$user, $pass);
-    // $conn = new PDO('mysql:host=$host;3306;dbname=$db_name',$user, $pass);
+    // $conn = new PDO('mysql:host=localhost;dbname=ecf',$user, $pass);
+    $conn = new PDO('mysql:host=$host;3306;dbname=$db_name',$user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
 
 }catch(PDOException $e){

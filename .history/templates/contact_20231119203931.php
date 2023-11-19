@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
     $portable = $_POST['portable'];
-    $message= $_POST['message'];
+    $message= $_FILES['message'];
     
   
     $query = "INSERT INTO contact (nom, prenom, mail, portable, message)
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
        <h3>Formulaire de contact</h3>
         <input type="text" name="nom"  placeholder="entrer votre nom" required> 
         <input type="text" name="prenom"  placeholder="entrer votre prenom" required> 
-        <input type="email" name="mail" placeholder="entrer votre email"required>
+        <input type="email" name="email" placeholder="entrer votre email"required>
         <input type="number" name="portable" placeholder="entrer votre numéro portable"required>
         <textarea name="message" placeholder="Votre message..." required></textarea>
         <button type="submit" name="submit" class="btn_button" value="Envoyer" class="form-btn">Envoyer</button>

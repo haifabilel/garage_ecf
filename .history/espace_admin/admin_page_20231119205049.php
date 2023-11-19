@@ -32,7 +32,7 @@
           </li>
           <li class="nav-item4 mt-2">
           <li class="nav-item">
-          <a href="fetch_contact.php" class="nav-link" px-2>Message clients</a>
+          <a href="fetch_service.php" class="nav-link" px-2>Message clie</a>
           </li>
           <a href="logout.php"  class="button" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
           </li>

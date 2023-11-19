@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
     $portable = $_POST['portable'];
-    $message= $_POST['message'];
+    $message= $_['message'];
     
   
     $query = "INSERT INTO contact (nom, prenom, mail, portable, message)
