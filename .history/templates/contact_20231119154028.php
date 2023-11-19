@@ -1,25 +1,6 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
-//Ajouter Véhicule
-if(isset($_POST['addCar'])){
-    $brand = $_POST['brand'];
-    $prix = $_POST['prix'];
-    $kilometrage = $_POST['kilometrage'];
-    $annee = $_POST['annee'];
-    $image = $_FILES['image'];
-    $img_loc = $_FILES['image']['tmp_name'];
-    $img_name = $_FILES['image']['name'];
-    $img_des = "../uploads/".$img_name;
-    move_uploaded_file($img_loc,'../uploads/'.$img_name);
-    
-  
-    $query = "INSERT INTO voitures (brand, prix, kilometrage, annee, image)
-     VALUES ('$brand','$prix','$kilometrage','$annee','$img_des')";
-     $statement = $conn->prepare($query);
-     $stat = $statement->execute();
-    header('location:fetch_car.php');
-};
 ?>
 
 

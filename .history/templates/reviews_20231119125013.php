@@ -1,7 +1,7 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
-if(isset($_POST["rating_data"]))
+if(isset($_POST["rating_data"]) éé)
 {
 
 	$data = array(
@@ -58,10 +58,10 @@ if(isset($_POST["rating_data"]))
 
 </section>
 
-<script src="../js/script.js"></script>
+
 </html>
 
 
-
+<script src="../js/script.js"></script>
 
 <?php require_once 'footer.php' ?>

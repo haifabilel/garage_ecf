@@ -4,7 +4,7 @@ require_once 'head.php';
 if(isset($_POST["rating_data"]))
 {
 
-	$data = array(
+	// $data = array(
 		':user_name'		=>	$_POST["user_name"],
 		':user_rating'		=>	$_POST["rating_data"],
 		':user_review'		=>	$_POST["user_review"],
@@ -58,10 +58,10 @@ if(isset($_POST["rating_data"]))
 
 </section>
 
-<script src="../js/script.js"></script>
+
 </html>
 
 
-
+<script src="../js/script.js"></script>
 
 <?php require_once 'footer.php' ?>

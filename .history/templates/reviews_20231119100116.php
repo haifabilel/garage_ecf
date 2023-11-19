@@ -1,6 +1,7 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
+session_start();
 if(isset($_POST["rating_data"]))
 {
 
@@ -15,8 +16,11 @@ if(isset($_POST["rating_data"]))
 	VALUES (:user_name, :user_rating, :user_review, :datetime)";
 	$statement = $conn->prepare($query);
 	$statement->execute($data);
-
+ $statement = $conn->prepare($query);
+     $stat = $statement->execute();
 };
+
+
 
 ?>
 
@@ -58,10 +62,10 @@ if(isset($_POST["rating_data"]))
 
 </section>
 
-<script src="../js/script.js"></script>
+
 </html>
 
 
-
+<script src="../js/script.js"></script>
 
 <?php require_once 'footer.php' ?>

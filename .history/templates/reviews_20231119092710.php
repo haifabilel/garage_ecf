@@ -1,6 +1,7 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
+session_start();
 if(isset($_POST["rating_data"]))
 {
 
@@ -11,12 +12,14 @@ if(isset($_POST["rating_data"]))
 		':datetime'			=>	time()
 	);
 
-	$query ="INSERT INTO review_table (user_name, user_rating, user_review, datetime) 
+	$query = "INSERT INTO review_table (user_name, user_rating, user_review, datetime) 
 	VALUES (:user_name, :user_rating, :user_review, :datetime)";
 	$statement = $conn->prepare($query);
 	$statement->execute($data);
 
 };
+
+
 
 ?>
 
@@ -41,7 +44,7 @@ if(isset($_POST["rating_data"]))
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 	        	</h4>
-                <form method="POST" enctype="multipart/form-data">
+                <form method="">
 	        	<div class="form-group">
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Entrer votre nom complét" />
 	        	</div><br>
@@ -58,10 +61,10 @@ if(isset($_POST["rating_data"]))
 
 </section>
 
-<script src="../js/script.js"></script>
+
 </html>
 
 
-
+<script src="../js/script.js"></script>
 
 <?php require_once 'footer.php' ?>

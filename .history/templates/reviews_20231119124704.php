@@ -58,10 +58,10 @@ if(isset($_POST["rating_data"]))
 
 </section>
 
-<script src="../js/script.js"></script>
+
 </html>
 
 
-
+<script src="../js/script.js"></script>
 
 <?php require_once 'footer.php' ?>

@@ -1,6 +1,11 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
+?>
+<?php
+require_once 'connexion.php';
+require_once ('head_admin.php');
+
 //Ajouter Véhicule
 if(isset($_POST['addCar'])){
     $brand = $_POST['brand'];
@@ -20,10 +25,6 @@ if(isset($_POST['addCar'])){
      $stat = $statement->execute();
     header('location:fetch_car.php');
 };
-?>
-
-
-
 
 <div class="container_header p-3 ">
     <div class="content_header d-flex">
