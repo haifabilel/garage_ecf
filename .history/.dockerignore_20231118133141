@@ -1,0 +1,11 @@
+# flyctl launch added from vendor\swiftmailer\swiftmailer\.gitignore
+vendor\swiftmailer\swiftmailer\.php_cs.cache
+vendor\swiftmailer\swiftmailer\.phpunit
+vendor\swiftmailer\swiftmailer\.phpunit.result.cache
+vendor\swiftmailer\swiftmailer\build\*
+vendor\swiftmailer\swiftmailer\composer.lock
+vendor\swiftmailer\swiftmailer\phpunit.xml
+vendor\swiftmailer\swiftmailer\tests\acceptance.conf.php
+vendor\swiftmailer\swiftmailer\tests\smoke.conf.php
+vendor\swiftmailer\swiftmailer\vendor
+fly.toml

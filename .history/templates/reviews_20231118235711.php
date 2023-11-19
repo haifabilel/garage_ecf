@@ -1,5 +1,5 @@
 <?php
-require_once '../espace_admin/connexion.php';
+require_once '../espace_admin/';
 require_once 'head.php';
 session_start();
 if(isset($_POST["rating_data"]))
@@ -16,13 +16,13 @@ if(isset($_POST["rating_data"]))
 	VALUES (:user_name, :user_rating, :user_review, :datetime)";
 	$statement = $conn->prepare($query);
 	$statement->execute($data);
-
+	
 };
 
 
 
 ?>
-
+ 
  <div class="container_header p-3 ">
     <div class="content_header d-flex">
         <p>Donner votre avis</p>
@@ -46,10 +46,10 @@ if(isset($_POST["rating_data"]))
 	        	</h4>
                 <form>
 	        	<div class="form-group">
-	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
+	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Entrer votre nom complét" />
 	        	</div><br>
 	        	<div class="form-group">
-	        		<textarea name="user_review" id="user_review" class="form-control " placeholder="Type Review Here"></textarea>
+	        		<textarea name="user_review" id="user_review" class="form-control " placeholder="Votre avis"></textarea>
 	        	</div>
 	        	<div class="form-group text-center mt-4">
 	        		<button type="submit" class="btn btn-primary" id="save_review">Submit</button>

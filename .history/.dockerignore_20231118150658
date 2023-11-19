@@ -1,0 +1,31 @@
+# flyctl launch added from vendor\swiftmailer\swiftmailer\.gitignore
+vendor\swiftmailer\swiftmailer\.php_cs.cache
+vendor\swiftmailer\swiftmailer\.phpunit
+vendor\swiftmailer\swiftmailer\.phpunit.result.cache
+vendor\swiftmailer\swiftmailer\build\*
+vendor\swiftmailer\swiftmailer\composer.lock
+vendor\swiftmailer\swiftmailer\phpunit.xml
+vendor\swiftmailer\swiftmailer\tests\acceptance.conf.php
+vendor\swiftmailer\swiftmailer\tests\smoke.conf.php
+vendor\swiftmailer\swiftmailer\vendor
+fly.toml
+docker build .
+
+Uploading context 18.829 MB
+Uploading context
+Step 1/2 : FROM busybox
+ ---> 769b9341d937
+Step 2/2 : CMD echo Hello world
+ ---> Using cache
+ ---> 99cc1ad10469
+Successfully built 99cc1ad10469
+echo ".git" > .dockerignore
+docker build .
+Uploading context  6.76 MB
+Uploading context
+Step 1/2 : FROM busybox
+ ---> 769b9341d937
+Step 2/2 : CMD echo Hello world
+ ---> Using cache
+ ---> 99cc1ad10469
+Successfully built 99cc1ad10469

@@ -12,7 +12,7 @@ if(isset($_GET['review_id']) AND !empty($_GET['review_id'])){
     if($recupReview->rowCount() > 0){
         $SupprimReview = $conn->prepare('DELETE FROM review_table WHERE review_id = ?');
         $SupprimReview->execute(array($id));
-        header('location:liste_avis.php');
+        header('location:liste_avis');
     }
 }
 

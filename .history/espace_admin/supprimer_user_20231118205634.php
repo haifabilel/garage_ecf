@@ -13,7 +13,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
     if($recupUser->rowCount() > 0){
         $bannirUser = $conn->prepare('DELETE FROM employe WHERE id = ?');
         $bannirUser->execute(array($id));
-        header('location:list_employés.php');
+        header('location:list_employés.ph');
     }
 }
 

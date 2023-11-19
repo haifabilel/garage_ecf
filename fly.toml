@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for garage-ecf on 2023-11-18T12:33:59+01:00
+# fly.toml app configuration file generated for garage-ecf-dark-dew-1742 on 2023-11-18T13:31:42+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "garage-ecf"
+app = "garage-ecf-dark-dew-1742"
 primary_region = "cdg"
 
 [http_service]
