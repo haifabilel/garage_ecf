@@ -37,7 +37,8 @@ if(isset($_POST['submit'])){
         <button type="submit" name="submit" class="btn_button" value="Envoyer" class="form-btn">Envoyer</button>
     </form>
   </div>
- </section>
+
+  </section>
 <?php
 require_once 'footer.php'
 ?>

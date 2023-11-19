@@ -36,8 +36,9 @@ if(isset($_POST['submit'])){
         <textarea name="message" placeholder="Votre message..." required></textarea>
         <button type="submit" name="submit" class="btn_button" value="Envoyer" class="form-btn">Envoyer</button>
     </form>
-  </div>
- </section>
+</div>
+
+  </section>
 <?php
 require_once 'footer.php'
 ?>

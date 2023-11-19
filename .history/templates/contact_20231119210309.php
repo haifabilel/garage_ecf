@@ -17,6 +17,11 @@ if(isset($_POST['submit'])){
     header('location:contact.php');
 };
 ?>
+
+
+
+
+
    <section id="Contact" class="Contact pt-5">
    <div class="container_header p-3 ">
     <div class="content_header d-flex">
@@ -36,8 +41,9 @@ if(isset($_POST['submit'])){
         <textarea name="message" placeholder="Votre message..." required></textarea>
         <button type="submit" name="submit" class="btn_button" value="Envoyer" class="form-btn">Envoyer</button>
     </form>
-  </div>
- </section>
+</div>
+
+  </section>
 <?php
 require_once 'footer.php'
 ?>
