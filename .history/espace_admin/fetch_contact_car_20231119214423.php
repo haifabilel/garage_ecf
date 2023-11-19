@@ -1,5 +1,5 @@
 <!-- Afficher la liste des messages enregistrés dans ma bdd -->
-  <section class="fetch_car">
+<section class="fetch_car">
   <div class="container_header p-3 ">
     <div class="content_header d-flex">
         <p>Message</p>
@@ -14,6 +14,7 @@
  <table class="blueTable">
 <thead>
 <tr>
+<th>S</th>
 <th>Nom</th>
 <th>Prénom</th>
 <th>Adresse mail</th>

@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     
   
     $query = "INSERT INTO contact_voitures (sujet,nom, prenom, mail, portable, message)
-     VALUES ('$sujet','$nom','$prenom','$mail','$portable','$message')";
+     VALUES ('$sujet''$nom','$prenom','$mail','$portable','$message')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
     header('location:contact.php');

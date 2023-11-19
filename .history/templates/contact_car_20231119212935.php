@@ -11,8 +11,8 @@ if(isset($_POST['submit'])){
     $message= $_POST['message'];
     
   
-    $query = "INSERT INTO contact_voitures (sujet,nom, prenom, mail, portable, message)
-     VALUES ('$sujet','$nom','$prenom','$mail','$portable','$message')";
+    $query = "INSERT INTO contact_voitures (sujet,nom, prenom, mail, portable, message,)
+     VALUES ('$nom','$prenom','$mail','$portable','$message','$sujet')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
     header('location:contact.php');

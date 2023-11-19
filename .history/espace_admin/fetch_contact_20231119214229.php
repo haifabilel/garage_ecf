@@ -1,13 +1,5 @@
 <!-- Afficher la liste des messages enregistrés dans ma bdd -->
   <section class="fetch_car">
-  <div class="container_header p-3 ">
-    <div class="content_header d-flex">
-        <p>Message</p>
-    </div>
-       <div class="content_button mt-2">
-          <a href="admin_page.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
-       </div>
-    </div>
      <div class="container_card my-5">
         <h2>liste des messages</h2>
   

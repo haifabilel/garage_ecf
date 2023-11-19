@@ -1,5 +1,5 @@
 <!-- Afficher la liste des messages enregistrés dans ma bdd -->
-  <section class="fetch_car">
+<section class="fetch_car">
   <div class="container_header p-3 ">
     <div class="content_header d-flex">
         <p>Message</p>
@@ -14,6 +14,7 @@
  <table class="blueTable">
 <thead>
 <tr>
+<th>Sujet de message</th>
 <th>Nom</th>
 <th>Prénom</th>
 <th>Adresse mail</th>
@@ -26,7 +27,7 @@
     <?php
      require_once 'connexion.php';
      require_once '../templates/head.php';
-     $req =$conn->query('SELECT * FROM contact');
+     $req =$conn->query('SELECT * FROM contact_voitures');
      while($user = $req->fetch()){
         ?>
         <tr>
