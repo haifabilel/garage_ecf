@@ -4,9 +4,9 @@
 // $user = 'root';
 // $pass = '';
  $host = 'ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com';
- $db_name = 'uo7hs8nyhiij4dh9';
- $user = 'y02xmjobhds0ymdj';
- $pass ='uj1dj6ugs57n1fbs';
+ $db_name = 'uzaznfs5dbj6jir9';
+ $user = 'xt2ic7ctkonp78fq';
+ $pass ='l7he3z6ycjvanvxa';
 try {
     // $conn = new PDO('mysql:host=localhost;dbname=ecf',$user, $pass);
     $conn = new PDO('mysql:host=$host;3306;dbname=$db_name',$user, $pass);
