@@ -10,7 +10,7 @@ if(isset($_POST['addService'])){
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
-// Sécuriser contre les injections SQL
+Sécuris
     $query = "INSERT INTO services (titre ,description, image)
     VALUES (:titre, :description, :image)";
     $statement = $conn->prepare($query);

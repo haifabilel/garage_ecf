@@ -6,7 +6,7 @@ if(!empty($_POST)) {
     if(isset($_POST["email"],$_POST["password"]) && !empty($_POST["email"]
     && !empty($_POST["password"]))) {
 
-        // Sécuriser contre les injections SQL
+        //stocker les informations admin
         $sql = "SELECT * FROM `admin` WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
@@ -19,7 +19,7 @@ if(!empty($_POST)) {
         } elseif(!$user_type) {
             $errors['user_type'] = "Ce user n'existe pas";
 
-        } elseif(!password_verify($_POST["password"], $user_type["password"])) {
+        } elseif(!password_verify(htmlspecialchars($_POST["password"]), $user_type["password"])) {
             $errors['password'] = "Votre password n'est pas valide";
 
         }else {

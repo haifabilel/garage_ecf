@@ -5,9 +5,9 @@ if(isset($_POST["rating_data"]))
 {
 
 	
-		$user_name=	htmlspecialchars($_POST["user_name"], ENT_QUOTES);
+		$user_name=	htmlspecialchars($_POST["user_name"]);
 		$user_rating= $_POST["rating_data"];
-		$user_review= htmlspecialchars($_POST["user_review"], ENT_QUOTES);
+		$user_review= $_POST["user_review"];
 		$datetime	=	time();
 	
 
@@ -54,7 +54,7 @@ if(isset($_POST["rating_data"]))
                 </form>
 				</div>
 </div>
-
+<!-- <a href="../espace_admin/espace_employé.php" class="btn btn-primary back_reviews mt-6">Back <i class="bi bi-backspace"></i></a> -->
 
 </section>
 

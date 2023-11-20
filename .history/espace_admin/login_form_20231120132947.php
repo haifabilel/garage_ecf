@@ -19,7 +19,7 @@ if(!empty($_POST)) {
         } elseif(!$user_type) {
             $errors['user_type'] = "Ce user n'existe pas";
 
-        } elseif(!password_verify($_POST["password"], $user_type["password"])) {
+        } elseif(!password_verify(htmlspecialchars($_POST["password"]), $user_type["password"])) {
             $errors['password'] = "Votre password n'est pas valide";
 
         }else {

@@ -6,13 +6,13 @@ if(!empty($_POST)) {
     if(isset($_POST["email"],$_POST["password"]) && !empty($_POST["email"]
     && !empty($_POST["password"]))) {
 
-        // Sécuriser contre les injections SQL
+        //stocker les informations admin
         $sql = "SELECT * FROM `admin` WHERE `email` = :email";
         $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $query->execute();
         $user_type = $query->fetch();
-        //Echapper les caractéres spéciaux 
+        //
         if(!filter_var(htmlspecialchars($_POST["email"]), FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = "Votre email n'est pas valide";
 

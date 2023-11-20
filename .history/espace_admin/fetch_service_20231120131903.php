@@ -5,12 +5,12 @@ require_once ('head_admin.php');
 if(isset($_POST['addService'])){
     $titre = $_POST['titre'];
     $desc = $_POST['description'];
-    $image = $_FILES['image'];
+    $image = $_FILES['image']['error'] === UPLOAD_ERR_OK);
     $img_loc = $_FILES['image']['tmp_name'];
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
-// Sécuriser contre les injections SQL
+
     $query = "INSERT INTO services (titre ,description, image)
     VALUES (:titre, :description, :image)";
     $statement = $conn->prepare($query);
