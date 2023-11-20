@@ -17,8 +17,8 @@ if (isset($_POST['submit'])) {
      VALUES ('$nom','$prenom','$mail','$portable','$message')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
+    // header('location:contact.php');
      $errors[] = "Message envoyé l'administrateur va vous répondre dans les brefs délais";
-      
 };
 ?>
 

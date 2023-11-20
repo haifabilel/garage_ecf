@@ -18,7 +18,6 @@ if (isset($_POST['submit'])) {
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
      $errors[] = "Message envoyé l'administrateur va vous répondre dans les brefs délais";
-      
 };
 ?>
 

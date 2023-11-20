@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     //Echapper les caractére spéciaux avec htmlspecialchars
     $nom = htmlspecialchars($_POST['nom'], ENT_QUOTES);
     $prenom = htmlspecialchars($_POST['prenom'], ENT_QUOTES);
-    $mail= htmlspecialchars($_POST['mail'], FILTER_VALIDATE_EMAIL);
+    $mail= filter_var,htmlspecialchars($_POST['mail'], FILTER_VALIDATE_EMAIL);
     $portable =htmlspecialchars($_POST['portable'], ENT_QUOTES);
     $message= htmlspecialchars($_POST['message'], ENT_QUOTES);
     
@@ -17,8 +17,7 @@ if (isset($_POST['submit'])) {
      VALUES ('$nom','$prenom','$mail','$portable','$message')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
-     $errors[] = "Message envoyé l'administrateur va vous répondre dans les brefs délais";
-      
+    header('location:contact.php');
 };
 ?>
 
@@ -34,13 +33,6 @@ if (isset($_POST['submit'])) {
        </div>
     </div>  
    <section id="Contact" class="Contact pt-5">
-   <?php
-        if(!empty($errors)){
-            foreach($errors as $error){
-                echo '<h3 class="error-msg" >'.$error.'</h3>';
-            };
-        };
-        ?>
     <div class="form-container">
     <form  method="POST">
        <h3>Formulaire de contact</h3>

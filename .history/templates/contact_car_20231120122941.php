@@ -28,18 +28,13 @@ if(isset($_POST['submit'])){
        </div>
     </div>  
 <section id="Contact" class="Contact pt-5">
-<?php
-        if(!empty($errors)){
-            foreach($errors as $error){
-                echo '<h3 class="error-msg" >'.$error.'</h3>';
-            };
-        };
-        ?>
+   
     <div class="form-container">
     <form  method="POST">
        <h3>Formulaire de contact</h3>
        <?php
         $id =(int) $_GET['id'];
+        //manque securité avec bandvalue
         $req =$conn->query("SELECT * FROM voitures WHERE id = $id");
         $user= $req-> fetch();
         ?>

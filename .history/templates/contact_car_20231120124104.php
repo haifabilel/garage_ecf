@@ -40,7 +40,8 @@ if(isset($_POST['submit'])){
        <h3>Formulaire de contact</h3>
        <?php
         $id =(int) $_GET['id'];
-        $req =$conn->query("SELECT * FROM voitures WHERE id = $id");
+        $req =$conn->query("SELECT * FROM voitures WHERE id = ':id");
+        $req->bindValue(':id', $id, PDO::PARAM_INT);
         $user= $req-> fetch();
         ?>
         <input type="text" name="sujet" value="Je vous contacte concernant: <?php echo $user['brand']; ?>"  required> 

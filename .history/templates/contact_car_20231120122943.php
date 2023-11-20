@@ -40,6 +40,7 @@ if(isset($_POST['submit'])){
        <h3>Formulaire de contact</h3>
        <?php
         $id =(int) $_GET['id'];
+        //manque securité avec bandvalue
         $req =$conn->query("SELECT * FROM voitures WHERE id = $id");
         $user= $req-> fetch();
         ?>
