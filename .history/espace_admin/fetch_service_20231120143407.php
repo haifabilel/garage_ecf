@@ -52,7 +52,7 @@ if(isset($_POST['addService'])){
 <tbody>
     <!-- Parcourir la liste des services -->
     <?php
-   
+    function get
      $req = $conn->query('SELECT * FROM services');
      while($user = $req->fetch()){
         ?>

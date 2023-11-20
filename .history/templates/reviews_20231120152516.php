@@ -53,7 +53,7 @@ if(isset($_POST["rating_data"]))
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 	        	</h4>
-                <form method="POST" enctype="multipart/form-data">
+                <form  enctype="multipart/form-data">
 	        	<div class="form-group">
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Entrer votre nom complét" />
 	        	</div><br>

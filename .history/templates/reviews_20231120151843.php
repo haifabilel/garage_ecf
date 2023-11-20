@@ -2,7 +2,7 @@
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
 session_start();
-if(isset($_POST["rating_data"]))
+if(isset($_POST["rating_data"]) && !empty($_POST["submit"]))
 {
 
 	

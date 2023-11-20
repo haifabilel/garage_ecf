@@ -1,6 +1,6 @@
 <?php
 require_once '../espace_admin/connexion.php';
-require_once 'head.php';
+// require_once 'head.php';
 session_start();
 if(isset($_POST["rating_data"]))
 {
@@ -61,7 +61,7 @@ if(isset($_POST["rating_data"]))
 	        		<textarea name="user_review" id="user_review" class="form-control " placeholder="Votre avis"></textarea>
 	        	</div>
 	        	<div class="form-group text-center mt-4">
-	        		<button type="submit" name="submit" class="btn btn-primary" id="save_review">Submit</button>
+	        		<button type="submit" class="btn btn-primary" id="save_review">Submit</button>
 	        	</div>
                 </form>
 				</div>

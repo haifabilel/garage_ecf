@@ -13,14 +13,12 @@ if(isset($_POST["rating_data"]))
 		':datetime'			=>	time()
 	);
 
-	$query = "INSERT INTO review_table (user_name, user_rating, user_review, datetime) 
-	VALUES (:user_name, :user_rating, :user_review, :datetime)";
-
+	
+	$query ="INSERT INTO review_table (user_name, user_rating, user_review, datetime) 
+	VALUES ($user_name, $user_rating, $user_review, $datetime)";
 	$statement = $conn->prepare($query);
-
-	$statement->execute($data);
+	$statement->execute();
 	$errors[] = "Merci pour votre témoignage";
-
 };
 
 ?>
@@ -61,7 +59,7 @@ if(isset($_POST["rating_data"]))
 	        		<textarea name="user_review" id="user_review" class="form-control " placeholder="Votre avis"></textarea>
 	        	</div>
 	        	<div class="form-group text-center mt-4">
-	        		<button type="submit" name="submit" class="btn btn-primary" id="save_review">Submit</button>
+	        		<button type="submit" class="btn btn-primary" id="save_review">Submit</button>
 	        	</div>
                 </form>
 				</div>
@@ -71,9 +69,9 @@ if(isset($_POST["rating_data"]))
 </section>
 
 <script src="../js/script.js"></script>
-<?php require_once 'footer.php' ?>
 </html>
 
 
 
 
+<?php require_once 'footer.php' ?>

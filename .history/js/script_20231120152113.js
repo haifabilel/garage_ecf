@@ -78,7 +78,7 @@ $('#save_review').click(function(){
             {
                 $('#review_modal').modal('hide');
 
-                load_rating_data();
+                rating_data();
 
                 alert(data);
             }
