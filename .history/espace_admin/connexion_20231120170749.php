@@ -6,7 +6,7 @@
  $host = 'ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com';
  $db_name = 'yg3r9r5mplpawdll';
  $user = 'olyahy4j1udx2w19';
- $pass ='b3ttm60zvnxu8xi5';
+ $pass ='uj1dj6ugs57n1fbs';
 try {
     // $conn = new PDO('mysql:host=localhost;dbname=ecf',$user, $pass);
     $conn = new PDO('mysql:host=$host;3306;dbname=$db_name',$user, $pass);
