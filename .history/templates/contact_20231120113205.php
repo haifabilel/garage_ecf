@@ -1,16 +1,19 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
+session_start();
+// Génération du jeton CSRF lors de l'affichage du formulaire
+$token = bin2hex(random_bytes(32));
+$_SESSION['token'] = $token;
 
-
-
-if (isset($_POST['submit'])) {
-    //Echapper les caractére spéciaux avec htmlspecialchars
+// Vérification du jeton lors du traitement du formulaire
+if (isset($_POST['submit']) && $_POST['token'] === $_SESSION['token']) {
+    // Traitement du formulaire
     $nom = htmlspecialchars($_POST['nom'], ENT_QUOTES);
     $prenom = htmlspecialchars($_POST['prenom'], ENT_QUOTES);
     $mail= filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
-    $portable =htmlspecialchars($_POST['portable'], ENT_QUOTES);
-    $message= htmlspecialchars($_POST['message'], ENT_QUOTES);
+    $portable =htmlspecialchars($_POST['prenom'], ENT_QUOTES);
+    $message= $_POST['message'];
     
   
     $query = "INSERT INTO contact (nom, prenom, mail, portable, message)

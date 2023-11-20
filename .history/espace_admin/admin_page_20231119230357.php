@@ -26,15 +26,15 @@
           <li class="nav-item">
              <a href="horaires.php" class="nav-link px-2" >Horaires</a>
           </li>
+          <li class="nav-item4 mt-2">
           <li class="nav-item">
              <a href="fetch_contact.php" class="nav-link px-2" >Message clients</a>
           </li>
           <li class="nav-item">
-             <a href="fetch_contact_car.php" class="nav-link px-2" >Message voitures</a>
+             <a href="fetch_contact_car.php" class="nav-link" px-2>Message voitures</a>
           </li>
              <a href="logout.php"  class="btn btn-primary" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
           </li>
-        </ul>
       </div>
     </div>
   </div>

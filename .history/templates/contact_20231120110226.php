@@ -1,16 +1,13 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
-
-
-
-if (isset($_POST['submit'])) {
-    //Echapper les caractére spéciaux avec htmlspecialchars
-    $nom = htmlspecialchars($_POST['nom'], ENT_QUOTES);
-    $prenom = htmlspecialchars($_POST['prenom'], ENT_QUOTES);
-    $mail= filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
-    $portable =htmlspecialchars($_POST['portable'], ENT_QUOTES);
-    $message= htmlspecialchars($_POST['message'], ENT_QUOTES);
+//Ajouter Véhicule
+if(isset($_POST['submit'])){
+    $nom = htmlspecialchars$_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $mail = $_POST['mail'];
+    $portable = $_POST['portable'];
+    $message= $_POST['message'];
     
   
     $query = "INSERT INTO contact (nom, prenom, mail, portable, message)

@@ -34,7 +34,6 @@
           </li>
              <a href="logout.php"  class="btn btn-primary" id="btn-login" >Déconnexion <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
           </li>
-        </ul>
       </div>
     </div>
   </div>

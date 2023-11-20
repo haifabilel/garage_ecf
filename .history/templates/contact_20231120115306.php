@@ -1,10 +1,13 @@
 <?php
 require_once '../espace_admin/connexion.php';
 require_once 'head.php';
+session_start();
+// Génération du jeton CSRF lors de l'affichage du formulaire
+$token = bin2hex(random_bytes(32));
+$_SESSION['token'] = $token;
 
-
-
-if (isset($_POST['submit'])) {
+// Vérification du jeton lors du traitement du formulaire
+if (isset($_POST['submit']) && $_POST['token'] === $_SESSION['token']) {
     //Echapper les caractére spéciaux avec htmlspecialchars
     $nom = htmlspecialchars($_POST['nom'], ENT_QUOTES);
     $prenom = htmlspecialchars($_POST['prenom'], ENT_QUOTES);
@@ -36,6 +39,7 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
     <form  method="POST">
        <h3>Formulaire de contact</h3>
+        <input type="hidden" name="token" value="<?php echo $token; ?>">
         <input type="text" name="nom"  placeholder="entrer votre nom" required> 
         <input type="text" name="prenom"  placeholder="entrer votre prenom" required> 
         <input type="email" name="mail" placeholder="entrer votre email"required>
