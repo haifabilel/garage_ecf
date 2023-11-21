@@ -58,9 +58,11 @@ if(!empty($_POST)) {
             </span>
         </div>
         <input type="submit" name="submit" value="login now" class="form-btn">
+       
     </form>
-  </div>
+</div>
 </section>
+
 <?php
 require_once '../templates/footer.php';
 ?>

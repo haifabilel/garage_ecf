@@ -29,7 +29,7 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
     }
 }
 ?>
-<section>
+<section></section>
 <div class="container_header p-3 ">
     <div class="content_button mt-2">
         <a href="horaires.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
@@ -47,7 +47,8 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
       <div class="form_footer">
         <button type="submit" name="Update" class="btn btn-primary" >Update</button>
       </div>
-    </form>
+     </form>
   </div>
-</section>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

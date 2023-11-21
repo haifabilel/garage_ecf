@@ -61,6 +61,7 @@ if(!empty($_POST)) {
     </form>
   </div>
 </section>
+
 <?php
 require_once '../templates/footer.php';
 ?>

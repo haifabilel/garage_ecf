@@ -26,7 +26,7 @@ if(isset($_POST['Update'])){
 
 
 <section>
-  <div class="form-container">
+    <div class="form-container">
     <form method="POST" >
           <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Update service</h3>
     <div class="form-group">

@@ -75,11 +75,11 @@ if(isset($_POST['addDétails'])){
         </tr>
     </thead>
     <tbody>
-        <tr>
-        <td><?=$user['caracteristique']?></td>
-        <td><?=$user['liste_equipements']?></td>
-        <td><?=$user['options_installes']?></td>
-        </tr>
+      <tr>
+      <td><?=$user['caracteristique']?></td>
+      <td><?=$user['liste_equipements']?></td>
+      <td><?=$user['options_installes']?></td>
+      </tr>
     </tbody>
   </table>
  </div>
@@ -89,39 +89,41 @@ if(isset($_POST['addDétails'])){
 <!-- Modal ajout détails car-->
 <div class="modal fade" id="ajoutDétails" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog">
-    <form  method="POST" enctype="multipart/form-data" >
-       <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Ajouter détails</h3>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>
-            <div class="modal-body">
-            <div class="form-group">
-              <input type="text" name="caracteristique" class="form-control"  placeholder="carectéristique" required><br>
-             </div>
-                <div class="form-group">
-                    <input type="text" name="liste_equipements" class="form-control"  placeholder="liste des équipements" required><br>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="options_installes" class="form-control"  placeholder="options installés" required><br>
-                </div>
-                <div class="form-group mb-3">
-                     <input type="file" name="image1" class="form-control" >
-                </div>
-                <div class="form-group mb-3">
-                    <input type="file" name="image2" class="form-control" >
-                </div>
-                <div class="form-group mb-3">
-                    <input type="file" name="image3" class="form-control" >
-                </div>
-                </div>
-                <div class="modal-footer">
-                <button type="submit" name="addDétails" class="btn btn-primary" >Valider</button>
-            </div>
-         </div>
-       </form>
-     </div>
-   </div>
+  <form  method="POST" enctype="multipart/form-data" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Ajouter détails</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="form-group">
+         <input type="text" name="caracteristique" class="form-control"  placeholder="carectéristique" required><br>
+      </div>
+      <div class="form-group">
+         <input type="text" name="liste_equipements" class="form-control"  placeholder="liste des équipements" required><br>
+      </div>
+      <div class="form-group">
+         <input type="text" name="options_installes" class="form-control"  placeholder="options installés" required><br>
+      </div>
+      <div class="form-group mb-3">
+         <input type="file" name="image1" class="form-control" >
+      </div>
+      <div class="form-group mb-3">
+         <input type="file" name="image2" class="form-control" >
+      </div>
+      <div class="form-group mb-3">
+         <input type="file" name="image3" class="form-control" >
+      </div>
+
+      
+      </div>
+      <div class="modal-footer">
+      <button type="submit" name="addDétails" class="btn btn-primary" >Valider</button>
+      </div>
+    </div>
+     </form>
+  </div>
+</div>
 <?php
 require_once 'footer.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

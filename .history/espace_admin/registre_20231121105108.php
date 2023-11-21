@@ -44,11 +44,11 @@ if(!empty($_POST)){
     }; 
 };
 ?>
-<div class="container_header p-3 ">
-    <div class="content_button mt-2">
-        <a href="admin_page.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
+   <div class="container_header p-3 ">
+       <div class="content_button mt-2">
+          <a href="admin_page.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
+       </div>
     </div>
-</div>
 <section>
 <div class="form-container">
     <form action="" method="POST">
@@ -71,7 +71,7 @@ if(!empty($_POST)){
         <input type="submit" name="submit" value="register now" class="form-btn">
         <p>already have an account? <a href="login_form.php">login now</a></p>
     </form>
-  </div>
+</div>
 </section>
 
 <?php

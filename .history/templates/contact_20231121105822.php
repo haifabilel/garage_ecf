@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
             };
         };
         ?>
-  <div class="form-container">
+ <div class="form-container">
     <form  method="POST">
        <h3>Formulaire de contact</h3>
         <input type="text" name="nom"  placeholder="entrer votre nom" required> 

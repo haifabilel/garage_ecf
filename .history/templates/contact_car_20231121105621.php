@@ -1,7 +1,7 @@
 <?php
 require_once 'head.php';
 require_once '../espace_admin/connexion.php';
-// Sécuriser contre les failles XSS
+Sécuriser contre les failles XSS
 if(isset($_POST['submit'])){
     $sujet= htmlspecialchars($_POST['sujet'], ENT_QUOTES);;
     $nom = htmlspecialchars($_POST['nom'], ENT_QUOTES);;
@@ -51,8 +51,8 @@ if(isset($_POST['submit'])){
         <textarea name="message" placeholder="Votre message..." required></textarea>
         <button type="submit" name="submit" class="btn_button" value="Envoyer" class="form-btn">Envoyer</button>
     </form>
-  </div>
-</section>
+</div>
+  </section>
 
 <?php
 require_once 'footer.php'
