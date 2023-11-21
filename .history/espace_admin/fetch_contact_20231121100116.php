@@ -1,0 +1,35 @@
+<!-- Afficher la liste des messages clients -->
+<section class="fetch_car">
+  <div class="container_header p-3 ">
+    <div class="content_header d-flex">
+        <p>Message</p>
+    </div>
+       <div class="content_button mt-2">
+          <a href="admin_page.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
+       </div>
+    </div>
+    <div class="container_card my-5">
+       <h2>liste des messages</h2>
+  
+ 
+    <!-- Parcourir la liste des messages -->
+    <?php
+     require_once 'connexion.php';
+     require_once '../templates/head.php';
+     $req =$conn->query('SELECT * FROM contact');
+     while($user = $req->fetch()){
+        ?>
+        <tr>
+        <td><?=$user['nom']?></td>
+        <td><?=$user['prenom']?></td>
+        <td><?=$user['mail']?></td>
+        <td><?=$user['portable']?></td>
+        <td><?=$user['message']?></td>
+        </tr>
+      
+        <?php 
+     };
+    ?>
+</tbody>
+</table>
+</section>
