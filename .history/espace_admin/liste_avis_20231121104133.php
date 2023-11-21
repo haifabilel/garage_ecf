@@ -25,6 +25,7 @@
             <th>Action</th>
             </tr>
       </thead>
+<section>
     <!-- Parcourir la liste des avis -->
     <?php
      require_once ('connexion.php');
@@ -44,6 +45,9 @@
      }
     ?>
    </tbody>
-  </table>
- </div>
-</section>
+</table>
+   </div>
+
+
+</body>
+</html>

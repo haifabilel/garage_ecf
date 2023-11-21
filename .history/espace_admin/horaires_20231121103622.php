@@ -49,8 +49,8 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
         <?php 
      }
     ?>
-   </tbody>
- </table>
+</tbody>
+</table>
 </section>
 
    

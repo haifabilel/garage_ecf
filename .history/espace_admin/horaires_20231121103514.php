@@ -1,7 +1,7 @@
 <?php
 require_once 'connexion.php';
 require_once ('head_admin.php');
-//afficher les horaires dans le dashbord admin
+//afficher les hora
 if(isset($_GET['id']) and !empty($_GET['id'])) {
     $id = (int)$_GET['id'];
     $req = $conn->prepare("SELECT * FROM horaires WHERE id =:id");
@@ -23,14 +23,14 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
 <section class="section_horaire">
     <h2 class="titre_time mt-4">Update les horaires d'ouverture / fermeture du garage</h2>
     <table class="blueTable">
-        <thead>
-        <tr>
-        <th>Jours</th>
-        <th>Matin</th>
-        <th>Aprés midi</th>
-        <th>Action</th>
-        </tr>
-        </thead>
+<thead>
+<tr>
+<th>Jours</th>
+<th>Matin</th>
+<th>Aprés midi</th>
+<th>Action</th>
+</tr>
+</thead>
     <!-- Parcourir la liste des avis -->
     <?php
    
@@ -49,8 +49,8 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
         <?php 
      }
     ?>
-   </tbody>
- </table>
+</tbody>
+</table>
 </section>
 
    

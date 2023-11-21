@@ -50,7 +50,7 @@ if(isset($_GET['id']) and !empty($_GET['id'])) {
      }
     ?>
    </tbody>
- </table>
+</table>
 </section>
 
    

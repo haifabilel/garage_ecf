@@ -45,5 +45,8 @@
     ?>
    </tbody>
   </table>
- </div>
+</div>
 </section>
+
+</body>
+</html>

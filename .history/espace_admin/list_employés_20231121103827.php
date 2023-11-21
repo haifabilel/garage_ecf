@@ -38,7 +38,9 @@
         <?php 
      }
     ?>
-   </tbody>
-  </table>
- </div>
-</section>
+  </tbody>
+</table>
+   </div>
+   </section>
+   
+</html>

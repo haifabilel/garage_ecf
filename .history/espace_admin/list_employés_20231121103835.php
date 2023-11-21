@@ -39,6 +39,8 @@
      }
     ?>
    </tbody>
-  </table>
- </div>
-</section>
+</table>
+   </div>
+   </section>
+   
+</html>

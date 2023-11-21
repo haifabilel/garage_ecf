@@ -21,7 +21,7 @@
          <th>Action</th>
          </tr>
       </thead>
-      <tbody>
+<tbody>
     <!-- Parcourir la liste des employés -->
     <?php
      require_once ('connexion.php');
@@ -38,7 +38,9 @@
         <?php 
      }
     ?>
-   </tbody>
-  </table>
- </div>
-</section>
+</tbody>
+</table>
+   </div>
+   </section>
+   
+</html>

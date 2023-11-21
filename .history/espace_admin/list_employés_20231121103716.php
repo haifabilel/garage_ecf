@@ -13,15 +13,17 @@
        <a href="registre.php" class="btn btn-primary mx-2" >Ajouter Employé  <i class="bi bi-plus-circle-fill"></i></a>
     </div> 
     </div>
-    <table class="blueTable mt-4">
-      <thead>
-         <tr>
-         <th>Nom</th>
-         <th>Email</th>
-         <th>Action</th>
-         </tr>
-      </thead>
-      <tbody>
+  
+     <table class="blueTable mt-4">
+<thead>
+<tr>
+<th>Nom</th>
+<th>Email</th>
+<th>Action</th>
+
+</tr>
+</thead>
+<tbody>
     <!-- Parcourir la liste des employés -->
     <?php
      require_once ('connexion.php');
@@ -38,7 +40,9 @@
         <?php 
      }
     ?>
-   </tbody>
-  </table>
- </div>
-</section>
+</tbody>
+</table>
+   </div>
+   </section>
+   
+</html>
