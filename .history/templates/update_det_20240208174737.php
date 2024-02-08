@@ -1,0 +1,56 @@
+<?php
+require_once ('head_admin.php');
+require_once ('.');
+ //Caster avec int
+ $id =(int)$_GET['id'];
+ $req =$conn->prepare("SELECT * FROM services WHERE id =:id");
+ //Sécuriser contre les injections sql
+ $req->bindValue(':id', $id, PDO::PARAM_INT);
+ $req->execute();
+ $row = $req->fetch(PDO::FETCH_ASSOC);
+
+
+if(isset($_POST['Update'])){
+  extract($_POST);
+  if(isset($titre) && isset($description) && isset($image)){
+    //Modifier information de la card service
+    $req =$conn->query("UPDATE services SET titre = '$titre' , description = '$description', image = '$image' WHERE id = $id ");
+    if($req){
+      header('location:fetch_service.php');
+    }
+
+  }
+}
+?>
+    <form  method="POST" enctype="multipart/form-data" >
+       <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Ajouter détails</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+            <div class="modal-body">
+            <div class="form-group">
+              <input type="text" name="caracteristique" class="form-control"  placeholder="carectéristique" required><br>
+             </div>
+                <div class="form-group">
+                    <input type="text" name="liste_equipements" class="form-control"  placeholder="liste des équipements" required><br>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="options_installes" class="form-control"  placeholder="options installés" required><br>
+                </div>
+                <div class="form-group mb-3">
+                     <input type="file" name="image1" class="form-control" >
+                </div>
+                <div class="form-group mb-3">
+                    <input type="file" name="image2" class="form-control" >
+                </div>
+                <div class="form-group mb-3">
+                    <input type="file" name="image3" class="form-control" >
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" name="addDétails" class="btn btn-primary" >Valider</button>
+            </div>
+         </div>
+       </form>
+
