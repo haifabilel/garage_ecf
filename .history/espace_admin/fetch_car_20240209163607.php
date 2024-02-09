@@ -61,9 +61,8 @@ if(isset($_POST['addCar'])){
             <td><?=$user['prix']?></td>
             <td><?=$user['kilometrage']?></td>
             <td><?=$user['annee']?></td>
-            <td>
-            <a class="btn btn-primary" href="supprimer_voiture.php?id=<?=$user['id']?>"><i class="fa-regular fa-trash-can"></i></a>
-            </td>
+            <td><?=$user['annee']?>
+         </td>
         </tr>
         <?php 
      };
