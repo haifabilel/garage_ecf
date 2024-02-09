@@ -16,10 +16,9 @@ require_once ('head_admin.php');
                 <div class="card-header"><?=$user['user_rating']?>
                     <i class="fas fa-star avis"></i>
                 </div>
-                <div class="card_body">
+                
                 <h4><?=$user['user_name']?></h4>
                 <p><?=$user['user_review']?></p>
-                </div>
                 <div class="card-footer text-body-secondary"><?=date('l jS, F Y h:i:s A', $user["datetime"])?></div>
             </div>
         </div>

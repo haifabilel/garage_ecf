@@ -548,7 +548,9 @@ span.matin,.apres_midi{
     perspective: 1000;
     padding-top: 2rem;
 }
-
+.testimonial-item{
+   
+}
 .testimonial-item{
     display: block;
     border-radius: 5px;
@@ -560,7 +562,6 @@ span.matin,.apres_midi{
     padding:1rem;
     transform-style:preserve-3d;
     animation: slide .4s linear;
-    background-color:#192f6a;
 }
 
 .section_avis{

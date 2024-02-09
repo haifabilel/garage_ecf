@@ -548,9 +548,10 @@ span.matin,.apres_midi{
     perspective: 1000;
     padding-top: 2rem;
 }
-
 .testimonial-item{
     display: block;
+}
+.testimonial-item{
     border-radius: 5px;
     box-shadow: 5px 5px 15px -1px #808080;
     color:gray;
@@ -560,14 +561,13 @@ span.matin,.apres_midi{
     padding:1rem;
     transform-style:preserve-3d;
     animation: slide .4s linear;
-    background-color:#192f6a;
 }
 
 .section_avis{
     margin-top: 5%;
 }
 .testimonial-item h4{
-    color:var(--second-color);
+    color:var();
     font-size: 1.5rem;
     padding-bottom: .5rem;
 }
@@ -575,9 +575,8 @@ span.matin,.apres_midi{
     color:#000;
 }
 .testimonial-item i{
-    color:#289CE8;
+    color:#80005e;
 }
-
 /* -----------------Reviews ENDS------------ */
 /* ------------------ liste-employés starts------------- */
 table.blueTable {

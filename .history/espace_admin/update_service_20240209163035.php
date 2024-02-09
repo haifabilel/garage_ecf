@@ -25,14 +25,6 @@ if(isset($_POST['Update'])){
 
 
 <section>
-<div class="container_header p-3 ">
-    <div class="content_header d-flex">
-        <p>Service</p>
-    </div>
-       <div class="content_button mt-2">
-          <a href="fetch_service.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
-       </div>
-    </div>
   <div class="form-container">
     <form method="POST" >
           <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Update service</h3>
