@@ -37,6 +37,7 @@ if(isset($_POST['addDétails'])){
         ?>
         <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a>
         
+        ?>
     </div>
 </div>
 <section class="section_details">

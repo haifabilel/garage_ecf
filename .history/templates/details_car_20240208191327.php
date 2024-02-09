@@ -34,9 +34,10 @@ if(isset($_POST['addDétails'])){
         <?php
           $req = $conn->query('SELECT * FROM details_voitures');
           $user = $req->fetch()
-        ?>
+      
         <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a>
         
+        ?>
     </div>
 </div>
 <section class="section_details">

@@ -2,6 +2,7 @@
 require_once ('head.php');
 require_once ('../espace_admin/connexion.php');
  //Caster avec int
+ // Vérifier si la clé "id_details" est définie dans $_GET
 if(isset($_GET['id_details'])) {
     // Caster avec int
     $id_details =(int)$_GET['id_details'];

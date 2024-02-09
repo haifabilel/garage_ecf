@@ -33,10 +33,11 @@ if(isset($_POST['addDétails'])){
         <a href="vehicules.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutDétails">Ajouter détails <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
         <?php
           $req = $conn->query('SELECT * FROM details_voitures');
-          $user = $req->fetch()
+          while($user = $req->fetch()){
         ?>
         <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a>
-        
+        <?php }
+        ?>
     </div>
 </div>
 <section class="section_details">

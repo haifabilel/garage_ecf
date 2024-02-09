@@ -2,29 +2,29 @@
 require_once ('head.php');
 require_once ('../espace_admin/connexion.php');
  //Caster avec int
-if(isset($_GET['id_details'])) {
-    // Caster avec int
-    $id_details =(int)$_GET['id_details'];
-    $req =$conn->prepare("SELECT * FROM details_voitures WHERE id_details =:id_details");
-    //Sécuriser contre les injections sql
-    $req->bindValue(':id_details', $id_details, PDO::PARAM_INT);
-    $req->execute();
-    $row = $req->fetch(PDO::FETCH_ASSOC);
 
-    if(isset($_POST['Update'])){
-      extract($_POST);
-      if(isset($details_voitures) && isset($caracteristique) && isset($liste_equipements)
-      && isset($image1)&& isset($image2)&& isset($image3)){
-        //Modifier information de la card service
-        $req =$conn->query("UPDATE details_voitures SET caracteristique = '$caracteristique' , liste_equipements = '$liste_equipements',
-        options_installes = '$options_installes' ,image1 = '$image1',image2 = '$image2',image3 = '$image3' WHERE id_details = $id_details");
-        if($req){
-          header('location:details_car.php');
-        }
+ $id_details =(int)$_GET['id_details'];
+ $req =$conn->prepare("SELECT * FROM details_voitures WHERE id_details =:id_details");
+ //Sécuriser contre les injections sql
+ $req->bindValue(':id_details', $id_details, PDO::PARAM_INT);
+ $req->execute();
+ $row = $req->fetch(PDO::FETCH_ASSOC);
 
-      }
+
+if(isset($_POST['Update'])){
+  extract($_POST);
+  if(isset($details_voitures) && isset($caracteristique) && isset($liste_equipements)
+  && isset($image1)&& isset($image2)&& isset($image3)){
+    //Modifier information de la card service
+    $req =$conn->query("UPDATE details_voitures SET caracteristique = '$caracteristique' , liste_equipements = '$liste_equipements',
+    options_installes = '$options_installes' ,image1 = '$image1',image2 = '$image2',image3 = '$image3' WHERE id_details = $id_details");
+    if($req){
+      header('location:details_car.php');
     }
+
+  }
 }
+
 ?>
     <form  method="POST" enctype="multipart/form-data" >
        <div class="modal-content">

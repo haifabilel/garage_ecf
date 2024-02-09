@@ -53,7 +53,7 @@ if(isset($_GET['id_details'])) {
                 </div>
                 </div>
                 <div class="modal-footer">
-                <button type="submit" name="Update" class="btn btn-primary" >Valider</button>
+                <button type="submit" name="Update" valeur class="btn btn-primary" >Valider</button>
             </div>
          </div>
        </form>

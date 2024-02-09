@@ -31,12 +31,7 @@ if(isset($_POST['addDétails'])){
     <div class="content_button mt-2">
         <a href="fetch_data.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
         <a href="vehicules.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutDétails">Ajouter détails <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
-        <?php
-          $req = $conn->query('SELECT * FROM details_voitures');
-          $user = $req->fetch()
-        ?>
-        <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a>
-        
+        <a href="details_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary car mx-2">Détails</a>
     </div>
 </div>
 <section class="section_details">
