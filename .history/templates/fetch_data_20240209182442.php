@@ -51,7 +51,6 @@ if (isset($_POST["action"])) {
                         <p class="card-text1">kilométrage: <?php echo $user['kilometrage']; ?></p>
                         <p class="card-text1">Année: <?php echo $user['annee']; ?></p>
                     </div>
-                    <div class="card-footer">
                         <a href="contact_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary car mx-2 ">Contacter</a>
                         <a href="details_car.php?id=<?= $user['id'] ?>" type="submit" class="btn btn-primary car mx-2">Détails</a>
                     </div>

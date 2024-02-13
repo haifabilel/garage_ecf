@@ -52,7 +52,6 @@ if(isset($_POST['addDétails'])){
  $id =(int)$_GET['id_details'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
   $user= $req-> fetch();
-  }
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -89,7 +88,7 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
         </tr>
-      
+        <?php }?>
     </tbody>
   </table>
  </div>

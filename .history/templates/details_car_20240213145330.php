@@ -48,11 +48,10 @@ if(isset($_POST['addDétails'])){
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
-  if(isset($_GET['id_details'])){
+  if($_GET[i])
  $id =(int)$_GET['id_details'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
   $user= $req-> fetch();
-  }
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -89,7 +88,6 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
         </tr>
-      
     </tbody>
   </table>
  </div>

@@ -19,7 +19,6 @@ if(isset($_POST['addDétails'])){
    VALUES ('$caracteristique','$liste_equipements','$options_installes','$img_name1','$img_name2','$img_name3')";
    $statement = $conn->prepare($query);
    
-   
    $stat = $statement->execute();
   header('location:details_car.php');
 };
@@ -48,15 +47,13 @@ if(isset($_POST['addDétails'])){
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
-  if(isset($_GET['id_details'])){
- $id =(int)$_GET['id_details'];
+ $id =(int)$_GET['id'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
   $user= $req-> fetch();
-  }
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
+        <img src="../?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
     </div>
     <div class="carousel-item">
         <img  src="../uploads/<?php echo $user['image2']; ?>" class="d-block w-100" alt="image2">
@@ -89,7 +86,6 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
         </tr>
-      
     </tbody>
   </table>
  </div>

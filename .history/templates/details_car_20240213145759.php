@@ -52,7 +52,7 @@ if(isset($_POST['addDétails'])){
  $id =(int)$_GET['id_details'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
   $user= $req-> fetch();
-  }
+  
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">

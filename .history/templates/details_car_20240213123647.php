@@ -14,6 +14,13 @@ if(isset($_POST['addDétails'])){
 
   $img_loc3 = $_FILES['image3']['tmp_name'];
   $img_name3 = $_FILES['image3']['name'];
+ 
+  $img_des1 = "../uploads/".$img_name1;
+  $img_des2 = "../uploads/".$img_name2;
+  $img_des3 = "../uploads/".$img_name3;
+  move_uploaded_file($img_loc1, $img_des1.$img_name1);
+  move_uploaded_file($img_loc2, $img_des2.$img_name2);
+  move_uploaded_file($img_loc3, $img_des3.$img_name3);
 
   $query = "INSERT INTO details_voitures (caracteristique, liste_equipements, options_installes, image1, image2, image3)
    VALUES ('$caracteristique','$liste_equipements','$options_installes','$img_name1','$img_name2','$img_name3')";
@@ -48,11 +55,9 @@ if(isset($_POST['addDétails'])){
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
-  if(isset($_GET['id_details'])){
- $id =(int)$_GET['id_details'];
+ $id =(int)$_GET['id'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
   $user= $req-> fetch();
-  }
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -89,7 +94,6 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
         </tr>
-      
     </tbody>
   </table>
  </div>

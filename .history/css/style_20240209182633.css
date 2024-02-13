@@ -651,9 +651,8 @@ li{
 .card-body{
     padding:0 20px;
 }
-.card-footer{
-    margin-top: 20px;
-    margin-left: 20%;
+.card-head{
+    justify-content: center;
 }
 .image_car{
 width: 300px;
