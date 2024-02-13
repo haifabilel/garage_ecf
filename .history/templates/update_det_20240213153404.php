@@ -12,11 +12,9 @@ if(isset($_GET['id_details'])) {
     if(isset($_POST['Update'])){
         extract($_POST);
         
-        // Assurez-vous que les champs du formulaire correspondent exactement aux clés utilisées dans $_POST
         if(isset($caracteristique) && isset($liste_equipements)
             && isset($options_installes) && isset($_FILES['image1']) && isset($_FILES['image2']) && isset($_FILES['image3'])){
             
-            // Assurez-vous que les noms des champs dans la base de données correspondent aux noms utilisés dans votre requête UPDATE
             $req = $conn->prepare("UPDATE details_voitures SET caracteristique = :caracteristique, 
             liste_equipements = :liste_equipements, options_installes = :options_installes, 
             image1 = :image1, image2 = :image2, image3 = :image3 WHERE id_details = :id_details");
@@ -41,15 +39,15 @@ if(isset($_GET['id_details'])) {
 }
 ?>
 <section>
-
-<div class="container_header p-3 d-flex">
-    <a href="details_car.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
-</div>
- <div class="update_content">
+  <div class="container_header p-3 ">
+  <a href="fetch_data.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
+  </div>
+    <div class="update_content">
     <form method="POST" enctype="multipart/form-data">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Update détails</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -72,12 +70,9 @@ if(isset($_GET['id_details'])) {
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" name="Update" class="btn btn-primary" id="update_btn">Valider</button>
+                <button type="submit" name="Update" class="btn btn-primary" id="btn_update">Valider</button>
             </div>
         </div>
     </form>
-  </div>
-  <?php
-require_once 'footer.php'
-?>
+    </div>
 </section>

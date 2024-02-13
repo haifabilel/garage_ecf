@@ -258,12 +258,7 @@ background-color: var(--bg-box);
     background-color:var(--second-color);
     color:white;
     width: 100%;
-}
-#update_btn{
-    width: 100%;
-}
-.heures{
-    color:var(--bg-color)
+
 }
 .js-filter-form h3{
     color: var(--bg-color);  
@@ -360,7 +355,7 @@ input[type="range"]::-moz-range-thumb{
     margin-top:2rem;
 }
 .update_content{
-    margin-top: 30px;
+    marf
     width: 40%;
     margin-left: 30%;
 }
@@ -370,11 +365,10 @@ footer{
     color:var(--second-color);
     height: 300px;
     margin-top:6.5rem;
-    background-color:var(--second-color);
+    background-color:var(--bg-color);
 }
 .contact-infos{
     margin: 0 20px;
-    color: var(--bg-color);
 }
 footer h5{
     color:var(--main-color);

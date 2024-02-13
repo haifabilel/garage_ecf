@@ -77,7 +77,4 @@ if(isset($_GET['id_details'])) {
         </div>
     </form>
   </div>
-  <?php
-require_once 'footer.php'
-?>
 </section>

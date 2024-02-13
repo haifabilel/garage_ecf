@@ -20,7 +20,7 @@
   while($user = $req->fetch()){
      ?>
      <table>
-        <tr class="heures">
+        <tr class>
         <td><span class="jours"><?=$user['jour']?> :</span> </td>
         <td><?=$user['matin']?>  / </td>
         <td><?=$user['apres_midi']?></td>

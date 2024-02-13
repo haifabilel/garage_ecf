@@ -42,7 +42,7 @@ if(isset($_GET['id_details'])) {
 ?>
 <section>
 
-<div class="container_header p-3 d-flex">
+<div class="container_header d-flex">
     <a href="details_car.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
 </div>
  <div class="update_content">
@@ -50,6 +50,7 @@ if(isset($_GET['id_details'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Update détails</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -77,7 +78,4 @@ if(isset($_GET['id_details'])) {
         </div>
     </form>
   </div>
-  <?php
-require_once 'footer.php'
-?>
 </section>

@@ -374,7 +374,6 @@ footer{
 }
 .contact-infos{
     margin: 0 20px;
-    color: var(--bg-color);
 }
 footer h5{
     color:var(--main-color);

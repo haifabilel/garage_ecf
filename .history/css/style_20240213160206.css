@@ -260,10 +260,7 @@ background-color: var(--bg-box);
     width: 100%;
 }
 #update_btn{
-    width: 100%;
-}
-.heures{
-    color:var(--bg-color)
+    width
 }
 .js-filter-form h3{
     color: var(--bg-color);  
@@ -370,11 +367,10 @@ footer{
     color:var(--second-color);
     height: 300px;
     margin-top:6.5rem;
-    background-color:var(--second-color);
+    background-color:var(--bg-color);
 }
 .contact-infos{
     margin: 0 20px;
-    color: var(--bg-color);
 }
 footer h5{
     color:var(--main-color);

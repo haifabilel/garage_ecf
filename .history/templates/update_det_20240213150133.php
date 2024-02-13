@@ -16,7 +16,7 @@ if(isset($_GET['id_details'])) {
         if(isset($caracteristique) && isset($liste_equipements)
             && isset($options_installes) && isset($_FILES['image1']) && isset($_FILES['image2']) && isset($_FILES['image3'])){
             
-            // Assurez-vous que les noms des champs dans la base de données correspondent aux noms utilisés dans votre requête UPDATE
+            // Assurer que les noms des champs dans la base de données correspondent aux noms utilisés dans votre requête UPDATE
             $req = $conn->prepare("UPDATE details_voitures SET caracteristique = :caracteristique, 
             liste_equipements = :liste_equipements, options_installes = :options_installes, 
             image1 = :image1, image2 = :image2, image3 = :image3 WHERE id_details = :id_details");
@@ -40,44 +40,35 @@ if(isset($_GET['id_details'])) {
     }
 }
 ?>
-<section>
 
-<div class="container_header p-3 d-flex">
-    <a href="details_car.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
-</div>
- <div class="update_content">
-    <form method="POST" enctype="multipart/form-data">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Update détails</h3>
+<form method="POST" enctype="multipart/form-data">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Update détails</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <input type="text" name="caracteristique" class="form-control" placeholder="Caractéristique" required><br>
             </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <input type="text" name="caracteristique" class="form-control" placeholder="Caractéristique" required><br>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="liste_equipements" class="form-control" placeholder="Liste des équipements" required><br>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="options_installes" class="form-control" placeholder="Options installés" required><br>
-                </div>
-                <div class="form-group mb-3">
-                    <input type="file" name="image1" class="form-control">
-                </div>
-                <div class="form-group mb-3">
-                    <input type="file" name="image2" class="form-control">
-                </div>
-                <div class="form-group mb-3">
-                    <input type="file" name="image3" class="form-control">
-                </div>
+            <div class="form-group">
+                <input type="text" name="liste_equipements" class="form-control" placeholder="Liste des équipements" required><br>
             </div>
-            <div class="modal-footer">
-                <button type="submit" name="Update" class="btn btn-primary" id="update_btn">Valider</button>
+            <div class="form-group">
+                <input type="text" name="options_installes" class="form-control" placeholder="Options installés" required><br>
+            </div>
+            <div class="form-group mb-3">
+                <input type="file" name="image1" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <input type="file" name="image2" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <input type="file" name="image3" class="form-control">
             </div>
         </div>
-    </form>
-  </div>
-  <?php
-require_once 'footer.php'
-?>
-</section>
+        <div class="modal-footer">
+            <button type="submit" name="Update" class="btn btn-primary">Valider</button>
+        </div>
+    </div>
+</form>
