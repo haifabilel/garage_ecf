@@ -12,7 +12,7 @@ if(isset($_POST['addCar'])){
     $img_loc = $_FILES['image']['tmp_name'];
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
-    
+    move_uploaded_file($img_loc,'../uploads/'.$img_name);
     
     $query = "INSERT INTO voitures (brand, prix, kilometrage, annee, image)
      VALUES ('$brand','$prix','$kilometrage','$annee','$img_des')";
@@ -56,7 +56,7 @@ if(isset($_POST['addCar'])){
      while($user = $req->fetch()){
         ?>
         <tr>
-            <td class="td_image img-fluid"><img src="../uploads/<?php echo $user['image']; ?>"  alt="image_car" class="image_car" ></td>
+            <td class="td_image img-fluid"><img src="./uploads/<?php echo $user['image']; ?>"  alt="image_car" class="image_car" ></td>
             <td><?=$user['brand']?></td>
             <td><?=$user['prix']?></td>
             <td><?=$user['kilometrage']?></td>

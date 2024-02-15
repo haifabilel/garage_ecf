@@ -12,7 +12,7 @@ if(isset($_POST['addCar'])){
     $img_loc = $_FILES['image']['tmp_name'];
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
-    
+    move_uploaded_file($img_loc,'../uploads/'.$img_name);
     
     $query = "INSERT INTO voitures (brand, prix, kilometrage, annee, image)
      VALUES ('$brand','$prix','$kilometrage','$annee','$img_des')";
@@ -63,7 +63,7 @@ if(isset($_POST['addCar'])){
             <td><?=$user['annee']?></td>
             <td>
             <a class="btn btn-primary" href="supprimer_voiture.php?id=<?=$user['id']?>"><i class="fa-regular fa-trash-can"></i></a>
-            <a class="btn btn-primary" href="modifier_voiture.php?id=<?=$user['id']?>"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
+            <a class="btn btn-primary" href="modifier_voiture.php?id=<?=$user['id']?>"><i class="fa-regular fa-trash-can"></i></a>
             </td>
         </tr>
         <?php 
