@@ -665,6 +665,7 @@ li{
 }
 .card-footer{
     margin-top: 20px;
+    /* margin-left: 20%; */
 }
 .image_car{
 width: 300px;

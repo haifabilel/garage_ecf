@@ -41,7 +41,7 @@ if(isset($_POST['addDétails'])){
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
-  
+  if(isset($_GET['id'])){
   $id =(int)$_GET['id'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
   $user= $req-> fetch();
@@ -85,7 +85,6 @@ if(isset($_POST['addDétails'])){
            <a href="update_det.php?id_details=<?=$user['id_details']?>" class="btn btn-primary">Update</a>
         </td>
         </tr>
-       
     </tbody>
   </table>
   

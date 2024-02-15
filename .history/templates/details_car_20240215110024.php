@@ -85,10 +85,8 @@ if(isset($_POST['addDétails'])){
            <a href="update_det.php?id_details=<?=$user['id_details']?>" class="btn btn-primary">Update</a>
         </td>
         </tr>
-       
     </tbody>
   </table>
-  
  </div>
 </section>
 

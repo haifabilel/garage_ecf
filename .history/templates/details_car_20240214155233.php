@@ -41,10 +41,9 @@ if(isset($_POST['addDétails'])){
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
-  
-  $id =(int)$_GET['id'];
+ $id =(int)$_GET['id'];
   $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
-  $user= $req-> fetch();
+  $user = $req->fetch();
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -82,16 +81,16 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
         <td>
-           <a href="update_det.php?id_details=<?=$user['id_details']?>" class="btn btn-primary">Update</a>
+           <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a>
         </td>
         </tr>
-       
+      
     </tbody>
+   
   </table>
-  
  </div>
-</section>
 
+</section>
 
 <!-- Modal ajout détails car-->
 <div class="modal fade" id="ajoutDétails" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">

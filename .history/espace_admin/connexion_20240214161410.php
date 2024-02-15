@@ -1,11 +1,11 @@
 <?php
 
 //connexion à la bdd
-$user = 'root';
-$pass = '';
+$user = 'chaabi';
+$pass = '07948155';
 
 try {
-    $conn = new PDO('mysql:host=localhost;dbname=ecf',$user, $pass);
+    $conn = new PDO('mysql:host=mysql-chaabi.alwaysdata.net;dbname=ecf',$user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
 
 }catch(PDOException $e){

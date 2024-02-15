@@ -19,6 +19,7 @@ if(isset($_POST['addDétails'])){
    VALUES ('$caracteristique','$liste_equipements','$options_installes','$img_name1','$img_name2','$img_name3')";
    $statement = $conn->prepare($query);
    
+   
    $stat = $statement->execute();
   header('location:details_car.php');
 };
@@ -31,21 +32,26 @@ if(isset($_POST['addDétails'])){
     <div class="content_button mt-2">
         <a href="fetch_data.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
         <a href="vehicules.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutDétails">Ajouter détails <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
+      
+        <!-- <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a> -->
+        
     </div>
 </div>
 <section class="section_details">
+<?php 
+  if(isset($_GET['id_details'])){
+   $id =(int)$_GET['id_details'];
+  $req =$conn->query("SELECT * FROM details_voitures WHERE id_details = $id");
+  $user= $req-> fetch();
+  }
+     ?>
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <?php 
-  
-  $id =(int)$_GET['id'];
-  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
-  $user= $req-> fetch();
-     ?>
+ 
   <div class="carousel-inner">
     <div class="carousel-item active">
         <img src="../uploads/<?php echo $user['image1']; ?>" class="d-block w-100" alt="image1">
@@ -73,7 +79,6 @@ if(isset($_POST['addDétails'])){
         <th>Tableau de caractéristiques</th>
         <th>Liste des équipements</th>
         <th>Options installés</th>
-        <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -81,15 +86,12 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['caracteristique']?></td>
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
-        <td>
-           <a href="update_det.php?id_details=<?=$user['id_details']?>" class="btn btn-primary">Update</a>
-        </td>
         </tr>
-       
     </tbody>
   </table>
-  
+ 
  </div>
+ 
 </section>
 
 

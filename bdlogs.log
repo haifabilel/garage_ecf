@@ -3,3 +3,4 @@ SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for $host failed: H
 SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for $host failed: Hôte inconnu. 
 SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for $host failed: Hôte inconnu. 
 SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for $host failed: Hôte inconnu. 
+SQLSTATE[HY000] [1044] Access denied for user 'chaabi'@'%' to database 'chaabi_garage'

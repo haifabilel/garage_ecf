@@ -2,6 +2,7 @@
 require_once 'head.php';
 require_once '../espace_admin/connexion.php';
 
+$conn1= $conn->$query('SELECT * FROM details_voitures')
 if(isset($_POST['addDétails'])){
   $caracteristique = $_POST['caracteristique'];
   $liste_equipements = $_POST['liste_equipements'];
@@ -19,6 +20,7 @@ if(isset($_POST['addDétails'])){
    VALUES ('$caracteristique','$liste_equipements','$options_installes','$img_name1','$img_name2','$img_name3')";
    $statement = $conn->prepare($query);
    
+   
    $stat = $statement->execute();
   header('location:details_car.php');
 };
@@ -31,6 +33,7 @@ if(isset($_POST['addDétails'])){
     <div class="content_button mt-2">
         <a href="fetch_data.php" class="btn btn-primary mx-2">Back  <i class="bi bi-backspace"></i></a>
         <a href="vehicules.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajoutDétails">Ajouter détails <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
+        
     </div>
 </div>
 <section class="section_details">
@@ -41,10 +44,11 @@ if(isset($_POST['addDétails'])){
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <?php 
-  
-  $id =(int)$_GET['id'];
-  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id = $id");
+  if(isset($_GET['id_details'])){
+ $id =(int)$_GET['id_details'];
+  $req =$conn->query("SELECT * FROM details_voitures JOIN voitures ON voitures.id = details_voitures.id_details WHERE id_details = $id");
   $user= $req-> fetch();
+  }
      ?>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -73,7 +77,7 @@ if(isset($_POST['addDétails'])){
         <th>Tableau de caractéristiques</th>
         <th>Liste des équipements</th>
         <th>Options installés</th>
-        <th>Action</th>
+        <th>Options installés</th>
         </tr>
     </thead>
     <tbody>
@@ -82,14 +86,14 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
         <td>
-           <a href="update_det.php?id_details=<?=$user['id_details']?>" class="btn btn-primary">Update</a>
+        <!-- <a href="update_det.php?id_details=<?=$user['id_details']?>" type="submit" class="btn btn-primary car mx-2">Update détails</a> -->
         </td>
         </tr>
-       
     </tbody>
   </table>
-  
+ 
  </div>
+ 
 </section>
 
 
