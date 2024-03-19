@@ -1,7 +1,7 @@
 <?php
 require_once 'head.php';
 ?>
-<footer class="d-flex flex-wrap justify-content-around align-items-center border-top" id="footer">
+<footer class="d-flex flex-wrap justify-content-around align-items-center border-top" >
     <div class="contact-info col-md-5 d-flex align-items-center">
         <div class="contact-infos">
             <h5>CONTACTER-NOUS</h5>

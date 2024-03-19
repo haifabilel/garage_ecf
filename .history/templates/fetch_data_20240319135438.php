@@ -48,7 +48,7 @@ if (isset($_POST["action"])) {
                     </div>
                     <div class="card-body">
                         <p class="card-text1"><span class="span_car">Prix:</span> <?php echo $user['prix']; ?>€</p>
-                        <p class="card-text1"><span class="span_car">kilométrage:</span> <?php echo $user['kilometrage']; ?>Km</p>
+                        <p class="card-text1"><span class="span_car">kilométrage:</span> <?php echo $user['kilometrage']; ?></p>
                         <p class="card-text1"><span class="span_car">Année:</span> <?php echo $user['annee']; ?></p>
                     </div>
                     <div class="card-footer">

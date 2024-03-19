@@ -346,12 +346,8 @@ input[type="range"]::-moz-range-thumb{
 .car_titre{
     font-size: 1.7rem;
 }
-.span_car{
-    color:var(--main-color);
-    font-size: 1.7rem;
-}
 .btn.car{
-    font-size: 1.5rem; 
+    font-size: 1.2rem; 
 }
 .js-filter-content{
     display:flex;
@@ -679,7 +675,7 @@ li{
 }
 .card-footer{
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 70px;
 }
 .image_car{
 width: 300px;
@@ -795,9 +791,7 @@ width: 300px;
     margin-left: 40px;
  }
  .btn.footer{
-    margin-left: 30%;
-    font-size: 1.5rem;
-    margin-top: -2px;
+    margin-left:30%;
  }
  #user_name , #user_review{
     margin-left: -25%;
@@ -869,10 +863,10 @@ width: 300px;
     margin-left: 0;
    }
    .footer_car{
-    margin-left: 15px;
+    /* height:100rem; */
    }
    .horaires-section_car{
-    margin-top: -12%;
+    /* margin-top: -120%; */
     margin-left: 26px;
    }
    .horaires-section_car h5{
@@ -882,17 +876,13 @@ width: 300px;
     /* margin-top: -75%; */
    }
    .content_button{
-    margin-right: 20%;
+    margin-right: 35%;
    }
    .reviews-section_car h5{
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-left: 30px;
-    margin-top: 20px;
    }
- .footer_car span.copyright{
-    margin:15px;
-    font-size: 1.5rem;
- }
+ footer_car span.copyright
   footer span.copyright{
 margin-top: 70%;
 color: var(--main-color);

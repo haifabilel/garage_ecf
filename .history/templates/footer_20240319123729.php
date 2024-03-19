@@ -34,5 +34,5 @@ require_once 'head.php';
  ?>
    </table>  
   </div>
-    <span class="copyright mb-3 mb-md-0 ">© 2023 Copyright: Garage Parrot</span>
+   
 </footer>

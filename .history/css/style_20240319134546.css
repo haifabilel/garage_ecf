@@ -348,10 +348,10 @@ input[type="range"]::-moz-range-thumb{
 }
 .span_car{
     color:var(--main-color);
-    font-size: 1.7rem;
+    
 }
 .btn.car{
-    font-size: 1.5rem; 
+    font-size: 1.2rem; 
 }
 .js-filter-content{
     display:flex;
@@ -679,7 +679,7 @@ li{
 }
 .card-footer{
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 70px;
 }
 .image_car{
 width: 300px;
@@ -882,7 +882,7 @@ width: 300px;
     /* margin-top: -75%; */
    }
    .content_button{
-    margin-right: 20%;
+    margin-right: 35%;
    }
    .reviews-section_car h5{
     font-size: 1.8rem;
