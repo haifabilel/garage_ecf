@@ -793,15 +793,11 @@ width: 300px;
  }
  .contact-infos{
     margin-left: 40px;
-    margin-top: 20px;
  }
- #btn_foo, #btn_index{
-    margin-left: 27%;
-    font-size: 1.2rem;
- }
- #btn_car_foo{
-    font-size: 2rem; 
+ .btn.footer{
     margin-left: 30%;
+    font-size: 1.5rem;
+    margin-top: -2px;
  }
  #user_name , #user_review{
     margin-left: -25%;
@@ -812,15 +808,15 @@ width: 300px;
     margin-left: 0;
  }
  .container_reviews .card{
-    width: 375px;
+    width: 364px;
     height: 300px;
     margin-bottom: 30px;
     margin: 0 5px;
  }
  .container_reviews h3{
     margin-top: -20px;
-    width: 23rem;
-    margin-left: 9px;
+    width: 22rem;
+    margin-left: 10px;
  }
  .content_header p{
     font-size: 1rem;
@@ -874,7 +870,7 @@ width: 300px;
    }
    .footer_car{
     margin-left: 15px;
-    height: 700px;
+    height: 790px;
    }
    .horaires-section_car{
     margin-top: -40%;
@@ -899,11 +895,11 @@ width: 300px;
     font-size: 1.5rem;
  }
   footer span.copyright{
+margin-top: 70%;
 color: var(--main-color);
    }
    .footer_car span.copyright{
     color: var(--main-color);
-    margin-top: -20%;
    }
    .titre_login{
     margin-top: 20%;

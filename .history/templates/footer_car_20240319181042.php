@@ -8,12 +8,12 @@ require_once 'head.php';
             <p class="footer_titre">Adresse: 06 Rue de Paris 94000</p>
             <p class="footer_titre">Email: vinccentparrot@gmail.com</p>
             <p class="footer_titre">Téléphone: 0600000000</p>
-            <a href="../templates/contact.php" type="button" class="btn btn-primary" id="btn_car_foo">Contact</a>
+            <a href="../templates/contact.php" type="button" class="btn btn-primary">Contact</a>
         </div>  
     </div>
     <div class="reviews-section_car col-md-4">
         <h5>SATISFAIT DE NOS SERVICES ?</h5>
-        <a href="../templates/reviews.php" type="button" class="btn btn-primary" id="btn_car_foo">Ajouter un avis</a>
+        <a href="../templates/reviews.php" type="button" class="btn btn-primary">Ajouter un avis</a>
     </div>
     <div class="horaires-section_car col-md-4">
       <h5>NOS HORAIRES</h5>

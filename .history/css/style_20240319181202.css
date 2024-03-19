@@ -798,10 +798,10 @@ width: 300px;
  #btn_foo, #btn_index{
     margin-left: 27%;
     font-size: 1.2rem;
+    
  }
  #btn_car_foo{
     font-size: 2rem; 
-    margin-left: 30%;
  }
  #user_name , #user_review{
     margin-left: -25%;
@@ -874,7 +874,7 @@ width: 300px;
    }
    .footer_car{
     margin-left: 15px;
-    height: 700px;
+    height: 790px;
    }
    .horaires-section_car{
     margin-top: -40%;
@@ -903,7 +903,6 @@ color: var(--main-color);
    }
    .footer_car span.copyright{
     color: var(--main-color);
-    margin-top: -20%;
    }
    .titre_login{
     margin-top: 20%;
