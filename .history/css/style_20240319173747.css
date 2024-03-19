@@ -870,17 +870,17 @@ width: 300px;
    }
    .footer_car{
     margin-left: 15px;
-    height: 790px;
+    height: 700px;
    }
    .horaires-section_car{
-    margin-top: -40%;
+    margin-top: -25%;
     margin-left: 26px;
    }
    .horaires-section_car h5{
     margin-left: 20%;
    }
    .reviews-section_car{
-    margin-top: -20%;
+    /* margin-top: -75%; */
    }
    .content_button{
     margin-right: 20%;
