@@ -73,6 +73,7 @@ if(isset($_POST['addDétails'])){
         <th>Tableau de caractéristiques</th>
         <th>Liste des équipements</th>
         <th>Options installés</th>
+        <th>Action</th>
         </tr>
     </thead>
     <tbody>

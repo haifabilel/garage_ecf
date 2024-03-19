@@ -10,3 +10,5 @@ SQLSTATE[HY000] [1044] Access denied for user 'chaabi'@'%' to database 'ecf'
 SQLSTATE[HY000] [1044] Access denied for user 'chaabi'@'%' to database 'ecf'
 SQLSTATE[HY000] [1044] Access denied for user 'chaabi'@'%' to database 'ecf'
 SQLSTATE[HY000] [1044] Access denied for user 'chaabi'@'%' to database 'ecf'
+SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)
+SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)

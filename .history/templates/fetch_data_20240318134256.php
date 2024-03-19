@@ -8,7 +8,7 @@ if (!isset($_POST["action"])) {
     <div class="content_header d-flex">
         <p class="car_titre">Véhicules</p>
     </div>
-    <div class="content_button mt-2" style="margin-right: 75%;">
+    <div class="content_button mt-2" style="margin-right: 70%;">
         <a href="../index.php" class="btn btn-primary car mx-2">Accueil  <i class="bi bi-backspace"></i></a>
         <a href="fetch_data.php" class="btn btn-primary car mx-2">Réinitialiser filtre <i class="fa-solid fa-arrows-rotate"></i></a>
     </div>

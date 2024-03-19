@@ -1,6 +1,4 @@
-<?php
-require_once 'head.php';
-?>
+
 <!------------ home ------------->
 <section class="home" >
   <div class="container col-xxl-8 px-2 py-6">
@@ -16,6 +14,3 @@ require_once 'head.php';
     </div>
    </div>  
 </section>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

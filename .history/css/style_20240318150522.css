@@ -413,8 +413,7 @@ span.matin,.apres_midi{
 .footer_car{
     background-color: var(--bg-color);
     margin-top: 30px;
-    -webkit-box-shadow: 1px -10px 4px -4px rgba(0,0,0,0.72); 
-    box-shadow: 1px -10px 4px -4px rgba(0,0,0,0.72);
+    box-shadow: var;
 }
 .footer_car{
     font-size:2rem; 

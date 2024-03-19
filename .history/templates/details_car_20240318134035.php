@@ -73,6 +73,7 @@ if(isset($_POST['addDétails'])){
         <th>Tableau de caractéristiques</th>
         <th>Liste des équipements</th>
         <th>Options installés</th>
+        <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -80,6 +81,7 @@ if(isset($_POST['addDétails'])){
         <td><?=$user['caracteristique']?></td>
         <td><?=$user['liste_equipements']?></td>
         <td><?=$user['options_installes']?></td>
+  
         </tr>
         <?php }?>
     </tbody>
